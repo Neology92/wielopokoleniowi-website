@@ -14,6 +14,10 @@ const Button = styled.button`
   outline: none;
   background: none;
   padding: 15px;
+
+  &:active {
+    outline: blue;
+  }
 `;
 
 const Wrapper = styled.div`

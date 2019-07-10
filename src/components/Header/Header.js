@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { HeaderWrap, CenterC, Logo } from './styled';
 import { BurgerButton } from './BurgerButton';
 
@@ -6,7 +7,9 @@ const Header = () => (
   <HeaderWrap>
     <div />
     <CenterC>
-      <Logo width="141" />
+      <Link to="/">
+        <Logo width="141" />
+      </Link>
     </CenterC>
     <CenterC>
       <BurgerButton />
