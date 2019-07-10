@@ -9,9 +9,11 @@ import Header from 'components/Header/Header';
 const MainLayout = ({ children }) => (
   <>
     <GlobalStyle />
-    <Header />
     <ThemeProvider theme={theme}>
-      <main>{children}</main>
+      <>
+        <Header />
+        <main>{children}</main>
+      </>
     </ThemeProvider>
   </>
 );

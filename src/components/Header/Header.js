@@ -1,10 +1,17 @@
 import React from 'react';
-import { HeaderContainer } from './styled';
+import { HeaderWrap, CenterC, Logo } from './styled';
+import { BurgerButton } from './BurgerButton';
 
 const Header = () => (
-  <HeaderContainer>
+  <HeaderWrap>
     <div />
-  </HeaderContainer>
+    <CenterC>
+      <Logo width="141" />
+    </CenterC>
+    <CenterC>
+      <BurgerButton />
+    </CenterC>
+  </HeaderWrap>
 );
 
 export default Header;
