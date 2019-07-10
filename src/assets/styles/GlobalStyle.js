@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import bg from '../images/bg.svg';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -15,7 +16,8 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-size: 1.6rem;
-
+        background-image: url(${bg});
+        background-size: cover;
     }
 
     h1{
