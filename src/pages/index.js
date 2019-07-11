@@ -6,7 +6,7 @@ import { SEO } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
-  height: 500px;
+  height: 1500px;
 `;
 
 const IndexPage = () => (

@@ -10,7 +10,7 @@ const BackgroundSection = ({ className, children }) => (
       query {
         desktop: file(relativePath: { eq: "background.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(quality: 90, maxHeight: 768) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }
@@ -41,9 +41,9 @@ BackgroundSection.propTypes = {
 
 const Background = styled(BackgroundSection)`
   width: 100%;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;
+  background-position: top center;
+  background-repeat: repeat;
+  background-size: contain;
 `;
 
 export default Background;
