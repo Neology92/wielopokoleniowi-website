@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import bgImage from 'assets/images/topBar.svg';
 
 export const FooterWrap = styled.footer`
-  width: 100vw;
+  width: 100%;
   height: 684px;
 
   display: grid;
@@ -44,12 +44,12 @@ export const Bar = styled.div`
   & a {
     color: rgba(255, 255, 255, 0.6);
     font-family: ${({ theme }) => theme.font.family.roboto};
-    font-size: 10px;
+    font-size: 1rem;
     line-height: 12px;
     text-decoration: none;
   }
 
-  & a:active {
+  & a:hover {
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
   }
@@ -70,5 +70,10 @@ export const Bar = styled.div`
 
   & p:nth-child(3n) {
     margin-top: 2px;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 `;

@@ -7,7 +7,7 @@ import logo from 'assets/images/logo.svg';
 
 export const HeaderWrap = styled.header`
   padding: 0 -5px;
-  width: 100vw;
+  width: 100%;
   height: 84px;
   background-image: url(${bgImage});
   background-size: cover;
