@@ -20,8 +20,8 @@ export const FooterWrap = styled.footer`
 export const Block = styled.div`
   height: 100%;
   width: 100%;
-  background-color: lightgrey;
-  border: 1px white solid;
+  background-color: ${({ color, theme }) =>
+    color == 'dark' ? theme.color.darkGrey : theme.color.grey};
 `;
 
 export const Bar = styled.div`

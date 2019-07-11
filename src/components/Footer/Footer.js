@@ -4,7 +4,7 @@ import { FooterWrap, Block, Bar } from './styled';
 const Footer = () => (
   <FooterWrap>
     <Block />
-    <Block />
+    <Block color="dark" />
     <Block />
     <Bar />
   </FooterWrap>
