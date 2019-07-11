@@ -7,6 +7,15 @@ export const theme = {
     grey: '#E5E5E5',
     white: '#FFFFFF',
   },
+
+  shadow: {
+    inside: {
+      strong: 'inset 0px 4px 4px rgba(0, 0, 0, 0.07)',
+      medium: 'inset 0px 1px 3px rgba(0, 0, 0, 0.07)',
+      none: 'inset 0px 0px 0px rgba(0, 0, 0, 0)',
+    },
+  },
+
   font: {
     family: {
       atma: '"Atma", cursive',

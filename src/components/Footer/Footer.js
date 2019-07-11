@@ -4,9 +4,9 @@ import { FooterWrap, Block, Bar } from './styled';
 
 const Footer = () => (
   <FooterWrap>
-    <Block />
-    <Block color="dark" />
-    <Block />
+    <Block shadow="strong" />
+    <Block shadow="medium" isDark />
+    <Block shadow="none" />
     <Bar>
       <div>
         <div>a</div>

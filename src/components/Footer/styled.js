@@ -20,8 +20,17 @@ export const FooterWrap = styled.footer`
 export const Block = styled.div`
   height: 100%;
   width: 100%;
-  background-color: ${({ color, theme }) =>
-    color == 'dark' ? theme.color.darkGrey : theme.color.grey};
+  background-color: ${({ isDark, theme }) =>
+    isDark ? theme.color.darkGrey : theme.color.grey};
+  box-shadow: ${({ shadow, theme }) => {
+    if (shadow == 'strong') return theme.shadow.inside.strong;
+    else if (shadow == 'medium') return theme.shadow.inside.medium;
+    else return theme.shadow.inside.none;
+  }};
+
+  ${({ theme }) => theme.media.above.m} {
+    box-shadow: ${({ theme }) => theme.shadow.inside.strong};
+  }
 `;
 
 export const Bar = styled.div`
