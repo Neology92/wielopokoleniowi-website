@@ -24,21 +24,21 @@
 		"styled-components": "^4.3.2"
 	},
 	"devDependencies": {
-		"babel-eslint": "^9.0.0",
+		"babel-eslint": "^10.0.2",
 		"core-js": "^3.1.4",
-		"eslint": "^6.0.1",
+		"eslint": "^5.12.0",
 		"eslint-config-airbnb": "^17.1.1",
 		"eslint-config-prettier": "^6.0.0",
-		"eslint-config-react-app": "^4.0.1",
 		"eslint-plugin-import": "^2.18.0",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.14.2",
+		"eslint-plugin-react-hooks": "^1.6.1",
 		"gatsby-plugin-eslint": "^2.0.5",
 		"gatsby-plugin-stylelint": "^3.2.0",
 		"husky": "^3.0.0",
 		"lint-staged": "^9.1.0",
 		"prettier": "^1.18.2",
-		"stylelint": "^10.1.0",
+		"stylelint": "^8.4.0",
 		"stylelint-config-recommended": "^2.2.0",
 		"stylelint-config-styled-components": "^0.1.1",
 		"stylelint-processor-styled-components": "^1.8.0",
@@ -73,6 +73,7 @@
 		"*.js": [
 			"prettier --config .prettierrc --write",
 			"eslint --fix",
+			"stylelint --fix",
 			"git add"
 		]
 	}
