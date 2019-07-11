@@ -4,8 +4,8 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
+import { Header, Footer } from 'components';
+import Background from './Background';
 
 const MainLayout = ({ children }) => (
   <>
@@ -13,7 +13,9 @@ const MainLayout = ({ children }) => (
     <ThemeProvider theme={theme}>
       <>
         <Header />
-        <main>{children}</main>
+        <Background>
+          <main>{children}</main>
+        </Background>
         <Footer />
       </>
     </ThemeProvider>
