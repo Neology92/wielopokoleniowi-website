@@ -1,4 +1,5 @@
 import SEO from './seo';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
-export { SEO, Header };
+export { SEO, Header, Footer };
