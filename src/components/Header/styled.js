@@ -27,10 +27,18 @@ export const CenterC = styled.div`
   align-items: center;
 `;
 
-export const Logo = ({ width }) => (
-  <img src={logo} alt="Logo Wielopokoleniowi" width={width} />
+const Logo = ({ className }) => (
+  <img src={logo} alt="Logo Wielopokoleniowi" className={className} />
 );
 
 Logo.propTypes = {
-  width: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
 };
+
+export const StyledLogo = styled(Logo)`
+  width: 141px;
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 252px;
+  }
+`;

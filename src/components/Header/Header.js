@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { HeaderWrap, CenterC, Logo } from './styled';
+import { HeaderWrap, CenterC, StyledLogo } from './styled';
 import { BurgerButton } from './BurgerButton';
 
 const Header = () => (
@@ -8,7 +8,7 @@ const Header = () => (
     <div />
     <CenterC>
       <Link to="/">
-        <Logo width="141" />
+        <StyledLogo />
       </Link>
     </CenterC>
     <CenterC>
