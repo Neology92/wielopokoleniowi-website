@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
+import 'assets/styles/fontsAtma.css';
+import 'assets/styles/fontsRoboto.css';
+
 import GlobalStyle from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import { Header, Footer } from 'components';
