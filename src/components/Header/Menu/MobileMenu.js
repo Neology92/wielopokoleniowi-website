@@ -15,8 +15,12 @@ const MobileMenu = ({ className }) => (
       ))}
     </MenuLinksWrapper>
     <IconsWrapper>
-      <StyledFacebook />
-      <StyledYoutube />
+      <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+        <StyledFacebook />
+      </a>
+      <a href="https://www.youtube.com/">
+        <StyledYoutube />
+      </a>
     </IconsWrapper>
   </MenuWrapper>
 );
@@ -42,17 +46,20 @@ const MenuLink = styled.li`
 
 const StyledFacebook = styled(Facebook)`
   height: 33px;
+  padding: 15px;
 `;
 
 const StyledYoutube = styled(Youtube)`
   height: 28px;
+  padding: 15px;
 `;
 
 const IconsWrapper = styled.div`
-  height: 95px;
+  height: 115px;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 `;
 
