@@ -1,28 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const BurgerButton = () => (
-  <Button>
-    <Wrapper>
-      <Burger />
-    </Wrapper>
-  </Button>
-);
-
-const Button = styled.button`
+const HamburgerWrapper = styled.button`
   border: none;
   outline: none;
   background: none;
   padding: 15px;
+  position: absolute;
+  z-index: 999;
 
   &:active {
     outline: blue;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    display: none;
+  }
 `;
 
-const Wrapper = styled.div`
+const InnerWrapper = styled.div`
   width: 28px;
-  height: 20px;
+  height: 22px;
 `;
 const Burger = styled.div`
   position: relative;
@@ -48,3 +50,13 @@ const Burger = styled.div`
     top: 9px;
   }
 `;
+
+const Hamburger = () => (
+  <HamburgerWrapper>
+    <InnerWrapper>
+      <Burger />
+    </InnerWrapper>
+  </HamburgerWrapper>
+);
+
+export default Hamburger;
