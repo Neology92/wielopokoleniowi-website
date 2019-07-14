@@ -34,7 +34,7 @@ const Block = styled.section`
     margin: 8px 0 0;
   }
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     box-shadow: ${({ theme }) => theme.shadow.inside.strong};
 
     h1 {

@@ -8,9 +8,9 @@ const FooterWrapper = styled.footer`
   grid-template-columns: 1fr;
   grid-template-rows: 3fr 3fr 3fr 2fr;
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     height: 428px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 7fr 2fr;
   }
 `;

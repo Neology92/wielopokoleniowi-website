@@ -41,7 +41,7 @@ const Bar = styled.div`
     margin: 1px 0;
   }
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     grid-column-start: 1;
     grid-column-end: 4;
 

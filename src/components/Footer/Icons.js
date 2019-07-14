@@ -21,7 +21,7 @@ export const StyledTelephone = styled(Telephone)`
   height: 16px;
   margin: 14px 0 0;
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     height: 21px;
     margin: 46px 0 0;
   }
@@ -31,7 +31,7 @@ export const StyledMail = styled(Mail)`
   height: 12px;
   margin: 16px 0 0;
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     height: 16px;
     margin: 24px 0 0;
   }
@@ -41,7 +41,7 @@ export const StyledWeb = styled(Web)`
   height: 16px;
   margin: 24px 0 0;
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     height: 20px;
     margin: 64px 0 0;
   }
@@ -50,7 +50,7 @@ export const StyledWeb = styled(Web)`
 export const StyledPages = styled(Pages)`
   display: none;
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     display: inherit;
     height: 103px;
     margin: 23px 0 0;

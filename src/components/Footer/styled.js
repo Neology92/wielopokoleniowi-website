@@ -17,6 +17,9 @@ export const StyledButton = styled(Button)`
 export const StyledImg = styled(Img)`
   margin: 25px 0 0;
   picture {
+    width: 170px;
+    height: 79px;
+    position: relative;
     margin: 0 12px;
   }
   picture img {
@@ -24,7 +27,7 @@ export const StyledImg = styled(Img)`
     height: 79px !important;
   }
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     margin: 35px 0 0;
     picture {
       margin: 0 0;
