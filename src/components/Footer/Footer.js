@@ -35,8 +35,12 @@ const Footer = () => (
     <Block shadow="none" />
     <Bar>
       <div>
-        <StyledFacebook />
-        <StyledYoutube />
+        <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+          <StyledFacebook />
+        </a>
+        <a href="https://www.youtube.com/">
+          <StyledYoutube />
+        </a>
       </div>
       <p>@ 2019 Wielopokoleniowi</p>
       <p>
