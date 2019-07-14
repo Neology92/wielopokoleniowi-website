@@ -7,12 +7,31 @@ import {
   Bar,
   StyledFacebook,
   StyledYoutube,
+  StyledTelephone,
+  StyledMail,
+  StyledWeb,
 } from './styled';
 
 const Footer = () => (
   <FooterWrap>
-    <Block shadow="strong" />
-    <Block shadow="medium" isDark />
+    <Block shadow="strong">
+      <h1>Masz jakieś pytania?</h1>
+      <StyledTelephone />
+      <a href="tel: +48604968609">+48 604 968 609</a>
+      <StyledMail />
+      <a href="mailto: martyniec@kancelariasukcesyjna.pl">
+        martyniec@kancelariasukcesyjna.pl
+      </a>
+    </Block>
+    <Block shadow="medium" isDark>
+      <h1>
+        Masz problem?
+        <br />
+        Szukasz pomocy sukcesyjnej?
+      </h1>
+      <StyledWeb />
+      <a href="https://kancelariasukcesyjna.pl/">www.kancelariasukcesyjna.pl</a>
+    </Block>
     <Block shadow="none" />
     <Bar>
       <div>

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import bgImage from 'assets/images/topBar.svg';
 import Facebook from '../Icon/Facebook';
 import Youtube from '../Icon/Youtube';
+import Telephone from '../Icon/Telephone';
+import Mail from '../Icon/Mail';
+import Web from '../Icon/Web';
 
 export const StyledFacebook = styled(Facebook)`
   height: 28px;
@@ -11,8 +14,22 @@ export const StyledFacebook = styled(Facebook)`
 
 export const StyledYoutube = styled(Youtube)`
   height: 24px;
-  padding: 15px;
   padding: 15px 15px 15px 8px;
+`;
+
+export const StyledTelephone = styled(Telephone)`
+  height: 16px;
+  margin: 14px 0 0;
+`;
+
+export const StyledMail = styled(Mail)`
+  height: 12px;
+  margin: 16px 0 0;
+`;
+
+export const StyledWeb = styled(Web)`
+  height: 16px;
+  margin: 24px 0 0;
 `;
 
 export const FooterWrap = styled.footer`
@@ -30,7 +47,7 @@ export const FooterWrap = styled.footer`
   }
 `;
 
-export const Block = styled.div`
+export const Block = styled.section`
   height: 100%;
   width: 100%;
   background-color: ${({ isDark, theme }) =>
@@ -40,6 +57,30 @@ export const Block = styled.div`
     else if (shadow == 'medium') return theme.shadow.inside.medium;
     else return theme.shadow.inside.none;
   }};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 18px;
+    font-family: ${({ theme }) => theme.font.family.atma};
+    font-weight: 500;
+    color: ${({ theme }) => theme.color.darkBlue};
+    text-align: center;
+
+    margin: 22px 0 0;
+  }
+
+  a {
+    font-size: 14px;
+    font-family: ${({ theme }) => theme.font.family.roboto};
+    font-weight: 400;
+    color: ${({ theme }) => theme.color.darkBlue};
+    text-decoration: underline;
+
+    margin: 8px 0 0;
+  }
 
   ${({ theme }) => theme.media.above.m} {
     box-shadow: ${({ theme }) => theme.shadow.inside.strong};
