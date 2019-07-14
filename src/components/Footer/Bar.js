@@ -24,7 +24,7 @@ const Bar = styled.div`
   }
 
   &,
-  & a {
+  a {
     color: rgba(255, 255, 255, 0.6);
     font-family: ${({ theme }) => theme.font.family.roboto};
     font-size: 1rem;
@@ -32,18 +32,41 @@ const Bar = styled.div`
     text-decoration: none;
   }
 
-  & a:hover {
+  a:hover {
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
   }
 
-  & p {
+  p {
     margin: 1px 0;
   }
 
   ${({ theme }) => theme.media.above.m} {
     grid-column-start: 1;
     grid-column-end: 4;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    &,
+    & a {
+      font-size: 1.4rem;
+      line-height: 14px;
+    }
+
+    p {
+      margin: 7px 0;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & section:nth-child(2) {
+      order: -1;
+    }
   }
 `;
 
