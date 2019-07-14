@@ -23,8 +23,7 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  padding: 0 -5px;
-  width: 100%;
+  width: calc(100% + 3px);
   height: 84px;
   background-image: url(${bgImage});
   background-size: cover;
@@ -60,7 +59,7 @@ const StyledLogo = styled(Logo)`
 
 const SyledMobileMenu = styled(MobileMenu)`
   top: 83px;
-  height: calc(100vh - 84px);
+  height: calc(100vh - 83px);
 `;
 
 export default Header;
