@@ -22,16 +22,31 @@ export const StyledYoutube = styled(Youtube)`
 export const StyledTelephone = styled(Telephone)`
   height: 16px;
   margin: 14px 0 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    height: 21px;
+    margin: 46px 0 0;
+  }
 `;
 
 export const StyledMail = styled(Mail)`
   height: 12px;
   margin: 16px 0 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    height: 16px;
+    margin: 24px 0 0;
+  }
 `;
 
 export const StyledWeb = styled(Web)`
   height: 16px;
   margin: 24px 0 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    height: 20px;
+    margin: 64px 0 0;
+  }
 `;
 
 export const StyledPages = styled(Pages)`
@@ -49,6 +64,8 @@ export const StyledButton = styled(Button)`
 
   ${({ theme }) => theme.media.above.m} {
     margin: 24px 0 0 0;
+    font-size: 18px;
+    padding: 10px 20px;
   }
 `;
 
@@ -88,7 +105,6 @@ export const Block = styled.section`
     font-weight: 500;
     color: ${({ theme }) => theme.color.darkBlue};
     text-align: center;
-
     margin: 22px 0 0;
   }
 
@@ -104,6 +120,15 @@ export const Block = styled.section`
 
   ${({ theme }) => theme.media.above.m} {
     box-shadow: ${({ theme }) => theme.shadow.inside.strong};
+
+    h1 {
+      margin: 66px 0 0;
+      font-size: 24px;
+    }
+
+    a {
+      font-size: 18px;
+    }
   }
 `;
 
