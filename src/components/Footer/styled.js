@@ -6,6 +6,7 @@ import Youtube from '../Icon/Youtube';
 import Telephone from '../Icon/Telephone';
 import Mail from '../Icon/Mail';
 import Web from '../Icon/Web';
+import Button from '../Button/Button';
 
 export const StyledFacebook = styled(Facebook)`
   height: 28px;
@@ -30,6 +31,10 @@ export const StyledMail = styled(Mail)`
 export const StyledWeb = styled(Web)`
   height: 16px;
   margin: 24px 0 0;
+`;
+
+export const StyledButton = styled(Button)`
+  margin: 40px 0 0 0;
 `;
 
 export const FooterWrap = styled.footer`

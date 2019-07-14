@@ -10,6 +10,7 @@ import {
   StyledTelephone,
   StyledMail,
   StyledWeb,
+  StyledButton,
 } from './styled';
 
 const Footer = () => (
@@ -32,7 +33,9 @@ const Footer = () => (
       <StyledWeb />
       <a href="https://kancelariasukcesyjna.pl/">www.kancelariasukcesyjna.pl</a>
     </Block>
-    <Block shadow="none" />
+    <Block shadow="none">
+      <StyledButton isTransparent>Zasady Wielopokoleniowych</StyledButton>
+    </Block>
     <Bar>
       <div>
         <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
@@ -47,7 +50,7 @@ const Footer = () => (
         <Link to="/">REGULAMIN</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
         <Link to="/">POLITYKA PRYWATNOŚCI</Link>
       </p>
-      <p>PROJEKT: AVE STUDIO&nbsp;&nbsp;|&nbsp;&nbsp;WDROŻENIE: NEOLOGY</p>
+      <p>PROJEKT: AVE STUDIO&nbsp;&nbsp;|&nbsp;&nbsp;WDROŻENIE: OSKAR LEGNER</p>
     </Bar>
   </FooterWrap>
 );
