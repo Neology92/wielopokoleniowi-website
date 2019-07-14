@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import bgImage from 'assets/images/topBar.svg';
 
 const HeaderWrapper = styled.header`
-  width: 100vw;
+  width: 100%;
   height: 84px;
   background-image: url(${bgImage});
   background-size: cover;
