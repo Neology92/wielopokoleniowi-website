@@ -67,6 +67,7 @@ const StyledLogo = styled(Logo)`
 
 const SyledMobileMenu = styled(MobileMenu)`
   top: 83px;
+  right: 0;
   height: calc(100vh - 83px);
 `;
 

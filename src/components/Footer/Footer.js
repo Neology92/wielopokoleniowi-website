@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { FooterWrap, Block, Bar } from './styled';
+
+import {
+  FooterWrap,
+  Block,
+  Bar,
+  StyledFacebook,
+  StyledYoutube,
+} from './styled';
 
 const Footer = () => (
   <FooterWrap>
@@ -9,8 +16,8 @@ const Footer = () => (
     <Block shadow="none" />
     <Bar>
       <div>
-        <div>a</div>
-        <div>b</div>
+        <StyledFacebook />
+        <StyledYoutube />
       </div>
       <p>@ 2019 Wielopokoleniowi</p>
       <p>

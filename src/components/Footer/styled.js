@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 
 import bgImage from 'assets/images/topBar.svg';
+import Facebook from '../Icon/Facebook';
+import Youtube from '../Icon/Youtube';
+
+export const StyledFacebook = styled(Facebook)`
+  height: 28px;
+  padding: 15px 8px 15px 15px;
+`;
+
+export const StyledYoutube = styled(Youtube)`
+  height: 24px;
+  padding: 15px;
+  padding: 15px 15px 15px 8px;
+`;
 
 export const FooterWrap = styled.footer`
   width: 100%;
