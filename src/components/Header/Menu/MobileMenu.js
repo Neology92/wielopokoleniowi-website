@@ -14,7 +14,8 @@ const MenuWrapper = styled.nav`
   right: 0;
   background-color: ${({ theme }) => theme.color.darkBlue};
 
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(100%)' : 'translateX(0)')};
+  transform: translateX(${({ isOpen }) => (isOpen ? '0' : '100%')});
+  transition: transform 0.3s ease-in-out;
 
   ${({ theme }) => theme.media.above.s} {
     width: 127px;
@@ -42,6 +43,22 @@ const MenuLink = styled.li`
   font-size: 24px;
   line-height: 39px;
   font-weight: 400;
+
+  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+  transition: opacity 0.3s 0.2s ease-in-out;
+`;
+
+const IconsWrapper = styled.div`
+  height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+  transform: translateY(${({ isOpen }) => (isOpen ? '0' : '150%')});
+  transition: opacity 0.3s 0.2s ease-in-out, transform 0.4s 0.2s ease-in-out;
 `;
 
 const StyledFacebook = styled(Facebook)`
@@ -54,25 +71,18 @@ const StyledYoutube = styled(Youtube)`
   padding: 15px;
 `;
 
-const IconsWrapper = styled.div`
-  height: 115px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-`;
-
 const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
 
 const MobileMenu = ({ className, isOpen }) => (
   <MenuWrapper className={className} isOpen={isOpen}>
     <MenuLinksWrapper>
       {menuItems.map(item => (
-        <MenuLink key={item}>{item}</MenuLink>
+        <MenuLink isOpen={isOpen} key={item}>
+          {item}
+        </MenuLink>
       ))}
     </MenuLinksWrapper>
-    <IconsWrapper>
+    <IconsWrapper isOpen={isOpen}>
       <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
         <StyledFacebook />
       </a>

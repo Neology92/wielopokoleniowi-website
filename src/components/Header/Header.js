@@ -8,11 +8,10 @@ import Logo from './Logo';
 import MobileMenu from './Menu/MobileMenu';
 
 const Header = () => {
-  const [isMenuOpen, setMenuState] = useState('false');
+  const [isMenuOpen, setMenuState] = useState(false);
 
   const toggleMobileMenu = () => {
     setMenuState(!isMenuOpen);
-    // console.log(isMenuOpen);
   };
 
   return (
