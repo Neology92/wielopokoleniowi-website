@@ -12,6 +12,7 @@ import {
   StyledTelephone,
   StyledMail,
   StyledWeb,
+  StyledPages,
   StyledButton,
 } from './styled';
 
@@ -74,6 +75,7 @@ const Footer = () => {
         </a>
       </Block>
       <Block shadow="none">
+        <StyledPages />
         <StyledButton isTransparent>Zasady Wielopokoleniowych</StyledButton>
         <StyledImg fixed={data.file.childImageSharp.fixed} />
       </Block>

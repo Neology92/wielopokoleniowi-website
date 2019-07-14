@@ -6,6 +6,7 @@ import Youtube from '../Icon/Youtube';
 import Telephone from '../Icon/Telephone';
 import Mail from '../Icon/Mail';
 import Web from '../Icon/Web';
+import Pages from '../Icon/Pages';
 import Button from '../Button/Button';
 
 export const StyledFacebook = styled(Facebook)`
@@ -33,8 +34,22 @@ export const StyledWeb = styled(Web)`
   margin: 24px 0 0;
 `;
 
+export const StyledPages = styled(Pages)`
+  display: none;
+
+  ${({ theme }) => theme.media.above.m} {
+    display: inherit;
+    height: 103px;
+    margin: 23px 0 0;
+  }
+`;
+
 export const StyledButton = styled(Button)`
   margin: 40px 0 0 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    margin: 24px 0 0 0;
+  }
 `;
 
 export const FooterWrap = styled.footer`
