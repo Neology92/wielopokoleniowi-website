@@ -55,22 +55,28 @@ const Footer = () => {
         <StyledImg fixed={data.file.childImageSharp.fixed} />
       </Block>
       <Bar>
-        <div>
-          <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
-            <StyledFacebook />
-          </a>
-          <a href="https://www.youtube.com/">
-            <StyledYoutube />
-          </a>
-        </div>
-        <p>@ 2019 Wielopokoleniowi</p>
-        <p>
-          <Link to="/">REGULAMIN</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
-          <Link to="/">POLITYKA PRYWATNOŚCI</Link>
-        </p>
-        <p>
-          PROJEKT: AVE STUDIO&nbsp;&nbsp;|&nbsp;&nbsp;WDROŻENIE: OSKAR LEGNER
-        </p>
+        <section>
+          <div>
+            <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+              <StyledFacebook />
+            </a>
+            <a href="https://www.youtube.com/">
+              <StyledYoutube />
+            </a>
+          </div>
+        </section>
+        <section>
+          <p>@ 2019 Wielopokoleniowi</p>
+          <p>
+            <Link to="/">REGULAMIN</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to="/">POLITYKA PRYWATNOŚCI</Link>
+          </p>
+        </section>
+        <section>
+          <p>
+            PROJEKT: AVE STUDIO&nbsp;&nbsp;|&nbsp;&nbsp;WDROŻENIE: OSKAR LEGNER
+          </p>
+        </section>
       </Bar>
     </FooterWrapper>
   );

@@ -8,6 +8,20 @@ const Bar = styled.div`
   background-image: url(${bgImage});
   background-size: cover;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 58px 37px 29px;
+
+  section > div {
+    height: 28px;
+    width: 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 15px auto 0 auto;
+  }
 
   &,
   & a {
@@ -23,22 +37,8 @@ const Bar = styled.div`
     cursor: pointer;
   }
 
-  & > div {
-    height: 28px;
-    width: 78px;
-    margin: 15px auto 5px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
   & p {
-    margin-bottom: 0px;
-  }
-
-  & p:nth-child(3n) {
-    margin-top: 2px;
+    margin: 1px 0;
   }
 
   ${({ theme }) => theme.media.above.m} {
