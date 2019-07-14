@@ -30,9 +30,9 @@ const InnerWrapper = styled.div`
 const Burger = styled.div`
   position: relative;
 
-  transform: rotate(${({ isOpen }) => (isOpen ? '45deg' : '0')})
+  transform: rotate(${({ isOpen }) => (isOpen ? '-45deg' : '0')})
     translateY(${({ isOpen }) => (isOpen ? '9px' : '0%')})
-    translateX(${({ isOpen }) => (isOpen ? '4px' : '0%')});
+    translateX(${({ isOpen }) => (isOpen ? '-4px' : '0%')});
 
   &,
   &::after,
@@ -49,8 +49,8 @@ const Burger = styled.div`
   &::after {
     left: 0px;
     top: 18px;
-    transform: rotate(${({ isOpen }) => (isOpen ? '-90deg' : '0')})
-      translateX(${({ isOpen }) => (isOpen ? '18px' : '0%')});
+    transform: rotate(${({ isOpen }) => (isOpen ? '90deg' : '0')})
+      translateX(${({ isOpen }) => (isOpen ? '-18px' : '0%')});
   }
 
   &::before {
@@ -59,8 +59,8 @@ const Burger = styled.div`
 
     opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
 
-    transform: translateX(${({ isOpen }) => (isOpen ? '-9px' : '0')})
-      rotate(${({ isOpen }) => (isOpen ? '-45deg' : '0')});
+    transform: translateX(${({ isOpen }) => (isOpen ? '9px' : '0')})
+      rotate(${({ isOpen }) => (isOpen ? '45deg' : '0')});
   }
 `;
 
