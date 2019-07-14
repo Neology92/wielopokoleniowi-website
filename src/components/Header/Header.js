@@ -31,7 +31,7 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.header`
-  width: calc(100% + 3px);
+  width: 100vw;
   height: 84px;
   background-image: url(${bgImage});
   background-size: cover;
@@ -42,7 +42,7 @@ const HeaderWrapper = styled.header`
 
   position: fixed;
   top: 0;
-  left: -2px;
+  left: 0;
   z-index: 100;
 
   ${({ theme }) => theme.media.above.m} {
