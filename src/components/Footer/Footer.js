@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Img from 'gatsby-image';
+import { StyledButton } from './styled';
+import Block from './Block';
+import FooterWrapper from './FooterWrapper';
+import Bar from './Bar';
 import {
-  FooterWrap,
-  Block,
-  Bar,
   StyledFacebook,
   StyledYoutube,
   StyledTelephone,
   StyledMail,
   StyledWeb,
   StyledPages,
-  StyledButton,
-} from './styled';
+} from './Icons';
 
 // TODO: Make better way to fit image...
 const StyledImg = styled(Img)`
@@ -53,7 +53,7 @@ const Footer = () => {
   `);
 
   return (
-    <FooterWrap>
+    <FooterWrapper>
       <Block shadow="strong">
         <h1>Masz jakieś pytania?</h1>
         <StyledTelephone />
@@ -97,7 +97,7 @@ const Footer = () => {
           PROJEKT: AVE STUDIO&nbsp;&nbsp;|&nbsp;&nbsp;WDROŻENIE: OSKAR LEGNER
         </p>
       </Bar>
-    </FooterWrap>
+    </FooterWrapper>
   );
 };
 
