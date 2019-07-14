@@ -57,10 +57,18 @@ const Footer = () => {
       <Bar>
         <section>
           <div>
-            <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+            <a
+              href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <StyledFacebook />
             </a>
-            <a href="https://www.youtube.com/">
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <StyledYoutube />
             </a>
           </div>
@@ -68,8 +76,13 @@ const Footer = () => {
         <section>
           <p>@ 2019 Wielopokoleniowi</p>
           <p>
-            <Link to="/">REGULAMIN</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to="/">POLITYKA PRYWATNOŚCI</Link>
+            <Link to="/regulamin" rel="nofollow">
+              REGULAMIN
+            </Link>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to="/polityka-prywatnosci" rel="nofollow">
+              POLITYKA PRYWATNOŚCI
+            </Link>
           </p>
         </section>
         <section>
