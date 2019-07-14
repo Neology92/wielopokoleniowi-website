@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import Img from 'gatsby-image';
-import { StyledButton } from './styled';
+import { StyledButton, StyledImg } from './styled';
 import Block from './Block';
 import FooterWrapper from './FooterWrapper';
 import Bar from './Bar';
@@ -15,29 +13,6 @@ import {
   StyledWeb,
   StyledPages,
 } from './Icons';
-
-// TODO: Make better way to fit image...
-const StyledImg = styled(Img)`
-  margin: 25px 0 0;
-  picture {
-    margin: 0 12px;
-  }
-  picture img {
-    width: 170px !important;
-    height: 79px !important;
-  }
-
-  ${({ theme }) => theme.media.above.m} {
-    margin: 35px 0 0;
-    picture {
-      margin: 0 0;
-    }
-    picture img {
-      width: 194px !important;
-      height: 90px !important;
-    }
-  }
-`;
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
