@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
@@ -7,20 +7,29 @@ import Hamburger from './Menu/Hamburger';
 import Logo from './Logo';
 import MobileMenu from './Menu/MobileMenu';
 
-const Header = () => (
-  <HeaderWrapper>
-    <InnerDiv />
-    <InnerDiv>
-      <Link to="/">
-        <StyledLogo />
-      </Link>
-    </InnerDiv>
-    <InnerDiv>
-      <Hamburger />
-      <SyledMobileMenu />
-    </InnerDiv>
-  </HeaderWrapper>
-);
+const Header = () => {
+  const [isMenuOpen, setMenuState] = useState('false');
+
+  const toggleMobileMenu = () => {
+    setMenuState(!isMenuOpen);
+    // console.log(isMenuOpen);
+  };
+
+  return (
+    <HeaderWrapper>
+      <InnerDiv />
+      <InnerDiv>
+        <Link to="/">
+          <StyledLogo />
+        </Link>
+      </InnerDiv>
+      <InnerDiv>
+        <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+        <SyledMobileMenu isOpen={isMenuOpen} />
+      </InnerDiv>
+    </HeaderWrapper>
+  );
+};
 
 const HeaderWrapper = styled.header`
   width: calc(100% + 3px);

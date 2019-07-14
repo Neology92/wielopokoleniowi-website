@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const HamburgerWrapper = styled.button`
@@ -51,12 +52,16 @@ const Burger = styled.div`
   }
 `;
 
-const Hamburger = () => (
-  <HamburgerWrapper>
+const Hamburger = ({ isOpen, ...props }) => (
+  <HamburgerWrapper {...props}>
     <InnerWrapper>
       <Burger />
     </InnerWrapper>
   </HamburgerWrapper>
 );
+
+Hamburger.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+};
 
 export default Hamburger;
