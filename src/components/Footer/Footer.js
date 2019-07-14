@@ -15,8 +15,27 @@ import {
   StyledButton,
 } from './styled';
 
+// TODO: Make better way to fit image...
 const StyledImg = styled(Img)`
   margin: 25px 0 0;
+  picture {
+    margin: 0 12px;
+  }
+  picture img {
+    width: 170px !important;
+    height: 79px !important;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    margin: 35px 0 0;
+    picture {
+      margin: 0 0;
+    }
+    picture img {
+      width: 194px !important;
+      height: 90px !important;
+    }
+  }
 `;
 
 const Footer = () => {
@@ -24,7 +43,7 @@ const Footer = () => {
     query FooterImage {
       file(relativePath: { eq: "family.png" }) {
         childImageSharp {
-          fixed(width: 170, height: 79) {
+          fixed(width: 194, height: 90) {
             ...GatsbyImageSharpFixed_noBase64
           }
         }
