@@ -6,5 +6,9 @@ const TextParagraph = styled.p`
   line-height: 150%;
   opacity: 80%;
   margin: 6px 0 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    font-size: 1.8rem;
+  }
 `;
 export default TextParagraph;

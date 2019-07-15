@@ -12,6 +12,22 @@ const StyledContainer = styled.div`
 const TextSection = styled.section`
   margin: 30px 10px 0;
   text-align: center;
+
+  ${({ theme }) => theme.media.above.s} {
+    width: 454px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 584px;
+    margin: 91px auto;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 754px;
+    margin: 91px auto;
+  }
 `;
 
 const StyledTextParagraph = styled(TextParagraph)`
