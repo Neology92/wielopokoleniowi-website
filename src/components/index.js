@@ -10,6 +10,7 @@ import Web from './Icon/Web';
 import Pages from './Icon/Pages';
 
 import Menu from './Menu/Menu';
+import TextParagraph from './TextParagraph/TextParagraph';
 
 export * from './Headings/Headings';
 export {
@@ -23,4 +24,5 @@ export {
   Web,
   Pages,
   Menu,
+  TextParagraph,
 };

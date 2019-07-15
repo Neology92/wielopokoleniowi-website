@@ -30,8 +30,11 @@ export const SidebarArticleTitle = styled('h5')`
 `;
 
 export const SectionHeading = styled('h2')`
+  margin: 0;
+  font-weight: 500;
   font-family: ${({ theme }) => theme.font.family.atma};
   font-size: 2.4rem;
+  color: ${({ theme }) => theme.color.darkBlue};
 
   ${({ theme }) => theme.media.above.l} {
     font-size: 3.6rem;
