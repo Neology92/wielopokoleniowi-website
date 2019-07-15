@@ -15,7 +15,7 @@ const Block = styled.section`
   flex-direction: column;
   align-items: center;
 
-  h1 {
+  h6 {
     font-size: 18px;
     font-family: ${({ theme }) => theme.font.family.atma};
     font-weight: 500;
@@ -37,7 +37,7 @@ const Block = styled.section`
   ${({ theme }) => theme.media.above.l} {
     box-shadow: ${({ theme }) => theme.shadow.inside.strong};
 
-    h1 {
+    h6 {
       margin: 66px 0 0;
       font-size: 24px;
     }

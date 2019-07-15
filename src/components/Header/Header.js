@@ -38,9 +38,11 @@ const Header = () => {
     <HeaderWrapper>
       <InnerDiv />
       <InnerDiv>
-        <Link to="/">
-          <StyledLogo />
-        </Link>
+        <h1>
+          <Link to="/">
+            <StyledLogo />
+          </Link>
+        </h1>
       </InnerDiv>
       <InnerDiv>
         <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />

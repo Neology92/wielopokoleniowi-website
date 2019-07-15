@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <Block shadow="strong">
-        <h1>Masz jakieś pytania?</h1>
+        <h6>Masz jakieś pytania?</h6>
         <StyledTelephone />
         <a href="tel: +48604968609">+48 604 968 609</a>
         <StyledMail />
@@ -39,11 +39,11 @@ const Footer = () => {
         </a>
       </Block>
       <Block shadow="medium" isDark>
-        <h1>
+        <h6>
           Masz problem?
           <br />
           Szukasz pomocy sukcesyjnej?
-        </h1>
+        </h6>
         <StyledWeb />
         <a href="https://kancelariasukcesyjna.pl/">
           www.kancelariasukcesyjna.pl
