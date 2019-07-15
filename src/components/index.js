@@ -11,6 +11,7 @@ import Pages from './Icon/Pages';
 
 import Menu from './Menu/Menu';
 
+export * from './Headings/Headings';
 export {
   SEO,
   Header,
