@@ -6,6 +6,15 @@ export const theme = {
     darkGrey: '#D9D9D9',
     grey: '#E5E5E5',
     white: '#FFFFFF',
+
+    rgb: {
+      nightBlue: '5,10,35',
+      darkBlue: '36,48,110',
+      lightBlue: '68,84,141',
+      darkGrey: '217,217,217',
+      grey: '229,229,229',
+      white: '255,255,255',
+    },
   },
 
   shadow: {
