@@ -53,7 +53,7 @@ export const GridArticleHeading = styled('h4')`
   font-size: 1.4rem;
 
   ${({ theme }) => theme.media.above.l} {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 `;
 export const SectionSecondHeading = styled('h5')`

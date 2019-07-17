@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const TileWrapper = styled.div`
@@ -23,13 +22,4 @@ const TileWrapper = styled.div`
   }
 `;
 
-// eslint-disable-next-line
-export default class ArticleTile extends Component {
-  render() {
-    return (
-      <TileWrapper>
-        <h6>Artykuł</h6>
-      </TileWrapper>
-    );
-  }
-}
+export default TileWrapper;

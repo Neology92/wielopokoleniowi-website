@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import ArticleTile from './ArticleTile';
+import ArticleTile from '../ArticleTile/ArticleTile';
 
-// eslint-disable-next-line
 const ArticlesGrid = () => {
   const data = useStaticQuery(graphql`
     {

@@ -11,8 +11,8 @@ import Pages from './Icon/Pages';
 
 import Menu from './Menu/Menu';
 import TextParagraph from './TextParagraph/TextParagraph';
-import ArticlesGrid from './ArticlesGrid';
-import ArticleTile from './ArticleTile';
+import ArticlesGrid from './ArticlesGrid/ArticlesGrid';
+import ArticleTile from './ArticleTile/ArticleTile';
 
 export * from './Headings/Headings';
 export {
