@@ -4,6 +4,7 @@ const TileWrapper = styled.div`
   width: 165px;
   height: 190px;
   border-radius: 10px;
+  text-align: left;
   background: ${({ theme }) => theme.color.grey};
 
   ${({ theme }) => theme.media.above.m} {
