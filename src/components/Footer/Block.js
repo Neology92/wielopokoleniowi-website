@@ -6,9 +6,9 @@ const Block = styled.section`
   background-color: ${({ isDark, theme }) =>
     isDark ? theme.color.darkGrey : theme.color.grey};
   box-shadow: ${({ shadow, theme }) => {
-    if (shadow == 'strong') return theme.shadow.inside.strong;
-    else if (shadow == 'medium') return theme.shadow.inside.medium;
-    else return theme.shadow.inside.none;
+    if (shadow === 'strong') return theme.shadow.inside.strong;
+    if (shadow === 'medium') return theme.shadow.inside.medium;
+    return theme.shadow.inside.none;
   }};
 
   display: flex;
