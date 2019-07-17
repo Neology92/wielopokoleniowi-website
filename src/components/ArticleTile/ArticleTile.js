@@ -8,10 +8,8 @@ import TileIconBg from './TileIconBg';
 const ArticleTile = ({ post }) => {
   return (
     <TileWrapper>
-      <TileIconBg />
-      <GridArticleHeading category={post.category}>
-        {post.title}
-      </GridArticleHeading>
+      <TileIconBg category={post.category} />
+      <GridArticleHeading>{post.title}</GridArticleHeading>
       <p>{post.category}</p>
     </TileWrapper>
   );
