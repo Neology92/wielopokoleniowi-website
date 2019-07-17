@@ -1,8 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import ArticleTile from './ArticleTile';
 
+// eslint-disable-next-line
+const ArticlesGrid = () => {
+  const data = useStaticQuery(graphql`
+    {
+      graphcms {
+        posts {
+          id
+          title
+          category
+          body {
+            html
+          }
+          icon {
+            url
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <ArtcilesWrapper>
+      {data.graphcms.posts.map(post => (
+        <ArticleTile post={post} key={post.id} />
+      ))}
+    </ArtcilesWrapper>
+  );
+};
 const ArtcilesWrapper = styled.div`
   margin: 24px auto 0;
   display: grid;
@@ -36,18 +65,4 @@ const ArtcilesWrapper = styled.div`
   }
 `;
 
-// eslint-disable-next-line
-export default class ArticlesGrid extends Component {
-  render() {
-    return (
-      <ArtcilesWrapper>
-        <ArticleTile />
-        <ArticleTile />
-        <ArticleTile />
-        <ArticleTile />
-        <ArticleTile />
-        <ArticleTile />
-      </ArtcilesWrapper>
-    );
-  }
-}
+export default ArticlesGrid;
