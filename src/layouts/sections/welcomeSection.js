@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { SectionHeading, TextParagraph } from 'components';
 
-const TextSection = styled.section`
+const SectionWrapper = styled.section`
   margin: 30px 10px 0;
   text-align: center;
 
@@ -29,7 +29,7 @@ const StyledTextParagraph = styled(TextParagraph)`
 `;
 
 const WelcomeSection = () => (
-  <TextSection>
+  <SectionWrapper>
     <SectionHeading>Łączy nas PRZYSZŁOŚĆ</SectionHeading>
     <TextParagraph>
       Jeśli dbasz o siebie, swoją rodzinę, majątek lub firmę - znalazłeś się w
@@ -42,7 +42,7 @@ const WelcomeSection = () => (
     </TextParagraph>
     <StyledTextParagraph>Cieszę się, że tu zajrzałeś!</StyledTextParagraph>
     <TextParagraph>Łukasz Martyniec</TextParagraph>
-  </TextSection>
+  </SectionWrapper>
 );
 
 export default WelcomeSection;
