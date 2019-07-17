@@ -11,6 +11,8 @@ import Pages from './Icon/Pages';
 
 import Menu from './Menu/Menu';
 import TextParagraph from './TextParagraph/TextParagraph';
+import ArticlesGrid from './ArticlesGrid';
+import ArticleTile from './ArticleTile';
 
 export * from './Headings/Headings';
 export {
@@ -25,4 +27,6 @@ export {
   Pages,
   Menu,
   TextParagraph,
+  ArticlesGrid,
+  ArticleTile,
 };
