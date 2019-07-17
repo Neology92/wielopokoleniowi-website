@@ -36,6 +36,16 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'Articles',
+        fieldName: 'articles',
+        url:
+          'https://api-euwest.graphcms.com/v1/cjy70z12s0z1z01dk10jdjcqb/master',
+      },
+    },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
