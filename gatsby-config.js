@@ -39,8 +39,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        typeName: 'Articles',
-        fieldName: 'articles',
+        typeName: 'GraphCMS',
+        fieldName: 'graphcms',
         url:
           'https://api-euwest.graphcms.com/v1/cjy70z12s0z1z01dk10jdjcqb/master',
       },
