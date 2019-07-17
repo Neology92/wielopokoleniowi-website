@@ -6,7 +6,8 @@ import { SEO, Menu } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
-  height: 1500px;
+  height: 100%;
+  margin: 0 0 10vw 0;
 `;
 
 const IndexPage = () => (
