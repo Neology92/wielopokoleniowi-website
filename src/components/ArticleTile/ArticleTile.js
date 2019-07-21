@@ -5,12 +5,12 @@ import styled from 'styled-components';
 import { GridArticleHeading } from '../Headings/Headings';
 import TileWrapper from './TileWrapper';
 import TileIcon from './TileIcon';
-import DescriptionWrapper from './DescriptionWrapper';
+import { DescriptionWrapper, P } from './TileDescription';
 
 const StyledArticleHeading = styled(GridArticleHeading)`
-  margin: 10px 0;
+  margin: 0 0 7px 0;
   ${({ theme }) => theme.media.above.l} {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
   }
 `;
 
@@ -22,7 +22,7 @@ const ArticleTile = ({ post }) => {
       </TileIcon>
       <DescriptionWrapper>
         <StyledArticleHeading>{post.title}</StyledArticleHeading>
-        <p>{post.category}</p>
+        <P>{post.body.text}</P>
       </DescriptionWrapper>
     </TileWrapper>
   );

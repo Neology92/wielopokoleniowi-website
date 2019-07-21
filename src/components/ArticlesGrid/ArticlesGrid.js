@@ -14,6 +14,7 @@ const ArticlesGrid = () => {
           category
           body {
             html
+            text
           }
           icon {
             url
