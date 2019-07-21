@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import React from 'react';
 
-const TileIconBg = ({ category, icon }) => (
+const TileIcon = ({ category, icon }) => (
   <IconWrapper category={category}>
-    <img src={icon} alt="article icon" />
+    <Icon src={icon} alt="article icon" />
   </IconWrapper>
 );
 
@@ -28,13 +28,18 @@ const IconWrapper = styled.div`
   }
 `;
 
-TileIconBg.propTypes = {
+const Icon = styled.img`
+  margin: 15px auto;
+  height: 65%;
+`;
+
+TileIcon.propTypes = {
   category: PropTypes.string.isRequired,
   icon: PropTypes.string,
 };
 
-TileIconBg.defaultProps = {
+TileIcon.defaultProps = {
   icon: '',
 };
 
-export default TileIconBg;
+export default TileIcon;

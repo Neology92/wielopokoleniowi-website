@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { GridArticleHeading } from '../Headings/Headings';
 import TileWrapper from './TileWrapper';
-import TileIconBg from './TileIconBg';
+import TileIcon from './TileIcon';
 import DescriptionWrapper from './DescriptionWrapper';
 
 const StyledArticleHeading = styled(GridArticleHeading)`
@@ -17,9 +17,9 @@ const StyledArticleHeading = styled(GridArticleHeading)`
 const ArticleTile = ({ post }) => {
   return (
     <TileWrapper>
-      <TileIconBg category={post.category} icon={post.icon.url}>
+      <TileIcon category={post.category} icon={post.icon.url}>
         icon
-      </TileIconBg>
+      </TileIcon>
       <DescriptionWrapper>
         <StyledArticleHeading>{post.title}</StyledArticleHeading>
         <p>{post.category}</p>
