@@ -17,7 +17,9 @@ const StyledArticleHeading = styled(GridArticleHeading)`
 const ArticleTile = ({ post }) => {
   return (
     <TileWrapper>
-      <TileIconBg category={post.category}>icon</TileIconBg>
+      <TileIconBg category={post.category} icon={post.icon.url}>
+        icon
+      </TileIconBg>
       <DescriptionWrapper>
         <StyledArticleHeading>{post.title}</StyledArticleHeading>
         <p>{post.category}</p>

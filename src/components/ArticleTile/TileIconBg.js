@@ -1,6 +1,15 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const TileIconBg = styled.div`
+import React from 'react';
+
+const TileIconBg = ({ category, icon }) => (
+  <IconWrapper category={category}>
+    <img src={icon} alt="article icon" />
+  </IconWrapper>
+);
+
+const IconWrapper = styled.div`
   width: 100%;
   height: 44%;
   border-radius: 10px 10px 0 0;
@@ -18,5 +27,14 @@ const TileIconBg = styled.div`
     height: 50%;
   }
 `;
+
+TileIconBg.propTypes = {
+  category: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+};
+
+TileIconBg.defaultProps = {
+  icon: '',
+};
 
 export default TileIconBg;
