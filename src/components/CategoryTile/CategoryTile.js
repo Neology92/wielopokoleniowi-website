@@ -1,16 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const Category = ({ className }) => {
-  return (
-    <div className={className}>
-      <h1> icon </h1>
-    </div>
-  );
-};
-
-const CategoryTile = styled(Category)`
+const CategoryTile = styled.div`
   height: 100%;
   width: 50%;
   background: ${({ theme: { color }, isDark }) =>
@@ -22,9 +12,5 @@ const CategoryTile = styled(Category)`
 
   color: white;
 `;
-
-Category.propTypes = {
-  className: PropTypes.string.isRequired,
-};
 
 export default CategoryTile;

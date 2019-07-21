@@ -8,6 +8,8 @@ import Telephone from './Icon/Telephone';
 import Mail from './Icon/Mail';
 import Web from './Icon/Web';
 import Pages from './Icon/Pages';
+import Bussines from './Icon/Bussines';
+import Everyone from './Icon/Everyone';
 
 import Menu from './Menu/Menu';
 import TextParagraph from './TextParagraph/TextParagraph';
@@ -32,4 +34,6 @@ export {
   PostsGrid,
   PostTile,
   CategoryTile,
+  Bussines,
+  Everyone,
 };
