@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MainLayout, WelcomeSection, ArticlesSection } from 'layouts';
+import { MainLayout, WelcomeSection, PostsSection } from 'layouts';
 import { SEO, Menu } from 'components';
 
 const StyledContainer = styled.div`
@@ -16,7 +16,7 @@ const IndexPage = () => (
     <StyledContainer>
       <Menu />
       <WelcomeSection />
-      <ArticlesSection />
+      <PostsSection />
     </StyledContainer>
   </MainLayout>
 );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ArticlesGridWrapper = styled.div`
+const PostsGridWrapper = styled.div`
   margin: 24px auto 0;
   display: grid;
   grid-template-columns: repeat(2, 165px);
@@ -33,4 +33,4 @@ const ArticlesGridWrapper = styled.div`
   }
 `;
 
-export default ArticlesGridWrapper;
+export default PostsGridWrapper;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ArticleMainHeading = styled('h2')`
+export const PostMainHeading = styled('h2')`
   font-family: ${({ theme }) => theme.font.family.roboto};
   font-size: 2.4rem;
 
@@ -8,7 +8,7 @@ export const ArticleMainHeading = styled('h2')`
     font-size: 1.8rem;
   }
 `;
-export const ArticleInsideHeading = styled('h3')`
+export const PostInsideHeading = styled('h3')`
   font-family: ${({ theme }) => theme.font.family.roboto};
   font-size: 1.2rem;
 
@@ -20,7 +20,7 @@ export const SidebarHeading = styled('h4')`
   font-family: ${({ theme }) => theme.font.family.atma};
   font-size: 2.4rem;
 `;
-export const SidebarArticleTitle = styled('h5')`
+export const SidebarPostTitle = styled('h5')`
   font-family: ${({ theme }) => theme.font.family.roboto};
   font-size: 1.4rem;
 
@@ -48,7 +48,7 @@ export const CategoryHeading = styled('h3')`
     display: none;
   }
 `;
-export const GridArticleHeading = styled('h4')`
+export const GridPostHeading = styled('h4')`
   font-family: ${({ theme }) => theme.font.family.roboto};
   font-weight: 500;
   font-size: 1.4rem;

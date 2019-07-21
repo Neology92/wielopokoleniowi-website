@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import slugify from 'slugify';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import ArticleTile from '../ArticleTile/ArticleTile';
-import ArticlesGridWrapper from './ArticlesGridWrapper';
+import PostTile from '../PostTile/PostTile';
+import PostsGridWrapper from './PostsGridWrapper';
 
-const ArticlesGrid = () => {
+const PostsGrid = () => {
   const data = useStaticQuery(graphql`
     {
       graphcms {
@@ -27,13 +27,13 @@ const ArticlesGrid = () => {
   `);
 
   return (
-    <ArticlesGridWrapper>
+    <PostsGridWrapper>
       {data.graphcms.posts.map(post => (
         <StyledLink key={post.id} to={`/${slugify(post.title.toLowerCase())}`}>
-          <ArticleTile post={post} />
+          <PostTile post={post} />
         </StyledLink>
       ))}
-    </ArticlesGridWrapper>
+    </PostsGridWrapper>
   );
 };
 
@@ -42,4 +42,4 @@ const StyledLink = styled(Link)`
   color: inherit;
 `;
 
-export default ArticlesGrid;
+export default PostsGrid;

@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SectionHeading, ArticlesGrid } from 'components';
+import { SectionHeading, PostsGrid } from 'components';
 
 const SectionWrapper = styled.section`
   margin: 30px 10px 0;
   text-align: center;
 `;
 
-const ArticlesSection = () => {
+const PostsSection = () => {
   return (
     <SectionWrapper>
       <SectionHeading>Najnowsze artykuły</SectionHeading>
-      <ArticlesGrid />
+      <PostsGrid />
     </SectionWrapper>
   );
 };
 
-export default ArticlesSection;
+export default PostsSection;

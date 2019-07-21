@@ -11,8 +11,8 @@ import Pages from './Icon/Pages';
 
 import Menu from './Menu/Menu';
 import TextParagraph from './TextParagraph/TextParagraph';
-import ArticlesGrid from './ArticlesGrid/ArticlesGrid';
-import ArticleTile from './ArticleTile/ArticleTile';
+import PostsGrid from './PostsGrid/PostsGrid';
+import PostTile from './PostTile/PostTile';
 
 export * from './Headings/Headings';
 export {
@@ -27,6 +27,6 @@ export {
   Pages,
   Menu,
   TextParagraph,
-  ArticlesGrid,
-  ArticleTile,
+  PostsGrid,
+  PostTile,
 };

@@ -1,5 +1,5 @@
 import MainLayout from './mainLayout';
 import WelcomeSection from './sections/welcomeSection';
-import ArticlesSection from './sections/articlesSection';
+import PostsSection from './sections/postsSection';
 
-export { MainLayout, WelcomeSection, ArticlesSection };
+export { MainLayout, WelcomeSection, PostsSection };
