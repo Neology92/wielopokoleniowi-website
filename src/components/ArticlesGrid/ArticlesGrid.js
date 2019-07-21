@@ -29,7 +29,7 @@ const ArticlesGrid = () => {
   return (
     <ArticlesGridWrapper>
       {data.graphcms.posts.map(post => (
-        <StyledLink key={post.id} to={slugify(post.title)}>
+        <StyledLink key={post.id} to={slugify(post.title.toLowerCase())}>
           <ArticleTile post={post} />
         </StyledLink>
       ))}

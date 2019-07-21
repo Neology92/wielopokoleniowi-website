@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   postsQuery.data.graphcms.posts.edges.forEach(post => {
     createPage({
-      path: slugify(post.node.title),
+      path: slugify(post.node.title.toLowerCase()),
       component: postLayout,
       context: {
         data: post.node,
