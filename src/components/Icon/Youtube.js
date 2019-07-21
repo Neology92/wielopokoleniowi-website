@@ -8,7 +8,10 @@ const Youtube = ({ className }) => (
 );
 
 Youtube.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+Youtube.defaultProps = {
+  className: '',
 };
 
 export default Youtube;

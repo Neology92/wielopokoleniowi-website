@@ -8,7 +8,10 @@ const Facebook = ({ className }) => (
 );
 
 Facebook.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+Facebook.defaultProps = {
+  className: '',
 };
 
 export default Facebook;
