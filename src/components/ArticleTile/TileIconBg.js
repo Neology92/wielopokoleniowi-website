@@ -5,6 +5,10 @@ const TileIconBg = styled.div`
   height: 50%;
   border-radius: 10px 10px 0 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: ${({ category, theme }) => {
     if (category === 'Bussines') return theme.color.nightBlue;
     return theme.color.lightBlue;

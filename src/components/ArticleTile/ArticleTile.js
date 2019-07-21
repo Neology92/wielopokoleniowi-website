@@ -16,7 +16,7 @@ const DescWrapper = styled.div`
 const ArticleTile = ({ post }) => {
   return (
     <TileWrapper>
-      <TileIconBg category={post.category} />
+      <TileIconBg category={post.category}>icon</TileIconBg>
       <DescWrapper>
         <GridArticleHeading>{post.title}</GridArticleHeading>
         <p>{post.category}</p>
