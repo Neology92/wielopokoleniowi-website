@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import { StyledButton, StyledImg } from './styled';
+import { StyledButton, StyledImg, StyledLink } from './styled';
 import Block from './Block';
 import FooterWrapper from './FooterWrapper';
 import Bar from './Bar';
@@ -45,13 +45,19 @@ const Footer = () => {
           Szukasz pomocy sukcesyjnej?
         </h6>
         <StyledWeb />
-        <a href="https://kancelariasukcesyjna.pl/">
+        <a
+          href="https://kancelariasukcesyjna.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           www.kancelariasukcesyjna.pl
         </a>
       </Block>
       <Block shadow="none">
         <StyledPages />
-        <StyledButton isTransparent>Zasady Wielopokoleniowych</StyledButton>
+        <StyledLink to="/zasady-wielopokoleniowych">
+          <StyledButton isTransparent>Zasady Wielopokoleniowych</StyledButton>
+        </StyledLink>
         <StyledImg fixed={data.file.childImageSharp.fixed} />
       </Block>
       <Bar>
