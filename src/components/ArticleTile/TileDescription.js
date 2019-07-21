@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { GridArticleHeading } from '../Headings/Headings';
 
 export const DescriptionWrapper = styled.div`
   box-sizing: border-box;
@@ -14,6 +15,13 @@ export const DescriptionWrapper = styled.div`
   ${({ theme }) => theme.media.above.l} {
     padding: 21px 16px 16px 16px;
     height: 50%;
+  }
+`;
+
+export const StyledArticleHeading = styled(GridArticleHeading)`
+  margin: 0 0 7px 0;
+  ${({ theme }) => theme.media.above.l} {
+    margin: 0 0 20px 0;
   }
 `;
 

@@ -1,18 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { GridArticleHeading } from '../Headings/Headings';
 import TileWrapper from './TileWrapper';
 import TileIcon from './TileIcon';
-import { DescriptionWrapper, P } from './TileDescription';
-
-const StyledArticleHeading = styled(GridArticleHeading)`
-  margin: 0 0 7px 0;
-  ${({ theme }) => theme.media.above.l} {
-    margin: 0 0 20px 0;
-  }
-`;
+import { DescriptionWrapper, P, StyledArticleHeading } from './TileDescription';
 
 const ArticleTile = ({ post }) => {
   return (
