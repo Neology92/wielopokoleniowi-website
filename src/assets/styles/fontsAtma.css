@@ -3,8 +3,7 @@
   font-family: 'Atma';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/atma-400.woff2') format('woff2'),
-    url('../fonts/atma-400.woff') format('woff');
+  src: url('../fonts/atma-400.ttf') format('truetype');
 }
 
 /* atma-500  */
@@ -12,6 +11,5 @@
   font-family: 'Atma';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/atma-500.woff2') format('woff2'),
-    url('../fonts/atma-500.woff') format('woff');
+  src: url('../fonts/atma-500.ttf') format('truetype');
 }
