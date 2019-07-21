@@ -50,6 +50,7 @@ export const CategoryHeading = styled('h3')`
 `;
 export const GridArticleHeading = styled('h4')`
   font-family: ${({ theme }) => theme.font.family.roboto};
+  font-weight: 500;
   font-size: 1.4rem;
 
   ${({ theme }) => theme.media.above.l} {
