@@ -14,6 +14,8 @@ import TextParagraph from './TextParagraph/TextParagraph';
 import PostsGrid from './PostsGrid/PostsGrid';
 import PostTile from './PostTile/PostTile';
 
+import CategoryTile from './CategoryTile/CategoryTile';
+
 export * from './Headings/Headings';
 export {
   SEO,
@@ -29,4 +31,5 @@ export {
   TextParagraph,
   PostsGrid,
   PostTile,
+  CategoryTile,
 };

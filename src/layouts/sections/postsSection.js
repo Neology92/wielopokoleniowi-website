@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { SectionHeading, PostsGrid } from 'components';
 
 const SectionWrapper = styled.section`
-  margin: 30px 10px 0;
+  margin: 58px 10px 0;
   text-align: center;
 `;
 
