@@ -14,12 +14,12 @@ const DescWrapper = styled.div`
 
   p {
     color: rgba(${({ theme }) => theme.color.rgb.nightBlue}, 0.6);
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
   }
   ${({ theme }) => theme.media.above.l} {
     margin: 0 17px;
     p {
-      font-size: 1.6 rem;
+      font-size: 1.6rem;
     }
   }
 `;
