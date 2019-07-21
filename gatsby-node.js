@@ -1,7 +1,39 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`);
+const slugify = require(`slugify`);
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const postLayout = path.resolve(`src/layouts/postLayout.js`);
+  const postsQuery = await graphql(`
+    {
+      graphcms {
+        posts: postsConnection(first: 100) {
+          edges {
+            node {
+              id
+              title
+              category
+              body {
+                html
+                text
+              }
+              icon {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  postsQuery.data.graphcms.posts.edges.forEach(post => {
+    createPage({
+      path: slugify(post.node.title),
+      component: postLayout,
+      context: {
+        data: post.node,
+      },
+    });
+  });
+};
