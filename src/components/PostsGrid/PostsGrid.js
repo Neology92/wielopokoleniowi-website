@@ -10,16 +10,20 @@ const PostsGrid = () => {
   const data = useStaticQuery(graphql`
     {
       graphcms {
-        posts {
-          id
-          title
-          category
-          body {
-            html
-            text
-          }
-          icon {
-            url
+        posts: postsConnection(first: 6, orderBy: createdAt_DESC) {
+          edges {
+            node {
+              title
+              category
+              level
+              body {
+                html
+                text
+              }
+              icon {
+                url
+              }
+            }
           }
         }
       }
@@ -28,9 +32,9 @@ const PostsGrid = () => {
 
   return (
     <PostsGridWrapper>
-      {data.graphcms.posts.map(post => (
-        <StyledLink key={post.id} to={`/${slugify(post.title.toLowerCase())}`}>
-          <PostTile post={post} />
+      {data.graphcms.posts.edges.map(({ node }) => (
+        <StyledLink key={node.id} to={`/${slugify(node.title.toLowerCase())}`}>
+          <PostTile post={node} />
         </StyledLink>
       ))}
     </PostsGridWrapper>

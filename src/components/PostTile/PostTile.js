@@ -24,6 +24,7 @@ PostTile.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
+    level: PropTypes.string.isRequired,
     body: PropTypes.shape({
       html: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
