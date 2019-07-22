@@ -6,6 +6,7 @@ import {
   WelcomeSection,
   PostsSection,
   CategoriesSection,
+  AboutSection,
 } from 'layouts';
 import { SEO, Menu } from 'components';
 
@@ -23,6 +24,7 @@ const IndexPage = () => (
       <WelcomeSection />
       <CategoriesSection />
       <PostsSection />
+      <AboutSection />
     </StyledContainer>
   </MainLayout>
 );
