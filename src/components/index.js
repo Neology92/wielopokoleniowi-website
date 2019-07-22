@@ -11,6 +11,9 @@ import Pages from './Icon/Pages';
 import Bussines from './Icon/Bussines';
 import Everyone from './Icon/Everyone';
 
+import FamilyLeft from './FamilyLeft/FamilyLeft';
+import FamilyRight from './FamilyRight/FamilyRight';
+
 import Menu from './Menu/Menu';
 import TextParagraph from './TextParagraph/TextParagraph';
 import PostsGrid from './PostsGrid/PostsGrid';
@@ -29,6 +32,8 @@ export {
   Mail,
   Web,
   Pages,
+  FamilyLeft,
+  FamilyRight,
   Menu,
   TextParagraph,
   PostsGrid,
