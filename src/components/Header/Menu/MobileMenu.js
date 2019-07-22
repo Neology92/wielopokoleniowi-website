@@ -1,9 +1,34 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import slugify from 'slugify';
+
 import Facebook from '../../Icon/Facebook';
 import Youtube from '../../Icon/Youtube';
+
+const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
+
+const MobileMenu = ({ className, isOpen }) => (
+  <MenuWrapper className={className} isOpen={isOpen}>
+    <MenuLinksWrapper>
+      {menuItems.map(item => (
+        <MenuLink isOpen={isOpen} key={item}>
+          <StyledLink to={`/${slugify(item.toLowerCase())}`}>{item}</StyledLink>
+        </MenuLink>
+      ))}
+    </MenuLinksWrapper>
+    <IconsWrapper isOpen={isOpen}>
+      <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+        <StyledFacebook />
+      </a>
+      <a href="https://www.youtube.com/">
+        <StyledYoutube />
+      </a>
+    </IconsWrapper>
+  </MenuWrapper>
+);
 
 const MenuWrapper = styled.nav`
   height: 610px;
@@ -48,6 +73,11 @@ const MenuLink = styled.li`
   transition: opacity 0.3s 0.2s ease-in-out;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const IconsWrapper = styled.div`
   height: 115px;
 
@@ -70,28 +100,6 @@ const StyledYoutube = styled(Youtube)`
   height: 28px;
   padding: 15px;
 `;
-
-const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
-
-const MobileMenu = ({ className, isOpen }) => (
-  <MenuWrapper className={className} isOpen={isOpen}>
-    <MenuLinksWrapper>
-      {menuItems.map(item => (
-        <MenuLink isOpen={isOpen} key={item}>
-          {item}
-        </MenuLink>
-      ))}
-    </MenuLinksWrapper>
-    <IconsWrapper isOpen={isOpen}>
-      <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
-        <StyledFacebook />
-      </a>
-      <a href="https://www.youtube.com/">
-        <StyledYoutube />
-      </a>
-    </IconsWrapper>
-  </MenuWrapper>
-);
 
 MobileMenu.propTypes = {
   className: PropTypes.string.isRequired,
