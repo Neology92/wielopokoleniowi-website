@@ -9,6 +9,7 @@ import Facebook from '../Icon/Facebook';
 import Youtube from '../Icon/Youtube';
 
 const InnerDiv = styled.div`
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

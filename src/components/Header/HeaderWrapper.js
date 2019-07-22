@@ -10,7 +10,7 @@ const HeaderWrapper = styled.header`
 
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 100%;
 
   position: fixed;
   top: 0;
