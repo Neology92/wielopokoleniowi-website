@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const TileWrapper = styled.div`
+  position: relative;
   width: 165px;
   height: 190px;
   border-radius: 10px;
