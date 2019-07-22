@@ -19,13 +19,13 @@ const InnerWrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.above.m} {
-    width: 584px;
-    margin: 91px auto;
+    width: 585px;
+    margin: 60px auto 91px;
   }
 
   ${({ theme }) => theme.media.above.l} {
     width: 754px;
-    margin: 91px auto;
+    margin: 93px auto;
   }
 `;
 
