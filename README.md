@@ -1,4 +1,6 @@
 Issues (TODO):
 
 - dummy way of setting graphics in footer
-- artcile -> post
+- stars
+- bg
+- people
