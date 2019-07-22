@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+
+import slugify from 'slugify';
 
 const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
 
@@ -9,7 +12,11 @@ const Menu = () => {
       <nav>
         <MenuLinksWrapper>
           {menuItems.map(item => (
-            <MenuLink key={item}>{item}</MenuLink>
+            <MenuLink key={item}>
+              <StyledLink to={`/${slugify(item.toLowerCase())}`}>
+                {item}
+              </StyledLink>
+            </MenuLink>
           ))}
         </MenuLinksWrapper>
       </nav>
@@ -31,6 +38,11 @@ const MenuLink = styled.li`
   color: ${({ theme }) => theme.color.nightBlue};
   font-size: 2.4rem;
   font-weight: 400;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;
 
 const MenuContiner = styled.div`
