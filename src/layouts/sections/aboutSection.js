@@ -49,10 +49,11 @@ const SectionWrapper = styled.section`
 
   ${({ theme }) => theme.media.above.l} {
     margin: 110px auto 0;
-    width: 684px;
+    width: 800px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   ${({ theme }) => theme.media.above.xl} {
@@ -76,12 +77,11 @@ const TextWrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.above.m} {
-    width: 585px;
     margin: 60px auto 91px;
   }
 
   ${({ theme }) => theme.media.above.l} {
-    width: 754px;
+    width: 500px;
     margin: 93px 0 0 70px;
 
     p {
@@ -90,6 +90,7 @@ const TextWrapper = styled.div`
 
     button {
       display: block;
+      margin: 40px 0 0 auto;
     }
   }
 `;
@@ -109,11 +110,11 @@ const LukasWrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.above.l} {
-    margin-left: -20px;
+    margin-left: -25px;
     order: -1;
 
     div {
-      width: 300px;
+      width: 400px;
     }
     button {
       display: none;
