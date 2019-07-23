@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 import { SectionHeading, TextParagraph, Button, LukasDesk } from 'components';
 
@@ -17,26 +16,17 @@ const AboutSection = () => (
         świat”. Jeszcze inni zaczynają drążyć… Testament to w tym wypadku tylko
         hasło i pretekst do dalszej rozmowy.
       </TextParagraph>
-      <Link to="/o-autorze">
-        <StyledButton>Czytaj</StyledButton>
-      </Link>
+      <Button to="/o-autorze">Czytaj</Button>
     </TextWrapper>
 
     <LukasWrapper>
       <div>
         <LukasDesk />
       </div>
-      <Link to="/o-autorze">
-        <StyledButton>Czytaj</StyledButton>
-      </Link>
+      <Button to="/o-autorze">Czytaj</Button>
     </LukasWrapper>
   </SectionWrapper>
 );
-
-const StyledButton = styled(Button)`
-  padding-left: 25px;
-  padding-right: 25px;
-`;
 
 const StyledSectionHeading = styled(SectionHeading)`
   ${({ theme }) => theme.media.above.l} {
@@ -76,7 +66,7 @@ const TextWrapper = styled.div`
   margin: 30px 10px 0;
   text-align: center;
 
-  button {
+  a {
     display: none;
   }
 
@@ -99,8 +89,9 @@ const TextWrapper = styled.div`
       text-align: right;
     }
 
-    button {
-      display: block;
+    a {
+      display: inherit;
+      width: 90px;
       margin: 40px 0 0 auto;
     }
   }
@@ -116,7 +107,7 @@ const LukasWrapper = styled.div`
     width: 188px;
   }
 
-  button {
+  a {
     margin: 13px;
   }
 
@@ -127,8 +118,9 @@ const LukasWrapper = styled.div`
       width: 300px;
     }
 
-    button {
+    a {
       margin: 46px;
+      padding: 0 35px;
     }
   }
 
@@ -139,7 +131,7 @@ const LukasWrapper = styled.div`
     div {
       width: 400px;
     }
-    button {
+    a {
       display: none;
     }
   }

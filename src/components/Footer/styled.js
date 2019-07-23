@@ -1,26 +1,20 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { Link } from 'gatsby';
 
 import Button from '../Button/Button';
 
 export const StyledButton = styled(Button)`
-  margin: 0 !important;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  ${({ theme }) => theme.media.above.m} {
-    margin: 24px 0 0 0;
-    font-size: 18px;
-    padding: 10px 20px;
-  }
-`;
-
-export const StyledLink = styled(Link)`
   margin: 40px 0 0 0 !important;
-  padding: 0 0 0 0 !important;
+
+  text-decoration: none !important;
+
+  font-size: 14px !important;
+  font-weight: 500 !important;
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 24px 0 0 0 !important;
+    font-size: 18px !important;
+  }
 `;
 
 // TODO: Make better way to fit image...

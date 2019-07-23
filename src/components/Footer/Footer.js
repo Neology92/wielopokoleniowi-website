@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import { StyledButton, StyledImg, StyledLink } from './styled';
+import { StyledButton, StyledImg } from './styled';
 import Block from './Block';
 import FooterWrapper from './FooterWrapper';
 import Bar from './Bar';
@@ -55,9 +55,10 @@ const Footer = () => {
       </Block>
       <Block shadow="none">
         <StyledPages />
-        <StyledLink to="/zasady-wielopokoleniowych">
-          <StyledButton isTransparent>Zasady Wielopokoleniowych</StyledButton>
-        </StyledLink>
+        <StyledButton to="/zasady-wielopokoleniowych" isTransparent>
+          Zasady Wielopokoleniowych
+        </StyledButton>
+
         <StyledImg fixed={data.file.childImageSharp.fixed} />
       </Block>
       <Bar>
