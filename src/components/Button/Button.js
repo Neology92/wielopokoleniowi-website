@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  height: ${({ isBig }) => (isBig ? '36px' : '33px')};
+  height: 33px;
   padding: 10px 14px;
 
   background: ${({ isTransparent, theme }) =>

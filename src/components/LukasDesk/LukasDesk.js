@@ -7,7 +7,7 @@ const LukasDesk = () => {
     query {
       file(relativePath: { eq: "LukasDesk.png" }) {
         childImageSharp {
-          fluid(maxWidth: 493) {
+          fluid(maxWidth: 493, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
