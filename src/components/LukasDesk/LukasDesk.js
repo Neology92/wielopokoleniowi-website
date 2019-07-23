@@ -7,15 +7,17 @@ const LukasDesk = () => {
     query {
       file(relativePath: { eq: "LukasDesk.png" }) {
         childImageSharp {
-          fixed(width: 493, height: 500) {
-            ...GatsbyImageSharpFixed_noBase64
+          fluid(maxWidth: 493) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
+  // fixed(width: 493, height: 500) {
+  // ...GatsbyImageSharpFixed_noBase64
 
-  return <Img fixed={data.file.childImageSharp.fixed} />;
+  return <Img fluid={data.file.childImageSharp.fluid} />;
 };
 
 export default LukasDesk;

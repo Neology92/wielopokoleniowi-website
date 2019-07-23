@@ -31,6 +31,20 @@ const SectionWrapper = styled.section`
   overflow: hidden;
 `;
 
+const LukasWrapper = styled.div`
+  margin: 7px 26px;
+  display: flex;
+  flex-direction: row;
+
+  div {
+    width: 188px;
+  }
+
+  button {
+    margin: 13px;
+  }
+`;
+
 const AboutSection = () => (
   <SectionWrapper>
     <InnerWrapper>
@@ -46,9 +60,12 @@ const AboutSection = () => (
       </TextParagraph>
     </InnerWrapper>
 
-    <LukasDesk />
-
-    <Button>Czytaj</Button>
+    <LukasWrapper>
+      <div>
+        <LukasDesk />
+      </div>
+      <Button>Czytaj</Button>
+    </LukasWrapper>
   </SectionWrapper>
 );
 
