@@ -36,6 +36,10 @@ export const SectionHeading = styled('h2')`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.color.darkBlue};
 
+  ${({ theme }) => theme.media.above.m} {
+    font-size: 3rem;
+  }
+
   ${({ theme }) => theme.media.above.l} {
     font-size: 3.6rem;
   }

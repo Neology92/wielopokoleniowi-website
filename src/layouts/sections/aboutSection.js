@@ -34,21 +34,25 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledSectionHeading = styled(SectionHeading)`
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     margin-bottom: 22px;
     text-align: right;
   }
 `;
 
 const SectionWrapper = styled.section`
-  margin: 0 auto;
+  margin: 40px auto;
   width: 95%;
   height: 100%;
   position: relative;
   overflow: hidden;
 
+  ${({ theme }) => theme.media.above.m} {
+    margin: 30px auto 0;
+  }
+
   ${({ theme }) => theme.media.above.l} {
-    margin: 110px auto 0;
+    margin: 20px auto 0;
     width: 800px;
     display: flex;
     flex-direction: row;
@@ -57,8 +61,9 @@ const SectionWrapper = styled.section`
   }
 
   ${({ theme }) => theme.media.above.xl} {
-    margin: 110px auto 0;
+    margin: 60px auto 0;
     width: 1070px;
+    align-items: flex-start;
   }
 `;
 
@@ -77,7 +82,8 @@ const TextWrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.above.m} {
-    margin: 60px auto 91px;
+    width: 600px;
+    margin: 60px auto 0;
   }
 
   ${({ theme }) => theme.media.above.l} {
@@ -107,6 +113,18 @@ const LukasWrapper = styled.div`
 
   button {
     margin: 13px;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 500px;
+    margin-top: 30px;
+    div {
+      width: 300px;
+    }
+
+    button {
+      margin: 46px;
+    }
   }
 
   ${({ theme }) => theme.media.above.l} {

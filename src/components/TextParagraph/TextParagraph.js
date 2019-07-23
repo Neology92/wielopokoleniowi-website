@@ -8,6 +8,10 @@ const TextParagraph = styled.p`
   margin: 6px 0 0;
 
   ${({ theme }) => theme.media.above.m} {
+    font-size: 1.6rem;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
     font-size: 1.8rem;
   }
 `;

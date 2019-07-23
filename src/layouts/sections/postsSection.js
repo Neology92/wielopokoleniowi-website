@@ -6,6 +6,9 @@ import { SectionHeading, PostsGrid } from 'components';
 const SectionWrapper = styled.section`
   margin: 58px 10px 0;
   text-align: center;
+  ${({ theme }) => theme.media.above.m} {
+    margin: 80px 10px 0;
+  }
 `;
 
 const PostsSection = () => {
