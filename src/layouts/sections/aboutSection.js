@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import { SectionHeading, TextParagraph, Button, LukasDesk } from 'components';
 
@@ -16,14 +17,18 @@ const AboutSection = () => (
         świat”. Jeszcze inni zaczynają drążyć… Testament to w tym wypadku tylko
         hasło i pretekst do dalszej rozmowy.
       </TextParagraph>
-      <StyledButton>Czytaj</StyledButton>
+      <Link to="/o-autorze">
+        <StyledButton>Czytaj</StyledButton>
+      </Link>
     </TextWrapper>
 
     <LukasWrapper>
       <div>
         <LukasDesk />
       </div>
-      <StyledButton>Czytaj</StyledButton>
+      <Link to="/o-autorze">
+        <StyledButton>Czytaj</StyledButton>
+      </Link>
     </LukasWrapper>
   </SectionWrapper>
 );

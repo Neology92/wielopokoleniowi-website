@@ -17,6 +17,10 @@ const Button = styled.button`
   font-weight: 500;
   font-size: ${({ isBig }) => (isBig ? '18px' : '14px')};
   line-height: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Button;

@@ -3,6 +3,6 @@ TODO:
 - repair dummy way of setting graphics in footer
 - stars legend
 - remove white stripe in topbar (just few resolutions)
-- About section
+- turn Button into -> <Link><Button></Link>
 
 (- Protected connection to API....)
