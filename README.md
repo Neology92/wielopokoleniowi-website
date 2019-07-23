@@ -5,4 +5,6 @@ TODO:
 - remove white stripe in topbar (just few resolutions)
 - turn Button into -> <Link><Button></Link>
 
+- make loading from up to down
+
 (- Protected connection to API....)
