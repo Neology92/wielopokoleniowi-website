@@ -8,6 +8,8 @@ const SectionWrapper = styled.section`
 
   ${({ theme }) => theme.media.above.m} {
     width: 34%;
+    box-sizing: border-box;
+    padding: 15px;
   }
 `;
 

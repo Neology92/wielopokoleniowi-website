@@ -10,21 +10,34 @@ import BodySection from './postSections/bodySection';
 import SidebarSection from './postSections/sidebarSection';
 
 const StyledContainer = styled.div`
+  margin: 60px auto 10vw;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 
   ${({ theme }) => theme.media.above.m} {
-    flex-direction: row;
-    width: 80%;
-    margin: 60px auto 10vw;
+    width: 89%;
+  }
 
-    div {
-      width: 66%;
-      height: 100%;
-    }
+  ${({ theme }) => theme.media.above.l} {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    flex-direction: row;
+    width: 1070px;
 
     align-items: stretch;
+  }
+`;
+
+const MainWrapper = styled.main`
+  width: 100%;
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 66%;
   }
 `;
 
@@ -33,10 +46,14 @@ const PostLayout = ({ pageContext: { data } }) => (
     <SEO title={data.title} />
     <Menu />
     <StyledContainer>
-      <div>
-        <HeadingSection title={data.title} />
+      <MainWrapper>
+        <HeadingSection
+          title={data.title}
+          category={data.category}
+          icon={data.icon.url}
+        />
         <BodySection content={data.body.text} />
-      </div>
+      </MainWrapper>
       <SidebarSection />
     </StyledContainer>
   </MainLayout>

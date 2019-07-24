@@ -22,6 +22,8 @@ import PostTile from './PostTile/PostTile';
 import CategoryTile from './CategoryTile/CategoryTile';
 import Button from './Button/Button';
 
+import PostGraphics from './PostGraphics/PostGraphics';
+
 export * from './Headings/Headings';
 export {
   SEO,
@@ -44,4 +46,5 @@ export {
   PostTile,
   CategoryTile,
   Button,
+  PostGraphics,
 };
