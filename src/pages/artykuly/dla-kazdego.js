@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { MainLayout } from 'layouts';
-import { SEO, Menu } from 'components';
+import { SEO, Menu, Breadcrumbs } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
   margin: 0 0 10vw 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   h1 {
     font-size: 4rem;
@@ -22,15 +22,23 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Artykuly = () => (
+const BreadcrumbsWrapper = styled.div`
+  margin: 100px auto;
+  width: 700px;
+`;
+
+const Everyone = () => (
   <MainLayout>
-    <SEO title="Home" />
+    <SEO title="Dla Każdego" />
     <Menu />
     <StyledContainer>
+      <BreadcrumbsWrapper>
+        <Breadcrumbs category="Everyone" />
+      </BreadcrumbsWrapper>
       <h1>Artykuły</h1>
       <h2>Dla Każdego</h2>
     </StyledContainer>
   </MainLayout>
 );
 
-export default Artykuly;
+export default Everyone;
