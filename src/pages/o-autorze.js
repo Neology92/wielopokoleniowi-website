@@ -20,7 +20,7 @@ const StyledContainer = styled.div`
 
 const About = () => (
   <MainLayout>
-    <SEO title="Home" />
+    <SEO title="O autorze" />
     <Menu />
     <StyledContainer>
       <h1>O autorze</h1>

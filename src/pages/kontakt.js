@@ -20,7 +20,7 @@ const StyledContainer = styled.div`
 
 const Kontakt = () => (
   <MainLayout>
-    <SEO title="Home" />
+    <SEO title="Kontakt" />
     <Menu />
     <StyledContainer>
       <h1>Kontakt</h1>
