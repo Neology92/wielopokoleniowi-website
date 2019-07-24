@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import PropTypes from 'prop-types';
 
-import { PostGraphics, PostMainHeading } from 'components';
+import { PostGraphics, PostMainHeading, Breadcrumbs } from 'components';
 
 const SectionWrapper = styled.section`
   width: 100%;
@@ -14,6 +14,7 @@ const SectionWrapper = styled.section`
 
 const HeadingSection = ({ title, category, icon }) => (
   <SectionWrapper>
+    <Breadcrumbs category={category} title={title} />
     <PostMainHeading>{title}</PostMainHeading>
     <PostGraphics category={category} icon={icon} />
   </SectionWrapper>

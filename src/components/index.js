@@ -23,6 +23,7 @@ import CategoryTile from './CategoryTile/CategoryTile';
 import Button from './Button/Button';
 
 import PostGraphics from './PostGraphics/PostGraphics';
+import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 export * from './Headings/Headings';
 export {
@@ -47,4 +48,5 @@ export {
   CategoryTile,
   Button,
   PostGraphics,
+  Breadcrumbs,
 };
