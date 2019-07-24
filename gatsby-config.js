@@ -42,8 +42,8 @@ module.exports = {
         typeName: 'GraphCMS',
         fieldName: 'graphcms',
         url:
-          // 'https://api-euwest.graphcms.com/v1/cjycti0901d9701e2wyewpsfw/master', //Lukas API
-          'https://api-euwest.graphcms.com/v1/cjy70z12s0z1z01dk10jdjcqb/master', // Dev API
+          'https://api-euwest.graphcms.com/v1/cjycti0901d9701e2wyewpsfw/master', // Lukas API
+        // 'https://api-euwest.graphcms.com/v1/cjy70z12s0z1z01dk10jdjcqb/master', // Dev API
       },
     },
 
