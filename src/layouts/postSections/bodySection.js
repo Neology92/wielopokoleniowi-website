@@ -15,8 +15,16 @@ const SectionWrapper = styled.section`
   }
 `;
 
+const Text = styled.section`
+  font-family: ${({ theme }) => theme.font.family.roboto};
+`;
+
 const BodySection = ({ content }) => {
-  return <SectionWrapper>{content}</SectionWrapper>;
+  return (
+    <SectionWrapper>
+      <Text>{content}</Text>
+    </SectionWrapper>
+  );
 };
 
 BodySection.propTypes = {
