@@ -22,7 +22,7 @@ const Breadcrumbs = ({ page, category, title }) => {
   const articlesCategory = [
     <>
       /<StyledLink to="/artykuly"> Artykuły </StyledLink>
-      {`/ ${category}`}
+      {`/ ${categoryPl}`}
     </>,
   ];
 
