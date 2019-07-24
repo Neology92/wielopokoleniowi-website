@@ -3,10 +3,9 @@ import styled from 'styled-components';
 
 import PropTypes from 'prop-types';
 
-import { PostGraphics } from 'components';
+import { PostGraphics, PostMainHeading } from 'components';
 
 const SectionWrapper = styled.section`
-  border: 1px solid red;
   width: 100%;
 
   box-sizing: border-box;
@@ -15,7 +14,7 @@ const SectionWrapper = styled.section`
 
 const HeadingSection = ({ title, category, icon }) => (
   <SectionWrapper>
-    <h1>{title}</h1>
+    <PostMainHeading>{title}</PostMainHeading>
     <PostGraphics category={category} icon={icon} />
   </SectionWrapper>
 );
