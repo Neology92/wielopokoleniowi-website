@@ -20,7 +20,7 @@ const BodySection = ({ content }) => {
 };
 
 BodySection.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.element.isRequired,
 };
 
 export default BodySection;

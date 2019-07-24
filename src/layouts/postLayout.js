@@ -9,6 +9,31 @@ import HeadingSection from './postSections/headingSection';
 import BodySection from './postSections/bodySection';
 import SidebarSection from './postSections/sidebarSection';
 
+// eslint-disable-next-line
+const parse = string => <div dangerouslySetInnerHTML={{ __html: string }} />;
+
+const PostLayout = ({ pageContext: { data } }) => {
+  const content = <> {parse(data.body.html)} </>;
+
+  return (
+    <MainLayout>
+      <SEO title={data.title} />
+      <Menu />
+      <StyledContainer>
+        <MainWrapper>
+          <HeadingSection
+            title={data.title}
+            category={data.category}
+            icon={data.icon.url}
+          />
+          <BodySection content={content} />
+        </MainWrapper>
+        <SidebarSection />
+      </StyledContainer>
+    </MainLayout>
+  );
+};
+
 const StyledContainer = styled.div`
   margin: 60px auto 10vw;
   width: 100%;
@@ -40,24 +65,6 @@ const MainWrapper = styled.main`
     width: 66%;
   }
 `;
-
-const PostLayout = ({ pageContext: { data } }) => (
-  <MainLayout>
-    <SEO title={data.title} />
-    <Menu />
-    <StyledContainer>
-      <MainWrapper>
-        <HeadingSection
-          title={data.title}
-          category={data.category}
-          icon={data.icon.url}
-        />
-        <BodySection content={data.body.text} />
-      </MainWrapper>
-      <SidebarSection />
-    </StyledContainer>
-  </MainLayout>
-);
 
 PostLayout.propTypes = {
   pageContext: PropTypes.node.isRequired,
