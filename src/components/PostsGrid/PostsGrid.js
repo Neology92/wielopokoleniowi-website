@@ -11,7 +11,7 @@ const PostsGrid = () => {
     {
       graphcms {
         everyone: postsConnection(
-          first: 6
+          first: 3
           orderBy: createdAt_DESC
           where: { category: Everyone }
         ) {
@@ -31,7 +31,7 @@ const PostsGrid = () => {
           }
         }
         bussines: postsConnection(
-          first: 6
+          first: 3
           orderBy: createdAt_DESC
           where: { category: Bussines }
         ) {
