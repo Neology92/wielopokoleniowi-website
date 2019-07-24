@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 
 import slugify from 'slugify';
@@ -6,25 +6,32 @@ import slugify from 'slugify';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Breadcrumbs = ({ category, title }) => {
+const Breadcrumbs = ({ page, category, title }) => {
   const categoryPl = category === 'Bussines' ? 'dla biznesu' : 'dla każdego';
+
+  const articlesCategoryTitle = [
+    <>
+      /<StyledLink to="/artykuly"> Artykuły </StyledLink>/
+      <StyledLink to={`/artykuly/${slugify(categoryPl)}`}>
+        {` ${categoryPl} `}
+      </StyledLink>
+      {`/ ${title}`}
+    </>,
+  ];
+
+  const articlesCategory = [
+    <>
+      /<StyledLink to="/artykuly"> Artykuły </StyledLink>
+      {`/ ${category}`}
+    </>,
+  ];
+
+  const onlyPage = [<>{`/ ${page}`}</>];
+
   return (
     <BreadcrumbsWrapper>
-      <StyledLink to="/"> Home </StyledLink>/
-      <StyledLink to="/artykuly"> Artykuły </StyledLink>
-      {title ? (
-        <>
-          /
-          <StyledLink to={`/artykuly/${slugify(categoryPl)}`}>
-            {` ${categoryPl} `}
-          </StyledLink>
-          {`/ ${title}`}
-        </>
-      ) : category ? (
-        <>{`/ ${category}`}</>
-      ) : (
-        <Fragment />
-      )}
+      <StyledLink to="/"> Home </StyledLink>
+      {title ? articlesCategoryTitle : category ? articlesCategory : onlyPage}
     </BreadcrumbsWrapper>
   );
 };
@@ -46,11 +53,13 @@ const BreadcrumbsWrapper = styled.div`
 `;
 
 Breadcrumbs.propTypes = {
+  page: PropTypes.string,
   category: PropTypes.string,
   title: PropTypes.string,
 };
 
 Breadcrumbs.defaultProps = {
+  page: 'Artykuły',
   category: '',
   title: '',
 };
