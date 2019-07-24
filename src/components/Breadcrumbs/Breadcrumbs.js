@@ -6,6 +6,8 @@ import slugify from 'slugify';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const If = (condition, then, otherwise) => (condition ? then : otherwise);
+
 const Breadcrumbs = ({ page, category, title }) => {
   const categoryPl = category === 'Bussines' ? 'dla biznesu' : 'dla każdego';
 
@@ -31,7 +33,11 @@ const Breadcrumbs = ({ page, category, title }) => {
   return (
     <BreadcrumbsWrapper>
       <StyledLink to="/"> Home </StyledLink>
-      {title ? articlesCategoryTitle : category ? articlesCategory : onlyPage}
+      {If(
+        title,
+        articlesCategoryTitle,
+        If(category, articlesCategory, onlyPage)
+      )}
     </BreadcrumbsWrapper>
   );
 };
