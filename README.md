@@ -6,4 +6,6 @@ TODO:
 
 - make loading from up to down
 
+- Make lazyload animation more efficient
+
 (- Protected connection to API....)

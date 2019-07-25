@@ -33,7 +33,7 @@ MainLayout.propTypes = {
 };
 
 const StyledMain = styled.main`
-  animation: ${lazyLoad} 0.5s ease-in-out;
+  /* animation: ${lazyLoad} 0.5s ease-in-out; */
 `;
 
 export default MainLayout;
