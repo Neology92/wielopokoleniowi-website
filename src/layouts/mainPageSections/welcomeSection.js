@@ -40,7 +40,15 @@ const SectionWrapper = styled.section`
   height: 100%;
   position: relative;
   overflow: hidden;
+`;
 
+const StyledFamilyLeft = styled(FamilyLeft)`
+  ${({ theme }) => theme.media.above.m} {
+    animation: ${lazyLoad} 0.8s ease-in-out;
+  }
+`;
+
+const StyledFamilyRight = styled(FamilyRight)`
   ${({ theme }) => theme.media.above.m} {
     animation: ${lazyLoad} 0.8s ease-in-out;
   }
@@ -63,8 +71,8 @@ const WelcomeSection = () => (
       <StyledTextParagraph>Cieszę się, że tu zajrzałeś!</StyledTextParagraph>
       <TextParagraph>Łukasz Martyniec</TextParagraph>
     </InnerWrapper>
-    <FamilyLeft />
-    <FamilyRight />
+    <StyledFamilyLeft />
+    <StyledFamilyRight />
   </SectionWrapper>
 );
 
