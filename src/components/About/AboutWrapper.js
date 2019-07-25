@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { lazyLoad } from 'assets/styles/keyframes';
+
 export const AboutWrapper = styled.div`
   display: none;
 
@@ -11,6 +13,8 @@ export const AboutWrapper = styled.div`
     justify-content: flex-end;
     align-items: center;
   }
+
+  animation: ${lazyLoad} 0.8s ease-in-out;
 `;
 
 export const InnerWrapper = styled.div`

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { lazyLoad } from 'assets/styles/keyframes';
+
 import {
   SectionHeading,
   TextParagraph,
@@ -38,6 +40,10 @@ const SectionWrapper = styled.section`
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  ${({ theme }) => theme.media.above.m} {
+    animation: ${lazyLoad} 0.8s ease-in-out;
+  }
 `;
 
 const WelcomeSection = () => (
