@@ -5,11 +5,16 @@ import {
   SidebarSectionHeading,
   SectionSecondHeading,
 } from '../Headings/Headings';
-import { StyledButton, StyledTextParagraph } from './styled';
+import {
+  StyledButton,
+  StyledTextParagraph,
+  StyledLukasPortret,
+} from './styled';
 
 const About = () => {
   return (
     <AboutWrapper>
+      <StyledLukasPortret />
       <InnerWrapper>
         <SidebarSectionHeading>O autorze</SidebarSectionHeading>
         <SectionSecondHeading>
