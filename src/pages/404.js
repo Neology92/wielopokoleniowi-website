@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { MainLayout } from 'layouts';
-import { SEO, Menu } from 'components';
+import { SEO } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -21,7 +21,6 @@ const StyledContainer = styled.div`
 const PageNotFound = () => (
   <MainLayout>
     <SEO title="Home" />
-    <Menu />
     <StyledContainer>
       <h1>404</h1>
       <h1>Page not found</h1>

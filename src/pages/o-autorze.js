@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { MainLayout } from 'layouts';
-import { SEO, Menu } from 'components';
+import { SEO } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -21,7 +21,6 @@ const StyledContainer = styled.div`
 const About = () => (
   <MainLayout>
     <SEO title="O autorze" />
-    <Menu />
     <StyledContainer>
       <h1>O autorze</h1>
     </StyledContainer>

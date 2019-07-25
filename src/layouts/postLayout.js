@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
-import { SEO, Menu } from 'components';
+import { SEO } from 'components';
 
 import HeadingSection from './postSections/headingSection';
 import BodySection from './postSections/bodySection';
@@ -18,7 +18,6 @@ const PostLayout = ({ pageContext: { data } }) => {
   return (
     <MainLayout>
       <SEO title={data.title} />
-      <Menu />
       <StyledContainer>
         <MainWrapper>
           <HeadingSection

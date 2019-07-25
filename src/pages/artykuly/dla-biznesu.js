@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { MainLayout } from 'layouts';
-import { SEO, Menu, Breadcrumbs } from 'components';
+import { SEO, Breadcrumbs } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -30,7 +30,6 @@ const BreadcrumbsWrapper = styled.div`
 const Bussines = () => (
   <MainLayout>
     <SEO title="Dla Biznesu" />
-    <Menu />
     <StyledContainer>
       <BreadcrumbsWrapper>
         <Breadcrumbs category="Bussines" />

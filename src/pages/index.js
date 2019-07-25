@@ -8,7 +8,7 @@ import {
   CategoriesSection,
   AboutSection,
 } from 'layouts';
-import { SEO, Menu } from 'components';
+import { SEO } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -20,7 +20,6 @@ const IndexPage = () => (
   <MainLayout>
     <SEO title="Home" />
     <StyledContainer>
-      <Menu />
       <WelcomeSection />
       <CategoriesSection />
       <PostsSection />
