@@ -39,7 +39,6 @@ const PostTile = ({ post }) => {
 
 PostTile.propTypes = {
   post: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     level: PropTypes.string.isRequired,

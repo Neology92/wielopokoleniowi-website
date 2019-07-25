@@ -11,24 +11,22 @@ const If = (condition, then, otherwise) => (condition ? then : otherwise);
 const Breadcrumbs = ({ page, category, title }) => {
   const categoryPl = category === 'Bussines' ? 'dla biznesu' : 'dla każdego';
 
-  const articlesCategoryTitle = [
+  const articlesCategoryTitle = (
     <>
       /<StyledLink to="/artykuly"> Artykuły </StyledLink>/
       <StyledLink to={`/artykuly/${slugify(categoryPl)}`}>
         {` ${categoryPl} `}
       </StyledLink>
       {`/ ${title}`}
-    </>,
-  ];
-
-  const articlesCategory = [
+    </>
+  );
+  const articlesCategory = (
     <>
       /<StyledLink to="/artykuly"> Artykuły </StyledLink>
       {`/ ${categoryPl}`}
-    </>,
-  ];
-
-  const onlyPage = [<>{`/ ${page}`}</>];
+    </>
+  );
+  const onlyPage = <>{`/ ${page}`}</>;
 
   return (
     <BreadcrumbsWrapper>

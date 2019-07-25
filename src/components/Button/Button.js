@@ -48,7 +48,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   to: '/',
-  isTransparent: '',
+  isTransparent: false,
   className: '',
 };
 
