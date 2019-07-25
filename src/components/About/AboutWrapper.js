@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const AboutWrapper = styled.div`
-  width: 100%;
-  height: 442px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: none;
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 100%;
+    height: 442px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 
 export const InnerWrapper = styled.div`
