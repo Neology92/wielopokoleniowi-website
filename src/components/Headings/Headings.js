@@ -50,7 +50,10 @@ export const SectionSecondHeading = styled('h5')`
   margin: 5px auto 0;
   font-family: ${({ theme }) => theme.font.family.roboto};
   color: rgba(${({ theme }) => theme.color.rgb.nightBlue}, 0.8);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  ${({ theme }) => theme.media.above.m} {
+    font-size: 1.8rem;
+  }
 `;
 
 export const CategoryHeading = styled('h3')`

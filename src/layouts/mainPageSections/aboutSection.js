@@ -1,13 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SectionHeading, TextParagraph, Button, LukasDesk } from 'components';
+import {
+  SectionHeading,
+  SectionSecondHeading,
+  TextParagraph,
+  Button,
+  LukasDesk,
+} from 'components';
 
 const AboutSection = () => (
   <SectionWrapper>
     <TextWrapper>
       <StyledSectionHeading>O autorze</StyledSectionHeading>
-      <TextParagraph>Cześć, witaj w moim świecie!</TextParagraph>
+      <StyledSecondSectionHeading>
+        Cześć, witaj w moim świecie!
+      </StyledSecondSectionHeading>
       <TextParagraph>
         Kim jestem? Od wielu lat przedstawiam się jako „gość, który pisze
         ludziom testamenty”. To prawda. Napisałem ich już grubo ponad tysiąc.
@@ -32,6 +40,17 @@ const StyledSectionHeading = styled(SectionHeading)`
   ${({ theme }) => theme.media.above.l} {
     margin-bottom: 22px;
     text-align: right;
+  }
+`;
+
+const StyledSecondSectionHeading = styled(SectionSecondHeading)`
+  ${({ theme }) => theme.media.above.l} {
+    text-align: right;
+    margin-bottom: 13px;
+    font-size: 2rem;
+  }
+  ${({ theme }) => theme.media.above.xl} {
+    font-size: 2.2rem;
   }
 `;
 
