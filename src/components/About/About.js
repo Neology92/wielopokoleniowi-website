@@ -9,7 +9,7 @@ const About = () => {
     <AboutWrapper>
       <InnerWrapper>
         <SidebarHeading>O autorze</SidebarHeading>
-        <StyledButton>Czytaj</StyledButton>
+        <StyledButton to="/o-autorze">Czytaj</StyledButton>
       </InnerWrapper>
     </AboutWrapper>
   );
