@@ -25,6 +25,8 @@ import Button from './Button/Button';
 import PostGraphics from './PostGraphics/PostGraphics';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
+import About from './About/About';
+
 export * from './Headings/Headings';
 export {
   SEO,
@@ -49,4 +51,5 @@ export {
   Button,
   PostGraphics,
   Breadcrumbs,
+  About,
 };

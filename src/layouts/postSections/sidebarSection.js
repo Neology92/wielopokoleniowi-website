@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { About } from 'components';
+
 const SectionWrapper = styled.section`
   min-height: 100px;
   width: 100%;
@@ -13,7 +15,11 @@ const SectionWrapper = styled.section`
 `;
 
 const SidebarSection = () => {
-  return <SectionWrapper />;
+  return (
+    <SectionWrapper>
+      <About />
+    </SectionWrapper>
+  );
 };
 
 export default SidebarSection;
