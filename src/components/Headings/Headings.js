@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const PostMainHeading = styled('h2')`
   font-family: ${({ theme }) => theme.font.family.roboto};
   color: rgb(${({ theme }) => theme.color.rgb.nightBlue}, 0.8);
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 130%;
 
-  ${({ theme }) => theme.media.above.l} {
+  ${({ theme }) => theme.media.above.s} {
     font-size: 2.4rem;
     margin: 10px 0 30px;
   }
