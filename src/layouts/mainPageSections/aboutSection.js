@@ -111,6 +111,19 @@ const LukasWrapper = styled.div`
     margin: 13px;
   }
 
+  ${({ theme }) => theme.media.above.s} {
+    width: 400px;
+    margin-top: 30px;
+    div {
+      width: 250px;
+    }
+
+    a {
+      margin: 26px;
+      padding: 0 35px;
+    }
+  }
+
   ${({ theme }) => theme.media.above.m} {
     width: 500px;
     margin-top: 30px;
