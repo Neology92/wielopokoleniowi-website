@@ -27,6 +27,7 @@ import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 import About from './About/About';
 import TagsBoard from './TagsBoard/TagsBoard';
+import Recommended from './Recommended/Recommended';
 
 export * from './Headings/Headings';
 export {
@@ -54,4 +55,5 @@ export {
   Breadcrumbs,
   About,
   TagsBoard,
+  Recommended,
 };

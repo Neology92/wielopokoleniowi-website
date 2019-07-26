@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               title
               category
+              level
               body {
                 html
                 text
@@ -30,12 +31,26 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  postsQuery.data.graphcms.posts.edges.forEach(post => {
+  postsQuery.data.graphcms.posts.edges.forEach(edge => {
+    let recommendedPostsEdges = {};
+    const patternCategory = edge.node.category;
+
+    edge.node.tags.forEach(patternTag => {
+      recommendedPostsEdges = postsQuery.data.graphcms.posts.edges.filter(
+        ({ node }) => {
+          return (
+            node.category === patternCategory && node.tags.includes(patternTag)
+          );
+        }
+      );
+    });
+
     createPage({
-      path: `/${slugify(post.node.title.toLowerCase())}`,
+      path: `/${slugify(edge.node.title.toLowerCase())}`,
       component: postLayout,
       context: {
-        data: post.node,
+        data: edge.node,
+        recommendedPostsEdges,
       },
     });
   });

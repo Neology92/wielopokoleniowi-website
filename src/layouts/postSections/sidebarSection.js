@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { About, TagsBoard } from 'components';
+import { About, TagsBoard, Recommended } from 'components';
 
 const SectionWrapper = styled.section`
   min-height: 100px;
@@ -15,10 +15,11 @@ const SectionWrapper = styled.section`
   }
 `;
 
-const SidebarSection = ({ tags }) => {
+const SidebarSection = ({ tags, recommendedPostsEdges }) => {
   return (
     <SectionWrapper>
       <About />
+      <Recommended recommendedPostsEdges={recommendedPostsEdges} />
       <TagsBoard tags={tags} />
     </SectionWrapper>
   );
@@ -26,6 +27,10 @@ const SidebarSection = ({ tags }) => {
 
 SidebarSection.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  recommendedPostsEdges: PropTypes.arrayOf(PropTypes.node),
 };
 
+SidebarSection.defaultProps = {
+  recommendedPostsEdges: [],
+};
 export default SidebarSection;
