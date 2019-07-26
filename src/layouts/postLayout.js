@@ -40,11 +40,19 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+  ${({ theme }) => theme.media.above.s} {
+    margin: 60px 8vw;
+    width: 84vw;
+  }
+
   ${({ theme }) => theme.media.above.m} {
-    width: 89%;
+    margin: 60px 15vw;
+    width: 70vw;
   }
 
   ${({ theme }) => theme.media.above.l} {
+    margin: 60px auto 10vw;
+    width: 89%;
     flex-direction: row;
     align-items: stretch;
   }
