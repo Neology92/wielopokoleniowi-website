@@ -26,6 +26,7 @@ import PostGraphics from './PostGraphics/PostGraphics';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 import About from './About/About';
+import TagsBoard from './TagsBoard/TagsBoard';
 
 export * from './Headings/Headings';
 export {
@@ -52,4 +53,5 @@ export {
   PostGraphics,
   Breadcrumbs,
   About,
+  TagsBoard,
 };

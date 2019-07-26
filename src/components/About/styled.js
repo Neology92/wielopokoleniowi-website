@@ -16,6 +16,10 @@ export const StyledTextParagraph = styled(TextParagraph)`
   text-align: center;
 
   ${({ theme }) => theme.media.above.l} {
+    font-size: 1.45rem;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
     font-size: 1.6rem;
   }
 `;

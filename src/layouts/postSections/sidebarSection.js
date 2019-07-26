@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { About } from 'components';
+import { About, TagsBoard } from 'components';
 
 const SectionWrapper = styled.section`
   min-height: 100px;
@@ -14,12 +15,17 @@ const SectionWrapper = styled.section`
   }
 `;
 
-const SidebarSection = () => {
+const SidebarSection = ({ tags }) => {
   return (
     <SectionWrapper>
       <About />
+      <TagsBoard tags={tags} />
     </SectionWrapper>
   );
+};
+
+SidebarSection.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default SidebarSection;
