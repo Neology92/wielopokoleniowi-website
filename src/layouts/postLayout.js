@@ -23,55 +23,21 @@ const PostLayout = ({ pageContext: { data, recommendedPostsEdges } }) => {
   return (
     <MainLayout>
       <SEO title={data.title} />
-      <StyledContainer>
-        <MainWrapper>
-          <HeadingSection
-            title={data.title}
-            category={data.category}
-            icon={data.icon.url}
-          />
-          <BodySection content={content} />
-        </MainWrapper>
-        <SidebarSection
-          tags={tagsArray}
-          recommendedPostsEdges={recommendedPostsEdges}
+      <MainWrapper>
+        <HeadingSection
+          title={data.title}
+          category={data.category}
+          icon={data.icon.url}
         />
-      </StyledContainer>
+        <BodySection content={content} />
+      </MainWrapper>
+      <SidebarSection
+        tags={tagsArray}
+        recommendedPostsEdges={recommendedPostsEdges}
+      />
     </MainLayout>
   );
 };
-
-const StyledContainer = styled.div`
-  margin: 60px auto 10vw;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  ${({ theme }) => theme.media.above.s} {
-    margin: 60px 8vw;
-    width: 84vw;
-  }
-
-  ${({ theme }) => theme.media.above.m} {
-    margin: 60px 15vw;
-    width: 70vw;
-  }
-
-  ${({ theme }) => theme.media.above.l} {
-    margin: 60px auto 10vw;
-    width: 89%;
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  ${({ theme }) => theme.media.above.xl} {
-    flex-direction: row;
-    width: 1070px;
-
-    align-items: stretch;
-  }
-`;
 
 const MainWrapper = styled.main`
   width: 100%;

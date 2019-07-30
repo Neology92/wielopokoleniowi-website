@@ -17,7 +17,7 @@ const StyledContainer = styled.div`
 `;
 
 const IndexPage = () => (
-  <MainLayout>
+  <MainLayout isMainPage>
     <SEO title="Home" />
     <StyledContainer>
       <WelcomeSection />
