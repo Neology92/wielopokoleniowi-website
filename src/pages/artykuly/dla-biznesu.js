@@ -23,8 +23,8 @@ const StyledContainer = styled.div`
 `;
 
 const BreadcrumbsWrapper = styled.div`
-  margin: 100px auto;
-  width: 700px;
+  padding: 15px 0 0 15px;
+  width: 100%;
 `;
 
 const Bussines = () => (
