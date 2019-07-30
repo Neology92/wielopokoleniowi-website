@@ -10,7 +10,7 @@ import { theme } from 'assets/styles/theme';
 import { Header, Footer, Menu } from 'components';
 import Background from './Background';
 
-const MainLayout = ({ children, isMainPage }) => (
+const MainLayout = ({ children, isMainPage, isPost }) => (
   <>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
@@ -18,7 +18,9 @@ const MainLayout = ({ children, isMainPage }) => (
         <Header />
         <Background>
           <Menu />
-          <StyledMain isMainPage={isMainPage}>{children}</StyledMain>
+          <StyledMain isMainPage={isMainPage} isPost={isPost}>
+            {children}
+          </StyledMain>
         </Background>
         <Footer />
       </>
@@ -27,7 +29,7 @@ const MainLayout = ({ children, isMainPage }) => (
 );
 
 const StyledMain = styled.main`
-  ${({ isMainPage }) =>
+  ${({ isMainPage, isPost }) =>
     isMainPage
       ? `width: 100%;`
       : `
@@ -50,12 +52,11 @@ const StyledMain = styled.main`
   ${theme.media.above.l} {
     margin: 60px auto 10vw;
     width: 89%;
-    flex-direction: row;
     align-items: stretch;
+    ${isPost ? `flex-direction: row;` : ``}
   }
-
+  
   ${theme.media.above.xl} {
-    flex-direction: row;
     width: 1070px;
 
     align-items: stretch;
@@ -65,10 +66,12 @@ const StyledMain = styled.main`
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
   isMainPage: PropTypes.bool,
+  isPost: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
   isMainPage: false,
+  isPost: false,
 };
 
 export default MainLayout;

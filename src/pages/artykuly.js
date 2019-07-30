@@ -26,7 +26,7 @@ const StyledContainer = styled.div`
 
 const BreadcrumbsWrapper = styled.div`
   margin: 100px auto;
-  width: 700px;
+  width: 100%;
 `;
 
 const Artykuly = () => (

@@ -21,7 +21,7 @@ const PostLayout = ({ pageContext: { data, recommendedPostsEdges } }) => {
   });
 
   return (
-    <MainLayout>
+    <MainLayout isPost>
       <SEO title={data.title} />
       <MainWrapper>
         <HeadingSection
