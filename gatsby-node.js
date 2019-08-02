@@ -37,9 +37,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
     edge.node.tags.forEach(patternTag => {
       recommendedPostsEdges = postsQuery.data.graphcms.posts.edges.filter(
-        ({ node }) => {
+        innerEdge => {
+          const filteredTags = innerEdge.node.tags.filter(
+            tag => tag.value === patternTag.value
+          );
           return (
-            node.category === patternCategory && node.tags.includes(patternTag)
+            filteredTags.length && innerEdge.node.category === patternCategory
           );
         }
       );
