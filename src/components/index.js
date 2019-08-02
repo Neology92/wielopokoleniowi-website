@@ -24,6 +24,7 @@ import Button from './Button/Button';
 
 import PostGraphics from './PostGraphics/PostGraphics';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
+import PostFooter from './PostFooter/PostFooter';
 
 import About from './About/About';
 import TagsBoard from './TagsBoard/TagsBoard';
@@ -53,6 +54,7 @@ export {
   Button,
   PostGraphics,
   Breadcrumbs,
+  PostFooter,
   About,
   TagsBoard,
   Recommended,

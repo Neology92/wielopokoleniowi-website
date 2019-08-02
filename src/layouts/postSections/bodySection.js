@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import styled from 'styled-components';
 
-import PropTypes from 'prop-types';
+import { PostFooter } from 'components';
 
 const SectionWrapper = styled.section`
   min-height: 400px;
@@ -23,6 +25,7 @@ const BodySection = ({ content }) => {
   return (
     <SectionWrapper>
       <Text>{content}</Text>
+      <PostFooter />
     </SectionWrapper>
   );
 };
