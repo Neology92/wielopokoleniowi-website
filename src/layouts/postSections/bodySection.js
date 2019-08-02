@@ -8,6 +8,7 @@ import { PostFooter } from 'components';
 const SectionWrapper = styled.section`
   min-height: 400px;
   padding: 15px;
+  margin-bottom: 20px;
 
   ${({ theme }) => theme.media.above.m} {
     width: 100%;

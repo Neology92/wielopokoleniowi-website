@@ -7,6 +7,10 @@ const PostFooterWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 50px auto 0;
+  }
 `;
 
 export default PostFooterWrapper;

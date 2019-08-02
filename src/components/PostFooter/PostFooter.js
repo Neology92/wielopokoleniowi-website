@@ -14,12 +14,16 @@ const PostFooter = () => {
       <StyledParagraph>
         <span>Wielopokoleniowi.pl</span> to miejsce, gdzie piszemy i mówimy
         m.in. o tego typu tematach. Rozkładamy na czynniki pierwsze różne ich
-        aspekty i uczymy się na błędach innych.Żeby takich historii było jak
-        najmniej. Żeby być mądrzejszym i sprytniejszym. Żeby zachować wpływ
-        przynajmniej na tę część otaczającej nas rzeczywistości, na którą się
-        da. Jeśli chcesz być na bieżąco, zapisz się na nasz Newsletter.
-        Zapraszam!
+        aspekty i uczymy się na błędach innych.
+        <br />
+        Żeby takich historii było jak najmniej. Żeby być mądrzejszym i
+        sprytniejszym. Żeby zachować wpływ przynajmniej na tę część otaczającej
+        nas rzeczywistości, na którą się da.
       </StyledParagraph>
+      <StyledParagraph>
+        Jeśli chcesz być na bieżąco, zapisz się na nasz Newsletter.
+      </StyledParagraph>
+      <StyledParagraph>Zapraszam!</StyledParagraph>
     </PostFooterWrapper>
   );
 };
@@ -34,6 +38,7 @@ const StyledParagraph = styled(TextParagraph)`
   text-align: center;
   font-weight: 400;
   line-height: 140%;
+  margin: 9px auto 0;
 
   & span {
     font-weight: 700;
