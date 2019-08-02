@@ -59,6 +59,7 @@ const PostsGridWrapper = styled.div`
   }
 
   ${({ theme }) => theme.media.above.l} {
+    margin: 70px auto 0;
     grid-template-columns: repeat(2, 327px);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 30px 36px;
