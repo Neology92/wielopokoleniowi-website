@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 const PostsWrapper = styled.div`
   width: 100%;
-  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
 
   ${({ theme }) => theme.media.above.l} {
-    margin: 10px 0;
+    margin: 0;
+    flex-direction: column;
   }
 `;
 
