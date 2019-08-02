@@ -33,7 +33,7 @@ const StyledMain = styled.main`
     isMainPage
       ? `width: 100%;`
       : `
-  margin: 60px auto 10vw;
+  margin: 60px auto 0;
   width: 100%;
   height: 100%;
   display: flex;

@@ -13,7 +13,11 @@ import { SEO } from 'components';
 const StyledContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin: 0 0 10vw 0;
+  margin: 0;
+
+  ${({ theme }) => theme.media.above.m} {
+    margin: 0 0 10vw 0;
+  }
 `;
 
 const IndexPage = () => (

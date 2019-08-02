@@ -5,10 +5,9 @@ import styled from 'styled-components';
 import { About, TagsBoard, Recommended } from 'components';
 
 const SectionWrapper = styled.section`
-  min-height: 100px;
   width: 100%;
 
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     width: 34%;
     box-sizing: border-box;
     padding: 15px;
