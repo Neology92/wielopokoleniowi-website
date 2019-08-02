@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import slugify from 'slugify';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 import PostTile from '../PostTile/PostTile';
 import RecommendedWrapper from './RecommendedWrapper';
@@ -15,7 +18,9 @@ const Recommended = ({ recommendedPostsEdges }) => {
         {recommendedPostsEdges.map(edge => (
           <div key={edge.node.id}>
             <TileWrapper>
-              <PostTile post={edge.node} />
+              <StyledLink to={`/${slugify(edge.node.title.toLowerCase())}`}>
+                <PostTile post={edge.node} />
+              </StyledLink>
             </TileWrapper>
           </div>
         ))}
@@ -23,6 +28,11 @@ const Recommended = ({ recommendedPostsEdges }) => {
     </RecommendedWrapper>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 Recommended.propTypes = {
   recommendedPostsEdges: PropTypes.arrayOf(PropTypes.node),
