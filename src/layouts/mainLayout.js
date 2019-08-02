@@ -12,9 +12,9 @@ import Background from './Background';
 
 const MainLayout = ({ children, isMainPage, isPost }) => (
   <>
-    <GlobalStyle />
     <ThemeProvider theme={theme}>
       <>
+        <GlobalStyle />
         <Header />
         <Background>
           <Menu />
@@ -50,7 +50,7 @@ const StyledMain = styled.main`
   }
 
   ${theme.media.above.l} {
-    margin: 60px auto 10vw;
+    margin: 60px auto;
     width: 89%;
     align-items: stretch;
     ${isPost ? `flex-direction: row;` : ``}
