@@ -33,19 +33,22 @@ exports.createPages = async ({ graphql, actions }) => {
 
   postsQuery.data.graphcms.posts.edges.forEach(edge => {
     let recommendedPostsEdges = {};
+    let edgesWithoutCurrent = {};
     const patternCategory = edge.node.category;
 
+    edgesWithoutCurrent = postsQuery.data.graphcms.posts.edges.filter(
+      innerEdge => !(innerEdge.node.id === edge.node.id)
+    );
+
     edge.node.tags.forEach(patternTag => {
-      recommendedPostsEdges = postsQuery.data.graphcms.posts.edges.filter(
-        innerEdge => {
-          const filteredTags = innerEdge.node.tags.filter(
-            tag => tag.value === patternTag.value
-          );
-          return (
-            filteredTags.length && innerEdge.node.category === patternCategory
-          );
-        }
-      );
+      recommendedPostsEdges = edgesWithoutCurrent.filter(innerEdge => {
+        const filteredTags = innerEdge.node.tags.filter(
+          tag => tag.value === patternTag.value
+        );
+        return (
+          filteredTags.length > 0 && innerEdge.node.category === patternCategory
+        );
+      });
     });
 
     createPage({
