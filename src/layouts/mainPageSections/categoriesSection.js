@@ -7,14 +7,14 @@ import { CategoryTile, Bussines, Everyone } from 'components';
 const CategoriesSection = () => {
   return (
     <SectionWrapper>
-      <CategoryTile isDark>
-        <StyledLink to="/artykuly/dla-biznesu">
-          <StyledBussines /> DLA BIZNESU
-        </StyledLink>
-      </CategoryTile>
       <CategoryTile>
         <StyledLink to="/artykuly/dla-kazdego">
           <StyledEveryone /> DLA KAŻDEGO
+        </StyledLink>
+      </CategoryTile>
+      <CategoryTile isDark>
+        <StyledLink to="/artykuly/dla-biznesu">
+          <StyledBussines /> DLA BIZNESU
         </StyledLink>
       </CategoryTile>
     </SectionWrapper>
