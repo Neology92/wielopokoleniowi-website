@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import Hamburger from './Menu/Hamburger';
+import Hamburger from '../Hamburger/Hamburger';
 import HeaderWrapper from './HeaderWrapper';
 import { StyledLogo, StyledMobileMenu } from './styled';
 import Facebook from '../Icon/Facebook';

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Logo from './Logo';
-import MobileMenu from './Menu/MobileMenu';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 export const StyledLogo = styled(Logo)`
   width: 141px;
