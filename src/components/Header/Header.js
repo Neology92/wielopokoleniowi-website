@@ -19,12 +19,31 @@ const SocialDesktop = styled.div`
   display: none;
 
   ${({ theme }) => theme.media.above.m} {
-    width: 110px;
+    width: 223px;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+`;
+
+const StyledNewsletterButton = styled.button`
+  background: none;
+  border: none;
+  color: white;
+  font-family: ${({ theme }) => theme.font.family.atma};
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 15px 0 0;
+  padding: 0;
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 0 10px 0 0;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    margin: 0 0 0 0;
   }
 `;
 
@@ -63,6 +82,7 @@ const Header = () => {
           >
             <Youtube />
           </a>
+          <StyledNewsletterButton>Newsletter</StyledNewsletterButton>
         </SocialDesktop>
       </InnerDiv>
     </HeaderWrapper>
