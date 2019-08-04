@@ -1,28 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import slugify from 'slugify';
+// import slugify from 'slugify';
 
-const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
+import MenuCategories from './MenuCategories';
+
+// const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
 
 const Menu = () => {
+  const [isCategoryBarOpen, setCategoryBarStatus] = useState(false);
+
+  const changeCategoryBarStatus = () => {
+    setCategoryBarStatus(!isCategoryBarOpen);
+  };
+
   return (
     <MenuContiner>
       <nav>
         <MenuLinksWrapper>
-          {menuItems.map(item => (
-            <MenuLink key={item}>
-              <StyledLink to={`/${slugify(item.toLowerCase())}`}>
-                {item}
-              </StyledLink>
-            </MenuLink>
-          ))}
+          <MenuLink>
+            <StyledLink to="/o-autorze">O autorze</StyledLink>
+          </MenuLink>
+
+          <MenuLink>
+            <button type="button" onClick={() => changeCategoryBarStatus()}>
+              Artykuły
+            </button>
+          </MenuLink>
+
+          <MenuLink>
+            <StyledLink to="/kontakt">Kontakt</StyledLink>
+          </MenuLink>
         </MenuLinksWrapper>
+        <MenuCategories isOpen={isCategoryBarOpen} />
       </nav>
     </MenuContiner>
   );
 };
+
+// {menuItems.map(item => (
+//   <MenuLink key={item}>
+//     <StyledLink to={`/${slugify(item.toLowerCase())}`}>
+//       {item}
+//     </StyledLink>
+//   </MenuLink>
+// ))}
 
 const MenuLinksWrapper = styled.ul`
   padding: 0;
@@ -53,6 +76,7 @@ const MenuContiner = styled.div`
   align-items: center;
 
   nav {
+    position: relative;
     width: 656px;
     border-bottom: 2px solid
       rgba(${({ theme }) => theme.color.rgb.darkBlue}, 0.1);
