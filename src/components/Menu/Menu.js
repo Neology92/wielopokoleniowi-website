@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
 
-// import slugify from 'slugify';
-
+import MenuContainer from './MenuContainer';
 import MenuCategories from './MenuCategories';
-
-// const menuItems = ['O autorze', 'Artykuły', 'Kontakt'];
+import MenuLinksWrapper from './MenuLinksWrapper';
+import MenuLink from './MenuLink';
+import { StyledButton, StyledLink } from './styled';
 
 const Menu = () => {
   const [isCategoryBarOpen, setCategoryBarStatus] = useState(false);
@@ -16,7 +14,7 @@ const Menu = () => {
   };
 
   return (
-    <MenuContiner>
+    <MenuContainer>
       <nav>
         <MenuLinksWrapper isVisible={!isCategoryBarOpen}>
           <MenuLink>
@@ -24,9 +22,12 @@ const Menu = () => {
           </MenuLink>
 
           <MenuLink>
-            <button type="button" onClick={() => changeCategoryBarStatus()}>
+            <StyledButton
+              type="button"
+              onClick={() => changeCategoryBarStatus()}
+            >
               Artykuły
-            </button>
+            </StyledButton>
           </MenuLink>
 
           <MenuLink>
@@ -35,73 +36,8 @@ const Menu = () => {
         </MenuLinksWrapper>
         <MenuCategories isOpen={isCategoryBarOpen} />
       </nav>
-    </MenuContiner>
+    </MenuContainer>
   );
 };
-
-// {menuItems.map(item => (
-//   <MenuLink key={item}>
-//     <StyledLink to={`/${slugify(item.toLowerCase())}`}>
-//       {item}
-//     </StyledLink>
-//   </MenuLink>
-// ))}
-
-const MenuLinksWrapper = styled.ul`
-  padding: 0;
-  display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-`;
-
-const MenuLink = styled.li`
-  list-style: none;
-  font-family: ${({ theme }) => theme.font.family.atma};
-  color: ${({ theme }) => theme.color.nightBlue};
-  font-size: 2.4rem;
-  font-weight: 400;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-`;
-
-const MenuContiner = styled.div`
-  position: relative;
-  height: 71px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  nav {
-    position: relative;
-    width: 656px;
-    height: 100%;
-    border-bottom: 2px solid
-      rgba(${({ theme }) => theme.color.rgb.darkBlue}, 0.1);
-
-    font-family: ${({ theme }) => theme.font.family.atma};
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: calc (50% - 8px);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-top: 11px solid rgba(${({ theme }) => theme.color.rgb.darkBlue}, 0.1);
-    border-right: 8px solid transparent;
-    border-bottom: 0;
-    border-left: 8px solid transparent;
-  }
-`;
 
 export default Menu;
