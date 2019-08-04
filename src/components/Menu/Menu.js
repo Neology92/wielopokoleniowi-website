@@ -18,7 +18,7 @@ const Menu = () => {
   return (
     <MenuContiner>
       <nav>
-        <MenuLinksWrapper>
+        <MenuLinksWrapper isVisible={!isCategoryBarOpen}>
           <MenuLink>
             <StyledLink to="/o-autorze">O autorze</StyledLink>
           </MenuLink>
@@ -49,7 +49,7 @@ const Menu = () => {
 
 const MenuLinksWrapper = styled.ul`
   padding: 0;
-  display: flex;
+  display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -61,6 +61,10 @@ const MenuLink = styled.li`
   color: ${({ theme }) => theme.color.nightBlue};
   font-size: 2.4rem;
   font-weight: 400;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StyledLink = styled(Link)`
@@ -70,7 +74,7 @@ const StyledLink = styled(Link)`
 
 const MenuContiner = styled.div`
   position: relative;
-  height: 76px;
+  height: 71px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +82,7 @@ const MenuContiner = styled.div`
   nav {
     position: relative;
     width: 656px;
+    height: 100%;
     border-bottom: 2px solid
       rgba(${({ theme }) => theme.color.rgb.darkBlue}, 0.1);
 
@@ -87,7 +92,7 @@ const MenuContiner = styled.div`
   &::after {
     content: '';
     position: absolute;
-    bottom: -7px;
+    bottom: -12px;
     left: calc (50% - 8px);
     width: 0;
     height: 0;
