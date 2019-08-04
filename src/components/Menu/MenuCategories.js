@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import everyoneMenu from 'assets/images/everyoneMenu.svg';
+import bussinesMenu from 'assets/images/bussinesMenu.svg';
 import MenuCategoryTile from './MenuCategoryTile';
-import BussinesMenu from '../Icon/BussinesMenu';
-import EveryoneMenu from '../Icon/EveryoneMenu';
 
 const MenuCategories = ({ isOpen }) => {
   return (
     <CategoriesWrapper isOpen={isOpen}>
-      <MenuCategoryTile category="Dla każdego" icon={EveryoneMenu} />
-      <MenuCategoryTile category="Dla Biznesu" icon={BussinesMenu} />
+      <MenuCategoryTile category="Dla każdego" iconSrc={everyoneMenu} />
+      <MenuCategoryTile category="Dla Biznesu" iconSrc={bussinesMenu} />
     </CategoriesWrapper>
   );
 };

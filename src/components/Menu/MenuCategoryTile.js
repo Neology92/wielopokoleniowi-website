@@ -6,22 +6,22 @@ import slugify from 'slugify';
 
 import styled from 'styled-components';
 
-const MenuCategoryTile = ({ category, icon }) => {
-  const Icon = icon;
+import Icon from '../Icon/Icon';
 
+const MenuCategoryTile = ({ category, iconSrc }) => {
   return (
     <TileLink
       to={`/artykuly/${slugify(category.toLowerCase())}`}
       category={category}
     >
-      <Icon />
+      <Icon src={iconSrc} />
       <CategoryName>{category.toUpperCase()}</CategoryName>
     </TileLink>
   );
 };
 
 const CategoryName = styled.div`
-  margin: 20px;
+  margin: 20px 10px 10px;
 
   font-family: ${({ theme }) => theme.font.family.atma};
   font-size: 2.4rem;
@@ -53,7 +53,7 @@ const TileLink = styled(Link)`
       color: white;
     }
 
-    img {
+    path {
       fill: white;
     }
   }
@@ -61,7 +61,7 @@ const TileLink = styled(Link)`
 
 MenuCategoryTile.propTypes = {
   category: PropTypes.string.isRequired,
-  icon: PropTypes.node.isRequired,
+  iconSrc: PropTypes.string.isRequired,
 };
 
 export default MenuCategoryTile;
