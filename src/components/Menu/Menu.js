@@ -15,7 +15,7 @@ const Menu = () => {
   useClickOutside(ref, () => setCategoryBarOpen(false));
 
   return (
-    <MenuContainer>
+    <MenuContainer isCategoryBarOpen={isCategoryBarOpen}>
       <nav>
         <MenuLinksWrapper isVisible={!isCategoryBarOpen}>
           <MenuLink>

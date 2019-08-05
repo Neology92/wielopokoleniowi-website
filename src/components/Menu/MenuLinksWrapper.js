@@ -8,8 +8,8 @@ const MenuLinksWrapper = styled.ul`
   justify-content: space-around;
 
   pointer-events: ${({ isVisible }) => (isVisible ? 'all' : 'none')};
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transition: opacity 0.25s ease-in-out;
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0.2')};
+  transition: opacity 0.3s 0.1s ease-in-out;
 `;
 
 export default MenuLinksWrapper;
