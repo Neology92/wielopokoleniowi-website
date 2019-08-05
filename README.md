@@ -7,5 +7,6 @@ TODO:
 - remove white stripe in topbar (just few resolutions)
 - make loading from up to down
 - Make lazyload animation more efficient
+- Fix flashing artykuly redirect....
 - create 'artykuly' subpage instead redirect
 - ARIA
