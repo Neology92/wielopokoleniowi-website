@@ -10,3 +10,5 @@ TODO:
 - Make lazyload animation more efficient
 
 - Protected connection to API....
+
+- ARIA
