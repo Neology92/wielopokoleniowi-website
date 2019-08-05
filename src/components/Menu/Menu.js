@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+// import { useClickOutside } from 'utils';
+
 import MenuContainer from './MenuContainer';
 import MenuCategories from './MenuCategories';
 import MenuLinksWrapper from './MenuLinksWrapper';
@@ -7,16 +9,15 @@ import MenuLink from './MenuLink';
 import { StyledButton, StyledLink } from './styled';
 
 const Menu = () => {
-  const [isCategoryBarOpen, setCategoryBarStatus] = useState(false);
+  // const ref = useRef();
+  const [isCategoryBarOpen, setCategoryBarOpen] = useState(false);
 
-  const changeCategoryBarStatus = () => {
-    setCategoryBarStatus(!isCategoryBarOpen);
-  };
+  // useClickOutside(ref, () => setCategoryBarOpen(false));
 
   return (
     <MenuContainer>
       <nav>
-        <MenuLinksWrapper isVisible={!isCategoryBarOpen}>
+        <MenuLinksWrapper>
           <MenuLink>
             <StyledLink to="/o-autorze">O autorze</StyledLink>
           </MenuLink>
@@ -24,7 +25,7 @@ const Menu = () => {
           <MenuLink>
             <StyledButton
               type="button"
-              onClick={() => changeCategoryBarStatus()}
+              onClick={() => setCategoryBarOpen(!isCategoryBarOpen)}
             >
               Artykuły
             </StyledButton>

@@ -16,9 +16,12 @@ const MenuCategories = ({ isOpen }) => {
 };
 
 const CategoriesWrapper = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   flex-direction: row;
 `;
