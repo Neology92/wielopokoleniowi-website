@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
-// import { useClickOutside } from 'utils';
+import { useClickOutside } from 'utils';
 
 import MenuContainer from './MenuContainer';
 import MenuCategories from './MenuCategories';
@@ -9,10 +9,10 @@ import MenuLink from './MenuLink';
 import { StyledButton, StyledLink } from './styled';
 
 const Menu = () => {
-  // const ref = useRef();
+  const ref = useRef();
   const [isCategoryBarOpen, setCategoryBarOpen] = useState(false);
 
-  // useClickOutside(ref, () => setCategoryBarOpen(false));
+  useClickOutside(ref, () => setCategoryBarOpen(false));
 
   return (
     <MenuContainer>
@@ -36,7 +36,9 @@ const Menu = () => {
           </MenuLink>
         </MenuLinksWrapper>
       </nav>
-      <MenuCategories isOpen={isCategoryBarOpen} />
+      <div ref={ref}>
+        <MenuCategories isOpen={isCategoryBarOpen} />
+      </div>
     </MenuContainer>
   );
 };

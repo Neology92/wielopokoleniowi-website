@@ -28,7 +28,7 @@ const CategoriesWrapper = styled.div`
 
   transform: translate(0, ${({ isOpen }) => (isOpen ? '0' : '-100%')});
   /* opacity: ${({ isOpen }) => (isOpen ? '1' : '0')}; */
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   /* transition: opacity 0.1s ease-in-out; */
 `;
 

@@ -9,7 +9,7 @@ const MenuLinksWrapper = styled.ul`
 
   pointer-events: ${({ isVisible }) => (isVisible ? 'all' : 'none')};
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 `;
 
 export default MenuLinksWrapper;
