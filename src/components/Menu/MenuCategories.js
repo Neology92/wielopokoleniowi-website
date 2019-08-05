@@ -17,13 +17,19 @@ const MenuCategories = ({ isOpen }) => {
 
 const CategoriesWrapper = styled.div`
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 0;
+  left: calc(50% - 328px);
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  width: 656px;
+  height: 71px;
+  display: flex;
   flex-direction: row;
+  /* visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')}; */
+
+  transform: translate(0, ${({ isOpen }) => (isOpen ? '0' : '-100%')});
+  /* opacity: ${({ isOpen }) => (isOpen ? '1' : '0')}; */
+  transition: transform 0.4s ease-in-out;
+  /* transition: opacity 0.1s ease-in-out; */
 `;
 
 MenuCategories.propTypes = {

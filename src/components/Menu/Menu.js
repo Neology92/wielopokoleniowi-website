@@ -17,7 +17,7 @@ const Menu = () => {
   return (
     <MenuContainer>
       <nav>
-        <MenuLinksWrapper>
+        <MenuLinksWrapper isVisible={!isCategoryBarOpen}>
           <MenuLink>
             <StyledLink to="/o-autorze">O autorze</StyledLink>
           </MenuLink>
@@ -35,8 +35,8 @@ const Menu = () => {
             <StyledLink to="/kontakt">Kontakt</StyledLink>
           </MenuLink>
         </MenuLinksWrapper>
-        <MenuCategories isOpen={isCategoryBarOpen} />
       </nav>
+      <MenuCategories isOpen={isCategoryBarOpen} />
     </MenuContainer>
   );
 };
