@@ -1,3 +1,4 @@
+import useOnClick from './useOnClick';
 import useClickOutside from './useClickOutside';
 
-export { useClickOutside };
+export { useOnClick, useClickOutside };
