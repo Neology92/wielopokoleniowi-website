@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs } from 'components';
@@ -22,8 +23,8 @@ const BreadcrumbsWrapper = styled.div`
   padding: 15px 0 0 15px;
   width: 100%;
 `;
-const Kontakt = () => (
-  <MainLayout>
+const Kontakt = ({ location: { pathname } }) => (
+  <MainLayout path={pathname}>
     <SEO title="Kontakt" />
     <BreadcrumbsWrapper>
       <Breadcrumbs page="Kontakt" />
@@ -33,5 +34,9 @@ const Kontakt = () => (
     </StyledContainer>
   </MainLayout>
 );
+
+Kontakt.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
+};
 
 export default Kontakt;

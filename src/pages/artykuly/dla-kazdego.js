@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs } from 'components';
@@ -27,8 +28,8 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const Everyone = () => (
-  <MainLayout>
+const Everyone = ({ location: { pathname } }) => (
+  <MainLayout path={pathname}>
     <SEO title="Dla Każdego" />
     <StyledContainer>
       <BreadcrumbsWrapper>
@@ -39,5 +40,9 @@ const Everyone = () => (
     </StyledContainer>
   </MainLayout>
 );
+
+Everyone.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
+};
 
 export default Everyone;

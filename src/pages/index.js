@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import {
   MainLayout,
@@ -20,8 +21,8 @@ const StyledContainer = styled.div`
   }
 `;
 
-const IndexPage = () => (
-  <MainLayout isMainPage>
+const IndexPage = ({ location: { pathname } }) => (
+  <MainLayout path={pathname} isMainPage>
     <SEO title="Home" />
     <StyledContainer>
       <WelcomeSection />
@@ -31,5 +32,9 @@ const IndexPage = () => (
     </StyledContainer>
   </MainLayout>
 );
+
+IndexPage.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
+};
 
 export default IndexPage;

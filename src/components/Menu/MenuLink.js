@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const MenuLink = styled.li`
   list-style: none;
-  width: 100px;
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;

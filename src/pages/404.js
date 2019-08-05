@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
 import { SEO } from 'components';
@@ -18,8 +19,8 @@ const StyledContainer = styled.div`
   }
 `;
 
-const PageNotFound = () => (
-  <MainLayout>
+const PageNotFound = ({ location: { pathname } }) => (
+  <MainLayout path={pathname}>
     <SEO title="Home" />
     <StyledContainer>
       <h1>404</h1>
@@ -27,5 +28,9 @@ const PageNotFound = () => (
     </StyledContainer>
   </MainLayout>
 );
+
+PageNotFound.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
+};
 
 export default PageNotFound;

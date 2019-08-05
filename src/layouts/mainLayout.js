@@ -10,14 +10,14 @@ import { theme } from 'assets/styles/theme';
 import { Header, Footer, Menu } from 'components';
 import Background from './Background';
 
-const MainLayout = ({ children, isMainPage, isPost }) => (
+const MainLayout = ({ children, isMainPage, isPost, path }) => (
   <>
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
         <Header />
         <Background>
-          <Menu />
+          <Menu path={path} />
           <StyledMain isMainPage={isMainPage} isPost={isPost}>
             {children}
           </StyledMain>
@@ -65,13 +65,15 @@ const StyledMain = styled.main`
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  isMainPage: PropTypes.bool,
+  path: PropTypes.string,
   isPost: PropTypes.bool,
+  isMainPage: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
-  isMainPage: false,
+  path: '/',
   isPost: false,
+  isMainPage: false,
 };
 
 export default MainLayout;

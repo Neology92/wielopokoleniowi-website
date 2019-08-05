@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
     h1{
         font-family: Atma, cursive;
+        font-weight: 500;
     }
 
     blockquote {

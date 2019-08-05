@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs } from 'components';
@@ -23,8 +24,8 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const ZasadyWielopokoleniowych = () => (
-  <MainLayout>
+const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
+  <MainLayout path={pathname}>
     <SEO title="Zasady Wielopokoleniowych" />
     <BreadcrumbsWrapper>
       <Breadcrumbs page="Zasady Wielopokoleniowych" />
@@ -34,5 +35,9 @@ const ZasadyWielopokoleniowych = () => (
     </StyledContainer>
   </MainLayout>
 );
+
+ZasadyWielopokoleniowych.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
+};
 
 export default ZasadyWielopokoleniowych;

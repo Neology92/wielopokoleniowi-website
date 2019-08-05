@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { useOnClick } from 'utils';
 
@@ -8,7 +9,7 @@ import MenuLinksWrapper from './MenuLinksWrapper';
 import MenuLink from './MenuLink';
 import { StyledButton, StyledLink } from './styled';
 
-const Menu = () => {
+const Menu = ({ path }) => {
   const [isCategoryBarOpen, setCategoryBarOpen] = useState(false);
 
   useOnClick(() => setCategoryBarOpen(false));
@@ -16,9 +17,11 @@ const Menu = () => {
   return (
     <MenuContainer isCategoryBarOpen={isCategoryBarOpen}>
       <nav>
-        <MenuLinksWrapper isVisible={!isCategoryBarOpen}>
+        <MenuLinksWrapper isVisible={!isCategoryBarOpen} path={path}>
           <MenuLink>
-            <StyledLink to="/o-autorze">O autorze</StyledLink>
+            <StyledLink to="/o-autorze">
+              <div>O autorze</div>
+            </StyledLink>
           </MenuLink>
 
           <MenuLink>
@@ -26,18 +29,28 @@ const Menu = () => {
               type="button"
               onClick={() => setCategoryBarOpen(!isCategoryBarOpen)}
             >
-              Artykuły
+              <div>Artykuły</div>
             </StyledButton>
           </MenuLink>
 
           <MenuLink>
-            <StyledLink to="/kontakt">Kontakt</StyledLink>
+            <StyledLink to="/kontakt">
+              <div>Kontakt</div>
+            </StyledLink>
           </MenuLink>
         </MenuLinksWrapper>
       </nav>
       <MenuCategories isOpen={isCategoryBarOpen} />
     </MenuContainer>
   );
+};
+
+Menu.propTypes = {
+  path: PropTypes.string,
+};
+
+Menu.defaultProps = {
+  path: '',
 };
 
 export default Menu;

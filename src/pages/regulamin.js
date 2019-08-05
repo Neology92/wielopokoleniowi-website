@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs } from 'components';
@@ -23,8 +24,8 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const Regulamin = () => (
-  <MainLayout>
+const Regulamin = ({ location: { pathname } }) => (
+  <MainLayout path={pathname}>
     <SEO title="Regulamin" />
     <BreadcrumbsWrapper>
       <Breadcrumbs page="Regulamin" />
@@ -34,5 +35,9 @@ const Regulamin = () => (
     </StyledContainer>
   </MainLayout>
 );
+
+Regulamin.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
+};
 
 export default Regulamin;
