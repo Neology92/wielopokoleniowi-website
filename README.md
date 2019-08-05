@@ -9,4 +9,5 @@ TODO:
 - Make lazyload animation more efficient
 - Fix flashing artykuly redirect....
 - create 'artykuly' subpage instead redirect
+- Fix menu openning with tab
 - ARIA
