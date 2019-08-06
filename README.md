@@ -1,5 +1,6 @@
 TODO:
 
+- SEO
 - repair clickOutside menu categories
 - repair dummy way of setting graphics in footer
 - Protected connection to API....

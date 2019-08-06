@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
-import { SEO, Breadcrumbs } from 'components';
+import { SEO, Breadcrumbs, PostsSortingTile } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -35,8 +35,7 @@ const Everyone = ({ location: { pathname } }) => (
       <BreadcrumbsWrapper>
         <Breadcrumbs category="Everyone" />
       </BreadcrumbsWrapper>
-      <h1>Artykuły</h1>
-      <h2>Dla Każdego</h2>
+      <PostsSortingTile path={pathname} />
     </StyledContainer>
   </MainLayout>
 );
@@ -44,5 +43,4 @@ const Everyone = ({ location: { pathname } }) => (
 Everyone.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
 };
-
 export default Everyone;

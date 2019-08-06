@@ -1,5 +1,6 @@
 import SEO from './seo';
 import Header from './Header/Header';
+import Menu from './Menu/Menu';
 import Footer from './Footer/Footer';
 
 import Facebook from './Icon/Facebook';
@@ -13,13 +14,13 @@ import Everyone from './Icon/Everyone';
 
 import FamilyLeft from './FamilyLeft/FamilyLeft';
 import FamilyRight from './FamilyRight/FamilyRight';
+import CategoryTile from './CategoryTile/CategoryTile';
+import PostsGrid from './PostsGrid/PostsGrid';
 import LukasDesk from './LukasDesk/LukasDesk';
 
-import Menu from './Menu/Menu';
 import TextParagraph from './TextParagraph/TextParagraph';
-import PostsGrid from './PostsGrid/PostsGrid';
+import PostsSortingTile from './PostsSortingTile/PostsSortingTile';
 import PostTile from './PostTile/PostTile';
-import CategoryTile from './CategoryTile/CategoryTile';
 import Button from './Button/Button';
 
 import PostGraphics from './PostGraphics/PostGraphics';
@@ -34,6 +35,7 @@ export * from './Headings/Headings';
 export {
   SEO,
   Header,
+  Menu,
   Footer,
   Facebook,
   Youtube,
@@ -45,12 +47,12 @@ export {
   Everyone,
   FamilyLeft,
   FamilyRight,
-  LukasDesk,
-  Menu,
-  TextParagraph,
-  PostsGrid,
-  PostTile,
   CategoryTile,
+  PostsGrid,
+  LukasDesk,
+  TextParagraph,
+  PostsSortingTile,
+  PostTile,
   Button,
   PostGraphics,
   Breadcrumbs,

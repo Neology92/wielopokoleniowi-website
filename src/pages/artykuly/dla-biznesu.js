@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
-import { SEO, Breadcrumbs } from 'components';
+import { SEO, Breadcrumbs, PostsSortingTile } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -35,8 +35,7 @@ const Bussines = ({ location: { pathname } }) => (
       <BreadcrumbsWrapper>
         <Breadcrumbs category="Bussines" />
       </BreadcrumbsWrapper>
-      <h1>Artykuły</h1>
-      <h2>Dla Biznesu</h2>
+      <PostsSortingTile path={pathname} />
     </StyledContainer>
   </MainLayout>
 );
