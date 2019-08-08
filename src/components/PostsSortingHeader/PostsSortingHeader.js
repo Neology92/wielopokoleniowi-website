@@ -8,7 +8,7 @@ import TileWrapper from './TileWrapper';
 import { InnerWrapperLeft, InnerWrapperRight } from './InnerWrappers';
 import { StyledH2, StyledIcon, StyledButton } from './styled';
 
-const PostsSortingTile = ({ path }) => {
+const PostsSortingHeader = ({ path }) => {
   return (
     <TileWrapper category={path}>
       <InnerWrapperLeft>
@@ -45,8 +45,8 @@ const PostsSortingTile = ({ path }) => {
   );
 };
 
-PostsSortingTile.propTypes = {
+PostsSortingHeader.propTypes = {
   path: PropTypes.string.isRequired,
 };
 
-export default PostsSortingTile;
+export default PostsSortingHeader;

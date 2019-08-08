@@ -19,7 +19,7 @@ import PostsGrid from './PostsGrid/PostsGrid';
 import LukasDesk from './LukasDesk/LukasDesk';
 
 import TextParagraph from './TextParagraph/TextParagraph';
-import PostsSortingTile from './PostsSortingTile/PostsSortingTile';
+import PostsSortingHeader from './PostsSortingHeader/PostsSortingHeader';
 import PostTile from './PostTile/PostTile';
 import Button from './Button/Button';
 
@@ -51,7 +51,7 @@ export {
   PostsGrid,
   LukasDesk,
   TextParagraph,
-  PostsSortingTile,
+  PostsSortingHeader,
   PostTile,
   Button,
   PostGraphics,

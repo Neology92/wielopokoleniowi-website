@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const TileWrapper = styled.div`
+const TileWrapper = styled.header`
   display: none;
   ${({ theme }) => theme.media.above.m} {
     display: flex;
