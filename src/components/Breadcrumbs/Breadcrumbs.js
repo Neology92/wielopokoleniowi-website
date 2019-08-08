@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Breadcrumbs = ({ path }) => {
+const Breadcrumbs = ({ path, isPost }) => {
   const breadcrumbsArray = path
     .toUpperCase()
     .slice(1)
@@ -20,14 +20,21 @@ const Breadcrumbs = ({ path }) => {
     slugs.push(slug);
   });
 
+  if (isPost) {
+    slugs.pop();
+    slugs.push('/');
+  }
+
   return (
     <BreadcrumbsWrapper>
       <StyledLink to="/"> Home </StyledLink>
       {breadcrumbsArray.map((element, i) => (
-        <StyledLink key={element} to={slugs[i]}>
-          {' '}
-          {`/ ${element.split('-').join(' ')}`}{' '}
-        </StyledLink>
+        <>
+          {' / '}
+          <StyledLink key={element} to={slugs[i]}>
+            {`${element.split('-').join(' ')}`}
+          </StyledLink>
+        </>
       ))}
     </BreadcrumbsWrapper>
   );
@@ -47,10 +54,24 @@ const BreadcrumbsWrapper = styled.div`
   font-size: 1.4rem;
   text-transform: uppercase;
   color: rgb(${({ theme }) => theme.color.rgb.nightBlue}, 0.4);
+
+  & > a:last-child {
+    pointer-events: none;
+    color: rgb(${({ theme }) => theme.color.rgb.nightBlue}, 0.4);
+
+    &:hover {
+      color: rgb(${({ theme }) => theme.color.rgb.nightBlue}, 0.4);
+    }
+  }
 `;
 
 Breadcrumbs.propTypes = {
   path: PropTypes.string.isRequired,
+  isPost: PropTypes.bool,
+};
+
+Breadcrumbs.defaultProps = {
+  isPost: false,
 };
 
 export default Breadcrumbs;
