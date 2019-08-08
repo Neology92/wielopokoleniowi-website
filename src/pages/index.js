@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import {
   MainLayout,
   WelcomeSection,
+  FirstStepsSection,
   PostsSection,
-  CategoriesSection,
   AboutSection,
 } from 'layouts';
 import { SEO } from 'components';
@@ -26,7 +26,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <SEO title="Home" />
     <StyledContainer>
       <WelcomeSection />
-      <CategoriesSection />
+      <FirstStepsSection />
       <PostsSection />
       <AboutSection />
     </StyledContainer>

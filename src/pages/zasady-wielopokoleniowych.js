@@ -28,7 +28,7 @@ const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
     <SEO title="Zasady Wielopokoleniowych" />
     <BreadcrumbsWrapper>
-      <Breadcrumbs page="Zasady Wielopokoleniowych" />
+      <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
       <h1>Zasady Wielopokoleniowych</h1>

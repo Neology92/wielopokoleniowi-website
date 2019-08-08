@@ -12,9 +12,9 @@ const SectionWrapper = styled.section`
   padding: 15px;
 `;
 
-const HeadingSection = ({ title, category, icon }) => (
+const HeadingSection = ({ title, category, icon, path }) => (
   <SectionWrapper>
-    <Breadcrumbs category={category} title={title} />
+    <Breadcrumbs path={path} />
     <PostMainHeading>{title}</PostMainHeading>
     <PostGraphics category={category} icon={icon} />
   </SectionWrapper>
@@ -24,6 +24,7 @@ HeadingSection.propTypes = {
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default HeadingSection;

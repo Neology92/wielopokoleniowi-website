@@ -4,16 +4,16 @@ import { Link } from 'gatsby';
 
 import { CategoryTile, Bussines, Everyone } from 'components';
 
-const CategoriesSection = () => {
+const FirstStepsSection = () => {
   return (
     <SectionWrapper>
       <CategoryTile>
-        <StyledLink to="/artykuly/dla-kazdego">
+        <StyledLink to="/pierwsze-kroki/dla-każdego">
           <StyledEveryone /> DLA KAŻDEGO
         </StyledLink>
       </CategoryTile>
       <CategoryTile isDark>
-        <StyledLink to="/artykuly/dla-biznesu">
+        <StyledLink to="/pierwsze-kroki/dla-biznesu">
           <StyledBussines /> DLA BIZNESU
         </StyledLink>
       </CategoryTile>
@@ -83,4 +83,4 @@ const StyledEveryone = styled(Everyone)`
   }
 `;
 
-export default CategoriesSection;
+export default FirstStepsSection;

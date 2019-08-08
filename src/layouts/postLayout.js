@@ -28,6 +28,7 @@ const PostLayout = ({ pageContext: { data, recommendedPostsEdges } }) => {
           title={data.title}
           category={data.category}
           icon={data.icon.url}
+          path="/artykuly/dla-biznesu/another-article"
         />
         <BodySection content={content} />
       </MainWrapper>

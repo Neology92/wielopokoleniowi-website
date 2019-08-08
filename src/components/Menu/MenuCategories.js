@@ -9,7 +9,7 @@ import MenuCategoryTile from './MenuCategoryTile';
 const MenuCategories = ({ isOpen }) => {
   return (
     <CategoriesWrapper isOpen={isOpen}>
-      <MenuCategoryTile category="Dla każdego" iconSrc={everyoneMenu} />
+      <MenuCategoryTile category="Dla Każdego" iconSrc={everyoneMenu} />
       <MenuCategoryTile category="Dla Biznesu" iconSrc={bussinesMenu} />
     </CategoriesWrapper>
   );

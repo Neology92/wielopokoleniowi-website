@@ -28,7 +28,7 @@ const Regulamin = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
     <SEO title="Regulamin" />
     <BreadcrumbsWrapper>
-      <Breadcrumbs page="Regulamin" />
+      <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
       <h1>Regulamin</h1>

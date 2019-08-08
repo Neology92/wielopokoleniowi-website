@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
-import { SEO, Breadcrumbs, PostsSortingHeader } from 'components';
+import { SEO, Breadcrumbs } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -28,19 +28,19 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const Everyone = ({ location: { pathname } }) => (
+const EveryoneFirstSteps = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
     <SEO title="Dla Każdego" />
     <StyledContainer>
       <BreadcrumbsWrapper>
-        <Breadcrumbs category="Everyone" />
+        <Breadcrumbs path={pathname} />
       </BreadcrumbsWrapper>
-      <PostsSortingHeader path={pathname} />
+      <h2>Pierwsze kroki dla Każdego</h2>
     </StyledContainer>
   </MainLayout>
 );
 
-Everyone.propTypes = {
+EveryoneFirstSteps.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
 };
-export default Everyone;
+export default EveryoneFirstSteps;

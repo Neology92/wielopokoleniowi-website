@@ -27,7 +27,7 @@ const Kontakt = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
     <SEO title="Kontakt" />
     <BreadcrumbsWrapper>
-      <Breadcrumbs page="Kontakt" />
+      <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
       <h1>Kontakt</h1>

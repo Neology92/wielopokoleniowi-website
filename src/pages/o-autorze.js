@@ -28,7 +28,7 @@ const About = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
     <SEO title="O autorze" />
     <BreadcrumbsWrapper>
-      <Breadcrumbs page="O autorze" />
+      <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
       <h1>O autorze</h1>

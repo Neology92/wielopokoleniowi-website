@@ -28,20 +28,20 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const Bussines = ({ location: { pathname } }) => (
+const BussinesPosts = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
     <SEO title="Dla Biznesu" />
     <StyledContainer>
       <BreadcrumbsWrapper>
-        <Breadcrumbs category="Bussines" />
+        <Breadcrumbs path={pathname} />
       </BreadcrumbsWrapper>
       <PostsSortingHeader path={pathname} />
     </StyledContainer>
   </MainLayout>
 );
 
-Bussines.propTypes = {
+BussinesPosts.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
 };
 
-export default Bussines;
+export default BussinesPosts;

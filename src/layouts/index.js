@@ -1,7 +1,7 @@
 import MainLayout from './mainLayout';
 import WelcomeSection from './mainPageSections/welcomeSection';
 import PostsSection from './mainPageSections/postsSection';
-import CategoriesSection from './mainPageSections/categoriesSection';
+import FirstStepsSection from './mainPageSections/FirstStepsSection';
 import AboutSection from './mainPageSections/aboutSection';
 
 import HeadingSection from './postSections/headingSection';
@@ -12,7 +12,7 @@ export {
   MainLayout,
   WelcomeSection,
   PostsSection,
-  CategoriesSection,
+  FirstStepsSection,
   AboutSection,
   HeadingSection,
   BodySection,

@@ -15,6 +15,10 @@ const StyledContainer = styled.div`
 
   h1 {
     font-size: 4rem;
+  }
+
+  h1,
+  h2 {
     margin: 0 auto;
   }
 `;
@@ -24,20 +28,20 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const PolitykaPrywatnosci = ({ location: { pathname } }) => (
+const BussinesFirstSteps = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Polityka prywatności" />
-    <BreadcrumbsWrapper>
-      <Breadcrumbs path={pathname} />
-    </BreadcrumbsWrapper>
+    <SEO title="Dla Biznesu" />
     <StyledContainer>
-      <h1>Polityka prywatności</h1>
+      <BreadcrumbsWrapper>
+        <Breadcrumbs path={pathname} />
+      </BreadcrumbsWrapper>
+      <h2>Pierwsze kroki dla Każdego</h2>
     </StyledContainer>
   </MainLayout>
 );
 
-PolitykaPrywatnosci.propTypes = {
+BussinesFirstSteps.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
 };
 
-export default PolitykaPrywatnosci;
+export default BussinesFirstSteps;

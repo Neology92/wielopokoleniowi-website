@@ -1,41 +1,34 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import slugify from 'slugify';
-
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const If = (condition, then, otherwise) => (condition ? then : otherwise);
+const Breadcrumbs = ({ path }) => {
+  const breadcrumbsArray = path
+    .toUpperCase()
+    .slice(1)
+    .split('/');
 
-const Breadcrumbs = ({ page, category, title }) => {
-  const categoryPl = category === 'Bussines' ? 'dla biznesu' : 'dla każdego';
+  const slugs = [];
 
-  const articlesCategoryTitle = (
-    <>
-      /<StyledLink to="/artykuly"> Artykuły </StyledLink>/
-      <StyledLink to={`/artykuly/${slugify(categoryPl)}`}>
-        {` ${categoryPl} `}
-      </StyledLink>
-      {`/ ${title}`}
-    </>
-  );
-  const articlesCategory = (
-    <>
-      /<StyledLink to="/artykuly"> Artykuły </StyledLink>
-      {`/ ${categoryPl}`}
-    </>
-  );
-  const onlyPage = <>{`/ ${page}`}</>;
+  breadcrumbsArray.forEach((elem, index) => {
+    let slug = '';
+    for (let i = 0; i <= index; i++) {
+      slug += `/${breadcrumbsArray[i].toLowerCase()}`;
+    }
+    slugs.push(slug);
+  });
 
   return (
     <BreadcrumbsWrapper>
       <StyledLink to="/"> Home </StyledLink>
-      {If(
-        title,
-        articlesCategoryTitle,
-        If(category, articlesCategory, onlyPage)
-      )}
+      {breadcrumbsArray.map((element, i) => (
+        <StyledLink key={element} to={slugs[i]}>
+          {' '}
+          {`/ ${element.split('-').join(' ')}`}{' '}
+        </StyledLink>
+      ))}
     </BreadcrumbsWrapper>
   );
 };
@@ -57,15 +50,7 @@ const BreadcrumbsWrapper = styled.div`
 `;
 
 Breadcrumbs.propTypes = {
-  page: PropTypes.string,
-  category: PropTypes.string,
-  title: PropTypes.string,
-};
-
-Breadcrumbs.defaultProps = {
-  page: 'Artykuły',
-  category: '',
-  title: '',
+  path: PropTypes.string.isRequired,
 };
 
 export default Breadcrumbs;
