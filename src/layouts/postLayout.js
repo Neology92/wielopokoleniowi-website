@@ -12,7 +12,9 @@ import SidebarSection from './postSections/sidebarSection';
 // eslint-disable-next-line
 const parse = string => <div dangerouslySetInnerHTML={{ __html: string }} />;
 
-const PostLayout = ({ pageContext: { data, recommendedPostsEdges } }) => {
+const PostLayout = ({
+  pageContext: { data, recommendedPostsEdges, pathname },
+}) => {
   const content = <> {parse(data.body.html)} </>;
 
   const tagsArray = [];
@@ -28,7 +30,9 @@ const PostLayout = ({ pageContext: { data, recommendedPostsEdges } }) => {
           title={data.title}
           category={data.category}
           icon={data.icon.url}
-          path="/artykuly/dla-biznesu/another-article"
+          path={`/artykuly/${
+            data.category === 'Everyone' ? 'dla-każdego' : 'dla-biznesu'
+          }${pathname}`}
         />
         <BodySection content={content} />
       </MainWrapper>

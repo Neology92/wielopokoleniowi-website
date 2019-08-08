@@ -57,6 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         data: edge.node,
         recommendedPostsEdges,
+        pathname: `/${slugify(edge.node.title.toLowerCase())}`,
       },
     });
   });
