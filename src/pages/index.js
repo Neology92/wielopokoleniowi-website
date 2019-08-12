@@ -25,12 +25,9 @@ const StyledContainer = styled.div`
 const IndexPage = ({ location: { pathname }, data }) => {
   const posts = [];
 
-  data.graphcms.everyone.edges.forEach(edge => {
+  data.graphcms.everyone.edges.forEach((edge, i) => {
     posts.push(edge);
-  });
-
-  data.graphcms.bussines.edges.forEach(edge => {
-    posts.push(edge);
+    posts.push(data.graphcms.bussines.edges[i]);
   });
 
   return (
