@@ -9,6 +9,7 @@ const StyledH2 = styled.h2`
   font-family: ${({ theme }) => theme.font.family.atma};
   font-weight: 500;
   padding-bottom: 10px;
+  margin: 0 auto;
 `;
 
 const StyledIcon = styled(Icon)`
