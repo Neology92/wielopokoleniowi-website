@@ -1,30 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import magnifier from 'assets/images/magnifier.svg';
+import { StyledIcon, StyledInput } from './styled';
+
 const SearchBox = () => {
-  return <StyledInput type="text" placeholder="Czego szukasz?" />;
+  return (
+    <Container>
+      <StyledInput type="text" placeholder="Czego szukasz?" />
+      <StyledIcon src={magnifier} />
+    </Container>
+  );
 };
 
-const StyledInput = styled.input`
-  width: 90%;
-  padding: 10px 20px;
-  border: none;
-  background: rgb(${({ theme }) => theme.color.rgb.white}, 0.1);
-  border-radius: 50px;
-
-  color: ${({ theme }) => theme.color.white};
-  font-family: ${({ theme }) => theme.font.family.roboto};
-  font-weight: 400;
-  font-size: 1.8rem;
-
-  &::placeholder {
-    color: rgb(${({ theme }) => theme.color.rgb.white}, 0.3);
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0px -50px 0px -49px ${({ theme }) => theme.color.white} inset;
-  }
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
 `;
 
 export default SearchBox;
