@@ -8,25 +8,6 @@ const PostsGridWrapper = styled.div`
   grid-gap: 10px 10px;
   justify-content: center;
 
-  & a:nth-child(1) {
-    order: 1;
-  }
-  & a:nth-child(2) {
-    order: 3;
-  }
-  & a:nth-child(3) {
-    order: 5;
-  }
-  & a:nth-child(4) {
-    order: 2;
-  }
-  & a:nth-child(5) {
-    order: 4;
-  }
-  & a:nth-child(6) {
-    order: 6;
-  }
-
   ${({ theme }) => theme.media.above.s} {
     grid-gap: 30px 36px;
   }

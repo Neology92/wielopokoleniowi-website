@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import styled from 'styled-components';
 
 import { SectionHeading, PostsGrid } from 'components';
@@ -11,13 +13,16 @@ const SectionWrapper = styled.section`
   }
 `;
 
-const PostsSection = () => {
+const PostsSection = ({ posts }) => {
   return (
     <SectionWrapper>
       <SectionHeading>Najnowsze artykuły</SectionHeading>
-      <PostsGrid />
+      <PostsGrid posts={posts} />
     </SectionWrapper>
   );
 };
 
+PostsSection.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
 export default PostsSection;

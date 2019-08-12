@@ -1,67 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import slugify from 'slugify';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+
+import styled from 'styled-components';
 
 import PostTile from '../PostTile/PostTile';
 import PostsGridWrapper from './PostsGridWrapper';
 
-const PostsGrid = () => {
-  const data = useStaticQuery(graphql`
-    {
-      graphcms {
-        everyone: postsConnection(
-          first: 3
-          orderBy: createdAt_DESC
-          where: { category: Everyone }
-        ) {
-          edges {
-            node {
-              title
-              category
-              level
-              body {
-                html
-                text
-              }
-              icon {
-                url
-              }
-            }
-          }
-        }
-        bussines: postsConnection(
-          first: 3
-          orderBy: createdAt_DESC
-          where: { category: Bussines }
-        ) {
-          edges {
-            node {
-              title
-              category
-              level
-              body {
-                html
-                text
-              }
-              icon {
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
+const PostsGrid = ({ posts }) => {
   return (
     <PostsGridWrapper>
-      {data.graphcms.everyone.edges.map(({ node }) => (
-        <StyledLink key={node.id} to={`/${slugify(node.title.toLowerCase())}`}>
-          <PostTile post={node} />
-        </StyledLink>
-      ))}
-      {data.graphcms.bussines.edges.map(({ node }) => (
+      {posts.map(({ node }) => (
         <StyledLink key={node.id} to={`/${slugify(node.title.toLowerCase())}`}>
           <PostTile post={node} />
         </StyledLink>
@@ -74,5 +24,9 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
+
+PostsGrid.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
 
 export default PostsGrid;
