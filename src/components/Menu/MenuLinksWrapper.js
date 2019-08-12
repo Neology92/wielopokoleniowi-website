@@ -14,7 +14,7 @@ const MenuLinksWrapper = styled.ul`
   li:nth-child(${({ path }) => {
         if (path === '/o-autorze') return 1;
         if (path === '/artykuly') return 2;
-        if (path === '/artykuly/dla-każdego') return 2;
+        if (path === '/artykuly/dla-kazdego') return 2;
         if (path === '/artykuly/dla-biznesu') return 2;
         if (path === '/kontakt') return 3;
         return 0;
