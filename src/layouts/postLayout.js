@@ -31,7 +31,7 @@ const PostLayout = ({
           category={data.category}
           icon={data.icon.url}
           path={`/artykuly/${
-            data.category === 'Everyone' ? 'dla-każdego' : 'dla-biznesu'
+            data.category === 'Everyone' ? 'dla-kazdego' : 'dla-biznesu'
           }${pathname}`}
         />
         <BodySection content={content} />

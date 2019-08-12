@@ -8,12 +8,12 @@ const FirstStepsSection = () => {
   return (
     <SectionWrapper>
       <CategoryTile>
-        <StyledLink to="/pierwsze-kroki/dla-kazdego">
+        <StyledLink to="/artykuly/dla-kazdego/pierwsze-kroki">
           <StyledEveryone /> DLA KAŻDEGO
         </StyledLink>
       </CategoryTile>
       <CategoryTile isDark>
-        <StyledLink to="/pierwsze-kroki/dla-biznesu">
+        <StyledLink to="/artykuly/dla-biznesu/pierwsze-kroki">
           <StyledBussines /> DLA BIZNESU
         </StyledLink>
       </CategoryTile>
