@@ -14,10 +14,10 @@ const Indicator = ({ className, level }) => {
   const stars = [];
 
   for (let i = 0; i < level; i++) {
-    stars.push(<StyledStar isBright />);
+    stars.push(<StyledStar isBright key={i} />);
   }
   for (let i = 3; i > level; i--) {
-    stars.push(<StyledStar />);
+    stars.push(<StyledStar key={i} />);
   }
 
   return <div className={className}>{stars}</div>;

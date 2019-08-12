@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
   }
 `;
 
-const IndexPage = ({ location: { pathname }, data }) => {
+const IndexPage = ({ data }) => {
   const posts = [];
 
   data.graphcms.everyone.edges.forEach((edge, i) => {
@@ -31,7 +31,7 @@ const IndexPage = ({ location: { pathname }, data }) => {
   });
 
   return (
-    <MainLayout path={pathname} isMainPage>
+    <MainLayout path="/" isMainPage>
       <SEO title="Home" />
       <StyledContainer>
         <WelcomeSection />
@@ -91,7 +91,6 @@ export const mainPagePostsQuery = graphql`
 `;
 
 IndexPage.propTypes = {
-  location: PropTypes.shape(PropTypes.string).isRequired,
   data: PropTypes.node.isRequired,
 };
 
