@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postsQuery = await graphql(`
     {
       graphcms {
-        posts: postsConnection(skip: 0) {
+        posts: postsConnection(skip: 0, where: { status: PUBLISHED }) {
           edges {
             node {
               id

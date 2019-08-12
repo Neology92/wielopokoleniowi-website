@@ -49,7 +49,7 @@ export const mainPagePostsQuery = graphql`
       everyone: postsConnection(
         first: 3
         orderBy: createdAt_DESC
-        where: { category: Everyone }
+        where: { category: Everyone, status: PUBLISHED }
       ) {
         edges {
           node {
@@ -69,7 +69,7 @@ export const mainPagePostsQuery = graphql`
       bussines: postsConnection(
         first: 3
         orderBy: createdAt_DESC
-        where: { category: Bussines }
+        where: { category: Bussines, status: PUBLISHED }
       ) {
         edges {
           node {

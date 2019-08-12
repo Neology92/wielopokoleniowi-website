@@ -23,7 +23,7 @@ const EveryonePosts = ({ location: { pathname } }) => {
       graphcms {
         everyone: postsConnection(
           orderBy: createdAt_DESC
-          where: { category: Everyone }
+          where: { category: Everyone, status: PUBLISHED }
         ) {
           edges {
             node {

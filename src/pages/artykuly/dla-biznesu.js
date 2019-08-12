@@ -22,7 +22,7 @@ const BussinesPosts = ({ location: { pathname } }) => {
       graphcms {
         bussines: postsConnection(
           orderBy: createdAt_DESC
-          where: { category: Bussines }
+          where: { category: Bussines, status: PUBLISHED }
         ) {
           edges {
             node {
