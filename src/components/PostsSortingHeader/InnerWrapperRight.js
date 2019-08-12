@@ -12,8 +12,8 @@ const InnerWrapperRight = () => {
 };
 
 const Container = styled.div`
-  width: 50%;
-  padding: 0 30px 0 0;
+  width: 40%;
+  padding: 0 27px 0;
   display: flex;
 
   flex-direction: column;

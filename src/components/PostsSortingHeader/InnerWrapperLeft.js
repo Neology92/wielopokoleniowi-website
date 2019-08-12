@@ -43,9 +43,9 @@ const InnerWrapperLeft = ({ path }) => {
 };
 
 const Container = styled.div`
-  width: 50%;
+  width: 51%;
   height: 100%;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 27px;
   display: flex;
 
   flex-direction: row;

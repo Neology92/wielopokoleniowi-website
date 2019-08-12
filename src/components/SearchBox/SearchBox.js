@@ -6,7 +6,7 @@ const SearchBox = () => {
 };
 
 const StyledInput = styled.input`
-  width: 80%;
+  width: 90%;
   padding: 10px 20px;
   border: none;
   background: rgb(${({ theme }) => theme.color.rgb.white}, 0.1);

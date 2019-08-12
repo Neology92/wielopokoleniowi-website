@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const TileWrapper = styled.header`
   display: none;
-  ${({ theme }) => theme.media.above.m} {
+  ${({ theme }) => theme.media.above.l} {
     display: flex;
     flex-direction: row;
     justify-content: center;
