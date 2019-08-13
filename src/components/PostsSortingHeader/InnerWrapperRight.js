@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import SearchBox from '../SearchBox/SearchBox';
 
-const InnerWrapperRight = () => {
+const InnerWrapperRight = ({ setSearchState }) => {
   return (
     <Container>
-      <SearchBox />
+      <SearchBox setSearchState={setSearchState} />
     </Container>
   );
 };
@@ -18,5 +19,9 @@ const Container = styled.div`
 
   flex-direction: column;
 `;
+
+InnerWrapperRight.propTypes = {
+  setSearchState: PropTypes.func.isRequired,
+};
 
 export default InnerWrapperRight;

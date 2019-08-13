@@ -1,5 +1,6 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -16,51 +17,109 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const BussinesPosts = ({ location: { pathname } }) => {
-  const data = useStaticQuery(graphql`
-    {
-      graphcms {
-        bussines: postsConnection(
-          orderBy: createdAt_DESC
-          where: { category: Bussines, status: PUBLISHED }
-        ) {
-          edges {
-            node {
-              title
-              category
-              level
-              body {
-                html
-                text
-              }
-              icon {
-                url
-              }
-              tags {
-                value
-              }
+class BussinesPosts extends Component {
+  constructor() {
+    super();
+    this.state = {
+      search: '',
+    };
+  }
+
+  // update() {
+  //   const distanceToBottom =
+  //     document.documentElement.offsetHeight -
+  //     (window.scrollY + window.innerHeight)
+  //   if (this.state.showingMore && distanceToBottom < 100) {
+  //     this.setState({ postsToShow: this.state.postsToShow + 12 })
+  //   }
+  //   this.ticking = false
+  // }
+  // handleScroll = () => {
+  //   if (!this.ticking) {
+  //     this.ticking = true
+  //     requestAnimationFrame(() => this.update())
+  //   }
+  // }
+
+  // componentDidMount() {
+  // window.addEventListener(`scroll`, this.handleScroll)
+  // }
+
+  // componentWillUnmount() {
+  // window.removeEventListener(`scroll`, this.handleScroll)
+  // window.postsToShow = this.state.postsToShow
+  // }
+
+  render() {
+    const setSearchState = str => {
+      this.setState({
+        search: str,
+      });
+    };
+    const {
+      location: { pathname },
+      data,
+    } = this.props;
+    const posts = data.graphcms.bussines.edges;
+    const { search } = this.state;
+
+    const filteredPosts = posts.filter(edge => {
+      const filteredTags = edge.node.tags.filter(
+        tag => tag.value.toLowerCase().indexOf(search.toLowerCase()) !== -1
+      );
+
+      return (
+        edge.node.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+        filteredTags.length > 0
+      );
+    });
+
+    return (
+      <MainLayout path={pathname}>
+        <SEO title="Dla Biznesu" />
+        <StyledContainer>
+          <BreadcrumbsWrapper>
+            <Breadcrumbs path={pathname} />
+          </BreadcrumbsWrapper>
+          <PostsSortingHeader path={pathname} setSearchState={setSearchState} />
+          <PostsGrid posts={filteredPosts} />
+        </StyledContainer>
+      </MainLayout>
+    );
+  }
+}
+
+export const bussinesPostsQuery = graphql`
+  query {
+    graphcms {
+      bussines: postsConnection(
+        orderBy: createdAt_DESC
+        where: { category: Bussines, status: PUBLISHED }
+      ) {
+        edges {
+          node {
+            title
+            category
+            level
+            body {
+              html
+              text
+            }
+            icon {
+              url
+            }
+            tags {
+              value
             }
           }
         }
       }
     }
-  `);
+  }
+`;
 
-  return (
-    <MainLayout path={pathname}>
-      <SEO title="Dla Biznesu" />
-      <StyledContainer>
-        <BreadcrumbsWrapper>
-          <Breadcrumbs path={pathname} />
-        </BreadcrumbsWrapper>
-        <PostsSortingHeader path={pathname} />
-        <PostsGrid posts={data.graphcms.bussines.edges} />
-      </StyledContainer>
-    </MainLayout>
-  );
-};
 BussinesPosts.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
+  data: PropTypes.node.isRequired,
 };
-
 export default BussinesPosts;
