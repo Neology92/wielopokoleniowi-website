@@ -55,9 +55,10 @@ class EveryonePosts extends Component {
     // Data destructuring
     const {
       location: { pathname },
-      data,
+      data: { graphcms },
     } = this.props;
-    const posts = data.graphcms.everyone.edges;
+    const posts = graphcms.everyone.edges;
+    const queryTags = graphcms.tags.edges;
     const { search, filterTags } = this.state;
 
     // Functions
@@ -106,6 +107,7 @@ class EveryonePosts extends Component {
             setSearchValue={setSearchValue}
             setFilterTags={setFilterTags}
             filterTags={filterTags}
+            tags={queryTags}
           />
           <PostsGrid posts={filteredPosts} />
         </StyledContainer>
@@ -136,6 +138,17 @@ export const everyonePostsQuery = graphql`
             tags {
               value
             }
+          }
+        }
+      }
+      tags: tagsConnection(
+        orderBy: createdAt_DESC
+        where: { status: PUBLISHED }
+        first: 12
+      ) {
+        edges {
+          node {
+            value
           }
         }
       }

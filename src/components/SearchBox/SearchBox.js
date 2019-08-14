@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import magnifier from 'assets/images/magnifier.svg';
 import { StyledIcon, StyledInput } from './styled';
 
-const SearchBox = ({ setSearchValue, setFilterTags, filterTags }) => {
+const SearchBox = ({ setSearchValue, setFilterTags, filterTags, tags }) => {
   function switchTag(item) {
     if (filterTags.filter(tag => tag === item).length === 1) {
       setFilterTags(filterTags.filter(tag => tag !== item));
@@ -23,27 +23,18 @@ const SearchBox = ({ setSearchValue, setFilterTags, filterTags }) => {
       />
       <StyledIcon src={magnifier} />
 
-      <button
-        type="button"
-        onClick={e => {
-          switchTag(e.target.value);
-        }}
-        value="Nieruchomość"
-      >
-        {' '}
-        Nieruchomość{' '}
-      </button>
-
-      <button
-        type="button"
-        onClick={e => {
-          switchTag(e.target.value);
-        }}
-        value="Problem"
-      >
-        {' '}
-        Problem{' '}
-      </button>
+      {tags.map(({ node: { value } }) => (
+        <button
+          key={value}
+          type="button"
+          onClick={e => {
+            switchTag(e.target.value);
+          }}
+          value={value}
+        >
+          {value}
+        </button>
+      ))}
     </Container>
   );
 };
@@ -58,6 +49,7 @@ SearchBox.propTypes = {
   setSearchValue: PropTypes.func.isRequired,
   setFilterTags: PropTypes.func.isRequired,
   filterTags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 export default SearchBox;

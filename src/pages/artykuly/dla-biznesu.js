@@ -55,9 +55,11 @@ class BussinesPosts extends Component {
     // Data destructuring
     const {
       location: { pathname },
-      data,
+      data: { graphcms },
     } = this.props;
-    const posts = data.graphcms.bussines.edges;
+    const posts = graphcms.bussines.edges;
+    const queryTags = graphcms.tags.edges;
+
     const { search, filterTags } = this.state;
 
     // Functions
@@ -106,6 +108,7 @@ class BussinesPosts extends Component {
             setSearchValue={setSearchValue}
             setFilterTags={setFilterTags}
             filterTags={filterTags}
+            tags={queryTags}
           />
           <PostsGrid posts={filteredPosts} />
         </StyledContainer>
@@ -136,6 +139,17 @@ export const bussinesPostsQuery = graphql`
             tags {
               value
             }
+          }
+        }
+      }
+      tags: tagsConnection(
+        orderBy: createdAt_DESC
+        where: { status: PUBLISHED }
+        first: 12
+      ) {
+        edges {
+          node {
+            value
           }
         }
       }

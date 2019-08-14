@@ -10,6 +10,7 @@ const PostsSortingHeader = ({
   setSearchValue,
   setFilterTags,
   filterTags,
+  tags,
 }) => {
   return (
     <TileWrapper category={path}>
@@ -18,6 +19,7 @@ const PostsSortingHeader = ({
         setSearchValue={setSearchValue}
         setFilterTags={setFilterTags}
         filterTags={filterTags}
+        tags={tags}
       />
     </TileWrapper>
   );
@@ -28,6 +30,7 @@ PostsSortingHeader.propTypes = {
   setSearchValue: PropTypes.func.isRequired,
   setFilterTags: PropTypes.func.isRequired,
   filterTags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 export default PostsSortingHeader;
