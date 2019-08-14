@@ -11,6 +11,16 @@ const TagButton = styled.button`
   border: none;
 
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translate(-1px, -2px);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 2px 0px -1px ${({ theme }) => theme.color.white};
+  }
 `;
 
 export default TagButton;
