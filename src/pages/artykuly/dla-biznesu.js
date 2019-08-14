@@ -145,7 +145,7 @@ export const bussinesPostsQuery = graphql`
       tags: tagsConnection(
         orderBy: createdAt_DESC
         where: { status: PUBLISHED }
-        first: 12
+        first: 8
       ) {
         edges {
           node {
