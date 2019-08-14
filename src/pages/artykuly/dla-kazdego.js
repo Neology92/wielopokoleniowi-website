@@ -81,7 +81,7 @@ class EveryonePosts extends Component {
     // if
     const ifTagsResults = edge => {
       const filteredTags = filterByTags(edge);
-      // return filteredTags.length === filterTags.length; //! Part of the common
+      // return filteredTags.length === filterTags.length; //! Intersection of sets
       return filteredTags.length > 0 || !filterTags.length; //! Sum
     };
     const ifSearchResults = edge =>
