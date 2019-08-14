@@ -5,18 +5,29 @@ import TileWrapper from './TileWrapper';
 import InnerWrapperLeft from './InnerWrapperLeft';
 import InnerWrapperRight from './InnerWrapperRight';
 
-const PostsSortingHeader = ({ path, setSearchState }) => {
+const PostsSortingHeader = ({
+  path,
+  setSearchValue,
+  setFilterTags,
+  filterTags,
+}) => {
   return (
     <TileWrapper category={path}>
       <InnerWrapperLeft path={path} />
-      <InnerWrapperRight setSearchState={setSearchState} />
+      <InnerWrapperRight
+        setSearchValue={setSearchValue}
+        setFilterTags={setFilterTags}
+        filterTags={filterTags}
+      />
     </TileWrapper>
   );
 };
 
 PostsSortingHeader.propTypes = {
   path: PropTypes.string.isRequired,
-  setSearchState: PropTypes.func.isRequired,
+  setSearchValue: PropTypes.func.isRequired,
+  setFilterTags: PropTypes.func.isRequired,
+  filterTags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default PostsSortingHeader;

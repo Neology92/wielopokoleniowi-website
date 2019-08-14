@@ -4,10 +4,14 @@ import styled from 'styled-components';
 
 import SearchBox from '../SearchBox/SearchBox';
 
-const InnerWrapperRight = ({ setSearchState }) => {
+const InnerWrapperRight = ({ setSearchValue, setFilterTags, filterTags }) => {
   return (
     <Container>
-      <SearchBox setSearchState={setSearchState} />
+      <SearchBox
+        setSearchValue={setSearchValue}
+        setFilterTags={setFilterTags}
+        filterTags={filterTags}
+      />
     </Container>
   );
 };
@@ -21,7 +25,9 @@ const Container = styled.div`
 `;
 
 InnerWrapperRight.propTypes = {
-  setSearchState: PropTypes.func.isRequired,
+  setSearchValue: PropTypes.func.isRequired,
+  setFilterTags: PropTypes.func.isRequired,
+  filterTags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default InnerWrapperRight;

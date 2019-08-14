@@ -22,6 +22,7 @@ class EveryonePosts extends Component {
     super();
     this.state = {
       search: '',
+      filterTags: [],
     };
   }
 
@@ -51,27 +52,45 @@ class EveryonePosts extends Component {
   // }
 
   render() {
-    const setSearchState = str => {
-      this.setState({
-        search: str,
-      });
-    };
+    // Data destructuring
     const {
       location: { pathname },
       data,
     } = this.props;
     const posts = data.graphcms.everyone.edges;
-    const { search } = this.state;
+    const { search, filterTags } = this.state;
 
-    const filteredPosts = posts.filter(edge => {
-      const filteredTags = edge.node.tags.filter(
+    // Functions
+    const setSearchValue = str => {
+      this.setState({
+        search: str,
+      });
+    };
+    const setFilterTags = arr => {
+      this.setState({
+        filterTags: arr,
+      });
+    };
+    const filterByTags = edge => {
+      return edge.node.tags.filter(
+        tag => filterTags.filter(filterTag => filterTag === tag.value).length
+      );
+    };
+
+    // if
+    const ifTagsResults = edge => {
+      const filteredTags = filterByTags(edge);
+      return filteredTags.length === filterTags.length;
+    };
+    const ifSearchResults = edge =>
+      edge.node.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+      edge.node.tags.filter(
         tag => tag.value.toLowerCase().indexOf(search.toLowerCase()) !== -1
-      );
+      ).length;
 
-      return (
-        edge.node.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
-        filteredTags.length > 0
-      );
+    // Filter posts
+    const filteredPosts = posts.filter(edge => {
+      return ifSearchResults(edge) && ifTagsResults(edge);
     });
 
     return (
@@ -81,7 +100,12 @@ class EveryonePosts extends Component {
           <BreadcrumbsWrapper>
             <Breadcrumbs path={pathname} />
           </BreadcrumbsWrapper>
-          <PostsSortingHeader path={pathname} setSearchState={setSearchState} />
+          <PostsSortingHeader
+            path={pathname}
+            setSearchValue={setSearchValue}
+            setFilterTags={setFilterTags}
+            filterTags={filterTags}
+          />
           <PostsGrid posts={filteredPosts} />
         </StyledContainer>
       </MainLayout>
