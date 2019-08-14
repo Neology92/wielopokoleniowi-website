@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import TagButton from './TagButton';
 import Container from './Container';
+import { StyledH3 } from './styled';
 
 class SearchByTags extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class SearchByTags extends Component {
 
     return (
       <Container>
+        <StyledH3>Popularne tematy</StyledH3>
         {tags.map(({ node: { value } }, index) => (
           <TagButton
             key={value}
