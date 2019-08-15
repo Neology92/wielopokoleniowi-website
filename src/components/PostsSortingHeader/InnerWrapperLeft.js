@@ -47,7 +47,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  width: 90%;
+  width: 100%;
+  box-sizing: border-box;
   padding: 21px;
 
   & > div {

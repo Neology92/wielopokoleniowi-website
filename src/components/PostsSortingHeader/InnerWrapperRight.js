@@ -16,6 +16,15 @@ const InnerWrapperRight = ({ ...props }) => {
 const Container = styled.div`
   width: 90%;
   margin: 0 auto;
+
+  ${({ theme }) => theme.media.above.s} {
+    width: 92%;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    width: 95%;
+  }
+
   /* padding: 0 27px 0;
   height: 80%;
   display: flex;

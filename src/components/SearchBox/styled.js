@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Icon from '../Icon/Icon';
 
 const StyledInput = styled.input`
-  width: 79%;
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 50px 10px 20px;
   border: none;
   background: rgb(${({ theme }) => theme.color.rgb.white}, 0.1);
