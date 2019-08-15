@@ -7,7 +7,7 @@ const TagButton = styled.button`
   font-size: 1.5rem;
 
   padding: 5px 10px;
-  margin: 3px;
+  margin: 4px;
   border: none;
 
   cursor: pointer;
@@ -19,7 +19,14 @@ const TagButton = styled.button`
 
   &:focus {
     outline: none;
-    box-shadow: 0px 2px 0px -1px ${({ theme }) => theme.color.white};
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 3px;
+
+    &:focus {
+      box-shadow: 0px 2px 0px -1px ${({ theme }) => theme.color.white};
+    }
   }
 `;
 

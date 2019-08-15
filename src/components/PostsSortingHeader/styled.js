@@ -4,30 +4,44 @@ import Button from '../Button/Button';
 
 const StyledH2 = styled.h2`
   text-transform: uppercase;
-  font-size: 4.8rem;
-  color: white;
   font-family: ${({ theme }) => theme.font.family.atma};
   font-weight: 500;
-  padding-bottom: 10px;
-  margin: 0 auto;
+  color: white;
+  font-size: 2.4rem;
+
+  margin: 0;
+
+  ${({ theme }) => theme.media.above.l} {
+    font-size: 4.8rem;
+    padding-bottom: 10px;
+    margin: 0;
+  }
 `;
 
 const StyledIcon = styled(Icon)`
-  height: 100%;
-  margin: 0 0 -2px;
+  display: none;
+
+  ${({ theme }) => theme.media.above.l} {
+    display: inherit;
+
+    height: 100%;
+    margin: 0 0 -2px;
+  }
 `;
 
 const StyledButton = styled(Button)`
-  text-transform: uppercase;
   font-family: ${({ theme }) => theme.font.family.atma};
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 500;
-
-  padding: 5px 20px;
-  margin: 0 0 0 -5px;
 
   border-radius: 50px;
   background: rgb(${({ theme }) => theme.color.rgb.white}, 0.1);
+  padding: 3px 15px;
+
+  ${({ theme }) => theme.media.above.l} {
+    font-size: 1.8rem;
+    margin: 0 0 0 -5px;
+  }
 `;
 
 export { StyledH2, StyledIcon, StyledButton };

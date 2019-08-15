@@ -18,9 +18,9 @@ const InnerWrapperLeft = ({ path }) => {
           </div>
           <div>
             <StyledH2>Dla Biznesu</StyledH2>
-            <StyledButton to="/artykuly/dla-kazdego">
+            <StyledButton to={`${path}/pierwsze-kroki`}>
               <StyledIcon src={arrow} />
-              &nbsp; Dla Każdego
+              Zacznij tutaj!
             </StyledButton>
           </div>
         </>
@@ -31,9 +31,9 @@ const InnerWrapperLeft = ({ path }) => {
           </div>
           <div>
             <StyledH2> Dla Każdego</StyledH2>
-            <StyledButton to="/artykuly/dla-biznesu">
+            <StyledButton to={`${path}/pierwsze-kroki`}>
               <StyledIcon src={arrow} />
-              &nbsp; Dla Biznesu
+              Zacznij Tutaj!
             </StyledButton>
           </div>
         </>
@@ -43,18 +43,27 @@ const InnerWrapperLeft = ({ path }) => {
 };
 
 const Container = styled.div`
-  width: 51%;
-  height: 100%;
-  padding: 0 0 0 27px;
   display: flex;
-
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 
-  & > div:first-of-type {
-    width: 145px;
-    margin: 0 3vw 0 0;
+  width: 90%;
+  padding: 21px;
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 51%;
+    height: 100%;
+    padding: 0 0 0 27px;
+
+    justify-content: flex-start;
+    align-items: center;
   }
 `;
 

@@ -14,14 +14,15 @@ const InnerWrapperRight = ({ ...props }) => {
 };
 
 const Container = styled.div`
-  width: 40%;
-  padding: 0 27px 0;
+  width: 90%;
+  margin: 0 auto;
+  /* padding: 0 27px 0;
   height: 80%;
   display: flex;
 
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
 `;
 
 export default InnerWrapperRight;
