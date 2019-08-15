@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 
 import PropTypes from 'prop-types';
@@ -29,12 +29,12 @@ const Breadcrumbs = ({ path, isPost }) => {
     <BreadcrumbsWrapper>
       <StyledLink to="/"> Home </StyledLink>
       {breadcrumbsArray.map((element, i) => (
-        <>
+        <Fragment key={element}>
           {' / '}
-          <StyledLink key={element} to={slugs[i]}>
+          <StyledLink to={slugs[i]}>
             {`${element.split('-').join(' ')}`}
           </StyledLink>
-        </>
+        </Fragment>
       ))}
     </BreadcrumbsWrapper>
   );
