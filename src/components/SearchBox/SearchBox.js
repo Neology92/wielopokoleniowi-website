@@ -19,8 +19,12 @@ const SearchBox = ({ setSearchValue }) => {
 };
 
 const Container = styled.div`
-  width: 100%;
   position: relative;
+  width: 100%;
+
+  ${({ theme }) => theme.media.above.l} {
+    margin: 10px 0;
+  }
 `;
 
 SearchBox.propTypes = {

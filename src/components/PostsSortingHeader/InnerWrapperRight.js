@@ -25,13 +25,22 @@ const Container = styled.div`
     width: 95%;
   }
 
-  /* padding: 0 27px 0;
-  height: 80%;
-  display: flex;
+  ${({ theme }) => theme.media.above.l} {
+    width: 40%;
+    padding: 0 27px 0;
+    height: 100%;
 
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; */
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ${({ theme }) => theme.media.above.xl} {
+    width: 55%;
+  }
 `;
 
 export default InnerWrapperRight;

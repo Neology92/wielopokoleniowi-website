@@ -23,10 +23,6 @@ const StyledInput = styled.input`
     outline: none;
     box-shadow: 0px -50px 0px -49px ${({ theme }) => theme.color.white} inset;
   }
-
-  ${({ theme }) => theme.media.above.l} {
-    width: 83%;
-  }
 `;
 
 const StyledIcon = styled(Icon)`

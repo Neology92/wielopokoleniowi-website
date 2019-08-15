@@ -13,7 +13,7 @@ const StyledH2 = styled.h2`
 
   ${({ theme }) => theme.media.above.l} {
     font-size: 4.8rem;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     margin: 0;
   }
 `;
@@ -40,7 +40,14 @@ const StyledButton = styled(Button)`
 
   ${({ theme }) => theme.media.above.l} {
     font-size: 1.8rem;
-    margin: 0 0 0 -5px;
+
+    display: flex;
+    flex-direction: row;
+
+    & svg:first-child {
+      padding: 11px 3px;
+      height: 12px;
+    }
   }
 `;
 

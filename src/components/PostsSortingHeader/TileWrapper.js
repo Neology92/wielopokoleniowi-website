@@ -19,6 +19,7 @@ const TileWrapper = styled.header`
   }
   ${({ theme }) => theme.media.above.l} {
     height: 233px;
+    flex-direction: row;
   }
 `;
 
