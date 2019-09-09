@@ -11,6 +11,7 @@ import Web from './Icon/Web';
 import Pages from './Icon/Pages';
 import Bussines from './Icon/Bussines';
 import Everyone from './Icon/Everyone';
+import Icon from './Icon/Icon';
 
 import FamilyLeft from './FamilyLeft/FamilyLeft';
 import FamilyRight from './FamilyRight/FamilyRight';
@@ -46,6 +47,7 @@ export {
   Pages,
   Bussines,
   Everyone,
+  Icon,
   FamilyLeft,
   FamilyRight,
   CategoryTile,

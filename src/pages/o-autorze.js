@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 import bulb from 'assets/images/bulb.svg';
 import target from 'assets/images/target.svg';
 import lukas from 'assets/images/lukasDesk.svg';
+import thumbUp from 'assets/images/thumbUp.svg';
+import blot1 from 'assets/images/blot1.svg';
+import blot2 from 'assets/images/blot2.svg';
+import blot3 from 'assets/images/blot3.svg';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs, TextWithIcon } from 'components';
@@ -12,6 +16,20 @@ import {
   StyledHeading,
   StyledTextParagraph,
 } from '../layouts/o-autorze/styled';
+import Decoration from '../layouts/o-autorze/Decoration';
+
+const StyledContainer = styled.div`
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 0 40px;
+  width: 100%;
+  min-height: 80vh;
+`;
+
+const BreadcrumbsWrapper = styled.div`
+  padding: 15px 0 0 15px;
+  width: 100%;
+`;
 
 const About = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
@@ -20,6 +38,10 @@ const About = ({ location: { pathname } }) => (
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
+      <Decoration src={thumbUp} right="-10px" top="60px" isTop />
+      <Decoration src={blot1} left="-300px" top="150px" isTop isLeft />
+      <Decoration src={blot2} right="-200px" bottom="800px" />
+      <Decoration src={blot3} left="-40px" bottom="100px" isLeft />
       <StyledHeading>Cześć, witaj w moim świecie!</StyledHeading>
       <StyledTextParagraph>
         Kim jestem? Od wielu lat przedstawiam się jako „gość, który pisze
@@ -192,19 +214,6 @@ const About = ({ location: { pathname } }) => (
     </StyledContainer>
   </MainLayout>
 );
-
-const StyledContainer = styled.div`
-  box-sizing: border-box;
-  padding: 0 15px;
-  margin: 0 0 40px;
-  width: 100%;
-  min-height: 80vh;
-`;
-
-const BreadcrumbsWrapper = styled.div`
-  padding: 15px 0 0 15px;
-  width: 100%;
-`;
 
 About.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
