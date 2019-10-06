@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { MainLayout } from 'layouts';
-import { SEO, Breadcrumbs } from 'components';
+import { SEO, Breadcrumbs, FirstStepsHeader } from 'components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -35,7 +35,8 @@ const EveryoneFirstSteps = ({ location: { pathname } }) => (
       <BreadcrumbsWrapper>
         <Breadcrumbs path={pathname} />
       </BreadcrumbsWrapper>
-      <h2>Pierwsze kroki dla Każdego</h2>
+      <FirstStepsHeader path={pathname} />
+      {/* <PostsGrid posts={} /> */}
     </StyledContainer>
   </MainLayout>
 );

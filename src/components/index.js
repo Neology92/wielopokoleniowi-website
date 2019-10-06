@@ -22,6 +22,7 @@ import LukasDesk from './LukasDesk/LukasDesk';
 import TextParagraph from './TextParagraph/TextParagraph';
 import TextWithIcon from './TextWithIcon/TextWithIcon';
 import PostsSortingHeader from './PostsSortingHeader/PostsSortingHeader';
+import FirstStepsHeader from './FirstStepsHeader/FirstStepsHeader';
 import PostTile from './PostTile/PostTile';
 import Button from './Button/Button';
 
@@ -56,6 +57,7 @@ export {
   TextParagraph,
   TextWithIcon,
   PostsSortingHeader,
+  FirstStepsHeader,
   PostTile,
   Button,
   PostGraphics,
