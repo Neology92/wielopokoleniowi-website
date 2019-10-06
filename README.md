@@ -20,3 +20,5 @@ TODO:
 - fix menu highlighting on tablet view
 - repair clickOutside menu categories
 - repair dummy way of setting graphics in footer
+
+- shorten "o autorze"

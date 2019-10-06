@@ -22,16 +22,20 @@ const FirstStepsSection = () => {
 };
 
 const SectionWrapper = styled.section`
-  display: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  width: 100%;
+  height: 80px;
+
+  margin-top: 30px;
 
   ${({ theme }) => theme.media.above.m} {
     width: 100%;
     height: 263px;
     margin: 0;
     text-align: center;
-
-    display: flex;
-    flex-direction: row;
   }
 `;
 
@@ -45,9 +49,18 @@ const StyledLink = styled(Link)`
   font-family: ${({ theme }) => theme.font.family.atma};
   color: ${({ theme }) => theme.color.white};
 
-  font-size: 2.8rem;
+  font-size: 1.6rem;
   padding: 30px;
 
+  ${({ theme }) => theme.media.above.s} {
+    font-size: 2rem;
+    padding: 30px;
+  }
+
+  ${({ theme }) => theme.media.above.m} {
+    font-size: 2.8rem;
+    padding: 30px;
+  }
   ${({ theme }) => theme.media.above.l} {
     font-size: 3.2rem;
     padding: 30px;
@@ -59,27 +72,39 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledBussines = styled(Bussines)`
-  margin: 30px;
-  width: 100px;
+  display: none;
 
-  ${({ theme }) => theme.media.above.l} {
-    width: 120px;
-  }
+  ${({ theme }) => theme.media.above.m} {
+    display: block;
 
-  ${({ theme }) => theme.media.above.xl} {
-    width: inherit;
+    margin: 30px;
+    width: 100px;
+
+    ${({ theme }) => theme.media.above.l} {
+      width: 120px;
+    }
+
+    ${({ theme }) => theme.media.above.xl} {
+      width: inherit;
+    }
   }
 `;
 
 const StyledEveryone = styled(Everyone)`
-  margin: 30px;
+  display: none;
 
-  width: 100px;
-  ${({ theme }) => theme.media.above.l} {
-    width: 120px;
-  }
-  ${({ theme }) => theme.media.above.xl} {
-    width: inherit;
+  ${({ theme }) => theme.media.above.m} {
+    display: block;
+
+    margin: 30px;
+    width: 100px;
+
+    ${({ theme }) => theme.media.above.l} {
+      width: 120px;
+    }
+    ${({ theme }) => theme.media.above.xl} {
+      width: inherit;
+    }
   }
 `;
 
