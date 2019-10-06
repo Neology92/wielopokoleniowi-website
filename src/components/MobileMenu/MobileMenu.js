@@ -9,11 +9,9 @@ import { StyledLink, StyledFacebook, StyledYoutube } from './styled';
 
 const menuItems = [
   { name: 'O autorze', slug: '/o-autorze' },
-  { name: '', slug: '' },
   { name: 'Dla Każdego', slug: '/artykuly/dla-kazdego' },
   { name: 'Dla Biznesu', slug: '/artykuly/dla-biznesu' },
-  { name: '', slug: '' },
-  { name: 'Kontakt', slug: '/kontakt' },
+  { name: 'Slownik', slug: '/slownik' },
   { name: 'Newsletter', slug: '/newsletter' },
 ];
 

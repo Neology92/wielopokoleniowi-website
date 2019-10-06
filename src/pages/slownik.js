@@ -23,20 +23,20 @@ const BreadcrumbsWrapper = styled.div`
   padding: 15px 0 0 15px;
   width: 100%;
 `;
-const Kontakt = ({ location: { pathname } }) => (
+const Slownik = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Kontakt" />
+    <SEO title="Slownik" />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
-      <h1>Kontakt</h1>
+      <h1>Slownik</h1>
     </StyledContainer>
   </MainLayout>
 );
 
-Kontakt.propTypes = {
+Slownik.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
 };
 
-export default Kontakt;
+export default Slownik;

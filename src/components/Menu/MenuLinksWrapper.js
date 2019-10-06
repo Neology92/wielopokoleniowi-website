@@ -16,7 +16,7 @@ const MenuLinksWrapper = styled.ul`
         if (path === '/artykuly') return 2;
         if (path === '/artykuly/dla-kazdego') return 2;
         if (path === '/artykuly/dla-biznesu') return 2;
-        if (path === '/kontakt') return 3;
+        if (path === '/slownik') return 3;
         return 0;
       }}) {
     div {

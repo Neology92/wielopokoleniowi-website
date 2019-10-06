@@ -34,8 +34,8 @@ const Menu = ({ path }) => {
           </MenuLink>
 
           <MenuLink>
-            <StyledLink to="/kontakt">
-              <div>Kontakt</div>
+            <StyledLink to="/slownik">
+              <div>Słownik</div>
             </StyledLink>
           </MenuLink>
         </MenuLinksWrapper>
