@@ -1,6 +1,7 @@
 # Wielopokoleniowi.pl <a name="main"></a>
 
-Wielopokoleniowi is a blog based on gatsby.js static pages generator.
+Wielopokoleniowi is a blog based on gatsby.js static pages generator. 
+(Work in progress)
 
 ## Table of Contents
 1. [Main](#main)
