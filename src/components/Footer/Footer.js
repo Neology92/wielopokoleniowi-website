@@ -81,7 +81,7 @@ const Footer = () => {
           </div>
         </section>
         <section>
-          <p>@ 2019 Wielopokoleniowi</p>
+          <p>@ 2021 Wielopokoleniowi</p>
           <p>
             <Link to="/regulamin" rel="nofollow">
               REGULAMIN
