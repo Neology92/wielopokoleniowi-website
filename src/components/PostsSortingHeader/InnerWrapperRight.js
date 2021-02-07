@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SearchBox from '../SearchBox/SearchBox';
-import SearchByTags from '../SearchByTags/SearchByTags';
+// import SearchByTags from '../SearchByTags/SearchByTags';
 
 const InnerWrapperRight = ({ ...props }) => {
   return (
     <Container>
       <SearchBox {...props} />
-      <SearchByTags {...props} />
+      {/* Tags will come back in the future */}
+      {/* <SearchByTags {...props} /> */}
     </Container>
   );
 };
