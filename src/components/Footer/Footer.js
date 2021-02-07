@@ -7,7 +7,6 @@ import FooterWrapper from './FooterWrapper';
 import Bar from './Bar';
 import {
   StyledFacebook,
-  StyledYoutube,
   StyledTelephone,
   StyledMail,
   StyledWeb,
@@ -71,13 +70,14 @@ const Footer = () => {
             >
               <StyledFacebook />
             </a>
-            <a
+            {/* Youtube will come back there in the future */}
+            {/* <a
               href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <StyledYoutube />
-            </a>
+            </a> */}
           </div>
         </section>
         <section>

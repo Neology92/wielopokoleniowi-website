@@ -5,7 +5,7 @@ import MenuLink from './MenuLink';
 import MenuWrapper from './MenuWrapper';
 import IconsWrapper from './IconsWrapper';
 import MenuLinksWrapper from './MenuLinksWrapper';
-import { StyledLink, StyledFacebook, StyledYoutube } from './styled';
+import { StyledLink, StyledFacebook } from './styled';
 
 const menuItems = [
   { name: 'O autorze', slug: '/o-autorze' },
@@ -28,9 +28,10 @@ const MobileMenu = ({ className, isOpen }) => (
       <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
         <StyledFacebook />
       </a>
-      <a href="https://www.youtube.com/">
+      {/* Youtube will come back there in the future */}
+      {/* <a href="https://www.youtube.com/">
         <StyledYoutube />
-      </a>
+      </a> */}
     </IconsWrapper>
   </MenuWrapper>
 );

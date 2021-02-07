@@ -6,7 +6,7 @@ import Hamburger from '../Hamburger/Hamburger';
 import HeaderWrapper from './HeaderWrapper';
 import { StyledLogo, StyledMobileMenu } from './styled';
 import Facebook from '../Icon/Facebook';
-import Youtube from '../Icon/Youtube';
+// import Youtube from '../Icon/Youtube';
 
 const InnerDiv = styled.div`
   height: 100%;
@@ -23,29 +23,29 @@ const SocialDesktop = styled.div`
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
 `;
-
-const StyledNewsletterButton = styled.button`
-  background: none;
-  border: none;
-  color: white;
-  font-family: ${({ theme }) => theme.font.family.atma};
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0 15px 0 0;
-  padding: 0;
-
-  ${({ theme }) => theme.media.above.l} {
-    margin: 0 10px 0 0;
-  }
-
-  ${({ theme }) => theme.media.above.xl} {
-    margin: 0 0 0 0;
-  }
-`;
+//
+// const StyledNewsletterButton = styled.button`
+//   background: none;
+//   border: none;
+//   color: white;
+//   font-family: ${({ theme }) => theme.font.family.atma};
+//   font-size: 20px;
+//   font-weight: 500;
+//   margin: 0 15px 0 0;
+//   padding: 0;
+//
+//   ${({ theme }) => theme.media.above.l} {
+//     margin: 0 10px 0 0;
+//   }
+//
+//   ${({ theme }) => theme.media.above.xl} {
+//     margin: 0 0 0 0;
+//   }
+// `;
 
 const Header = () => {
   const [isMenuOpen, setMenuState] = useState(false);
@@ -75,14 +75,17 @@ const Header = () => {
           >
             <Facebook />
           </a>
-          <a
+          {/* Youtube will come back there in the future */}
+          {/* <a
             href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Youtube />
-          </a>
-          <StyledNewsletterButton>Newsletter</StyledNewsletterButton>
+          </a> */}
+
+          {/* Newsletter will come back there in the future */}
+          {/* <StyledNewsletterButton>Newsletter</StyledNewsletterButton> */}
         </SocialDesktop>
       </InnerDiv>
     </HeaderWrapper>
