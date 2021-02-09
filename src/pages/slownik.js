@@ -1,17 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+
+import thumbUp from 'assets/images/thumbUp.svg';
+import blot1 from 'assets/images/blot1.svg';
+import blot2 from 'assets/images/blot2.svg';
+import blot3 from 'assets/images/blot3.svg';
 
 import { MainLayout } from 'layouts';
-import { SEO, Breadcrumbs } from 'components';
+import { SEO, Breadcrumbs, Definition } from 'components';
+import { StyledHeading } from '../layouts/o-autorze/styled';
+import Decoration from '../layouts/o-autorze/Decoration';
 
 const StyledContainer = styled.div`
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   margin: 0 0 10vw 0;
   display: flex;
   flex-direction: column;
-  justify-content: fles-start;
+  justify-content: flex-start;
 
   h1 {
     font-size: 4rem;
@@ -23,20 +31,53 @@ const BreadcrumbsWrapper = styled.div`
   padding: 15px 0 0 15px;
   width: 100%;
 `;
-const Slownik = ({ location: { pathname } }) => (
+const Slownik = ({
+  location: { pathname },
+  data: {
+    graphcms: { dictionaries },
+  },
+}) => (
   <MainLayout path={pathname}>
     <SEO title="Slownik" />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
     <StyledContainer>
-      <h1>Slownik</h1>
+      <Decoration src={blot1} left="-300px" top="150px" isTop isLeft />
+      <Decoration src={blot2} right="-400px" top="800px" isTop />
+      <Decoration src={blot3} left="-240px" top="1500px" isTop isLeft />
+      <Decoration src={thumbUp} right="-10px" top="60px" isTop />
+      <StyledHeading>Wszystkie trudne słówka</StyledHeading>
+      {dictionaries.map(({ word, definition }) => (
+        <Definition key={word} word={word} definition={definition} />
+      ))}
     </StyledContainer>
   </MainLayout>
 );
 
+export const dictionaryQuery = graphql`
+  query {
+    graphcms {
+      dictionaries {
+        word
+        definition
+      }
+    }
+  }
+`;
+
 Slownik.propTypes = {
   location: PropTypes.shape(PropTypes.string).isRequired,
+  data: PropTypes.shape({
+    graphcms: PropTypes.shape({
+      dictionaries: PropTypes.arrayOf(
+        PropTypes.shape({
+          word: PropTypes.string,
+          definition: PropTypes.string,
+        })
+      ),
+    }),
+  }).isRequired,
 };
 
 export default Slownik;
