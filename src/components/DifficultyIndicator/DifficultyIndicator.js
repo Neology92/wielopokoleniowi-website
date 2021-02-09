@@ -7,7 +7,7 @@ import Star from '../Icon/Star';
 const StyledStar = styled(Star)`
   padding: 1px;
   height: 11px;
-  opacity: ${({ isBright }) => (isBright ? 1 : 0.25)};
+  opacity: ${({ isBright }) => (isBright ? 1 : 0.3)};
 `;
 
 const Indicator = ({ className, level }) => {
@@ -25,9 +25,9 @@ const Indicator = ({ className, level }) => {
 
 const DifficultyIndicator = styled(Indicator)`
   display: flex;
-  flex-direction: row;
-  margin: 8px;
-  width: 39px;
+  flex-direction: column-reverse;
+  row-gap: 2px;
+  margin: 15px;
 `;
 
 Indicator.propTypes = {
