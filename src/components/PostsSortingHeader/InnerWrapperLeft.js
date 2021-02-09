@@ -4,9 +4,13 @@ import PropTypes from 'prop-types';
 
 import bussines from 'assets/images/bussines.svg';
 import everyone from 'assets/images/everyone.svg';
-import arrow from 'assets/images/arrow.svg';
+// import arrow from 'assets/images/arrow.svg';
 
-import { StyledH2, StyledIcon, StyledButton } from './styled';
+import {
+  StyledH2,
+  StyledIcon,
+  // StyledButton
+} from './styled';
 
 const InnerWrapperLeft = ({ path }) => {
   return (
@@ -18,10 +22,11 @@ const InnerWrapperLeft = ({ path }) => {
           </div>
           <div id="category">
             <StyledH2>Dla Biznesu</StyledH2>
-            <StyledButton to={`${path}/pierwsze-kroki`}>
+            {/* In the futuuureeee */}
+            {/* <StyledButton to={`${path}/pierwsze-kroki`}>
               <StyledIcon src={arrow} />
               Zacznij tutaj!
-            </StyledButton>
+            </StyledButton> */}
           </div>
         </>
       ) : (
@@ -31,10 +36,11 @@ const InnerWrapperLeft = ({ path }) => {
           </div>
           <div id="category">
             <StyledH2> Dla Każdego</StyledH2>
-            <StyledButton to={`${path}/pierwsze-kroki`}>
+            {/* In the futuuureeee */}
+            {/* <StyledButton to={`${path}/pierwsze-kroki`}>
               <StyledIcon src={arrow} />
               Zacznij Tutaj!
-            </StyledButton>
+            </StyledButton> */}
           </div>
         </>
       )}
