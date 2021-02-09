@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
             html
             text
           }
+          excerpt
           icon {
             url
           }
