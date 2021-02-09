@@ -41,6 +41,12 @@ const PostLayout = ({ pageContext: { data, recommendedPosts, pathname } }) => {
 
 const MainWrapper = styled.main`
   width: 100%;
+  text-align: justify;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
 
   ${({ theme }) => theme.media.above.l} {
     width: 66%;
