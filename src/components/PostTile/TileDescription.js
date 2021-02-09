@@ -10,7 +10,7 @@ export const DescriptionWrapper = styled.div`
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   ${({ theme }) => theme.media.above.l} {
     padding: 21px 16px 16px 16px;
@@ -21,7 +21,7 @@ export const DescriptionWrapper = styled.div`
 export const StyledPostHeading = styled(GridPostHeading)`
   margin: 0 0 7px 0;
   ${({ theme }) => theme.media.above.l} {
-    margin: 0 0 20px 0;
+    margin: 0;
   }
 `;
 
