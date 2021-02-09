@@ -59,6 +59,7 @@ export const mainPagePostsQuery = graphql`
           html
           text
         }
+        excerpt
         icon {
           url
         }
@@ -79,6 +80,7 @@ export const mainPagePostsQuery = graphql`
           html
           text
         }
+        excerpt
         icon {
           url
         }

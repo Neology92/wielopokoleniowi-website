@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import slugify from 'slugify';
-
 import styled from 'styled-components';
+
+import propTypeCommons from '../../utils/propTypeCommons';
 
 import PostTile from '../PostTile/PostTile';
 import PostsGridWrapper from './PostsGridWrapper';
@@ -26,7 +27,7 @@ const StyledLink = styled(Link)`
 `;
 
 PostsGrid.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.node).isRequired,
+  posts: PropTypes.arrayOf(propTypeCommons.post).isRequired,
 };
 
 export default PostsGrid;

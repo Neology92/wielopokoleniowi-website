@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
 import { About, TagsBoard, Recommended } from 'components';
+import propTypeCommons from '../../utils/propTypeCommons';
 
 const SectionWrapper = styled.section`
   width: 100%;
@@ -26,20 +26,7 @@ const SidebarSection = ({ tags, recommendedPosts }) => {
 
 SidebarSection.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  recommendedPosts: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-      level: PropTypes.string.isRequired,
-      body: PropTypes.shape({
-        html: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired,
-      }).isRequired,
-      icon: PropTypes.shape({
-        url: PropTypes.string.isRequired,
-      }).isRequired,
-    })
-  ),
+  recommendedPosts: PropTypes.arrayOf(propTypeCommons.post),
 };
 
 SidebarSection.defaultProps = {

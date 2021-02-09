@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import propTypeCommons from '../../utils/propTypeCommons';
 
 import TileWrapper from './TileWrapper';
 import TileIcon from './TileIcon';
@@ -31,25 +32,14 @@ const PostTile = ({ post }) => {
       </TileIcon>
       <DescriptionWrapper>
         <StyledPostHeading>{post.title}</StyledPostHeading>
-        <P>{post.body.text}</P>
+        <P>{post.excerpt}</P>
       </DescriptionWrapper>
     </TileWrapper>
   );
 };
 
 PostTile.propTypes = {
-  post: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    level: PropTypes.string.isRequired,
-    body: PropTypes.shape({
-      html: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-    }).isRequired,
-    icon: PropTypes.shape({
-      url: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+  post: PropTypes.shape(propTypeCommons.post).isRequired,
 };
 
 export default PostTile;

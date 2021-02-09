@@ -4,6 +4,8 @@ import slugify from 'slugify';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import propTypeCommons from '../../utils/propTypeCommons';
+
 import PostTile from '../PostTile/PostTile';
 import RecommendedWrapper from './RecommendedWrapper';
 import PostsWrapper from './PostsWrapper';
@@ -35,18 +37,7 @@ const StyledLink = styled(Link)`
 `;
 
 Recommended.propTypes = {
-  recommendedPosts: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    level: PropTypes.string.isRequired,
-    body: PropTypes.shape({
-      html: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-    }).isRequired,
-    icon: PropTypes.shape({
-      url: PropTypes.string.isRequired,
-    }).isRequired,
-  }),
+  recommendedPosts: PropTypes.arrayOf(propTypeCommons.post),
 };
 
 Recommended.defaultProps = {

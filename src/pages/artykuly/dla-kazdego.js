@@ -131,6 +131,7 @@ export const everyonePostsQuery = graphql`
           html
           text
         }
+        excerpt
         icon {
           url
         }

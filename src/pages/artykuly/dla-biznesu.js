@@ -106,6 +106,7 @@ export const bussinesPostsQuery = graphql`
           html
           text
         }
+        excerpt
         icon {
           url
         }
