@@ -11,9 +11,9 @@ import PostsGridWrapper from './PostsGridWrapper';
 const PostsGrid = ({ posts }) => {
   return (
     <PostsGridWrapper>
-      {posts.map(({ node }) => (
-        <StyledLink key={node.id} to={`/${slugify(node.title.toLowerCase())}`}>
-          <PostTile post={node} />
+      {posts.map(post => (
+        <StyledLink key={post.id} to={`/${slugify(post.title.toLowerCase())}`}>
+          <PostTile post={post} />
         </StyledLink>
       ))}
     </PostsGridWrapper>

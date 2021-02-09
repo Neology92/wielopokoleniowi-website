@@ -25,9 +25,9 @@ const StyledContainer = styled.div`
 const IndexPage = ({ data }) => {
   const posts = [];
 
-  data.graphcms.everyone.edges.forEach((edge, i) => {
-    posts.push(edge);
-    posts.push(data.graphcms.bussines.edges[i]);
+  data.graphcms.everyone.forEach((post, i) => {
+    posts.push(post);
+    posts.push(data.graphcms.bussines[i]);
   });
 
   return (
@@ -44,46 +44,46 @@ const IndexPage = ({ data }) => {
 };
 
 export const mainPagePostsQuery = graphql`
-  {
+  query {
     graphcms {
-      everyone: postsConnection(
+      everyone: posts(
         first: 3
         orderBy: createdAt_DESC
-        where: { category: Everyone, status: PUBLISHED }
+        where: { category: Everyone }
+        stage: PUBLISHED
       ) {
-        edges {
-          node {
-            title
-            category
-            level
-            body {
-              html
-              text
-            }
-            icon {
-              url
-            }
-          }
+        title
+        category
+        level
+        body {
+          html
+          text
+        }
+        icon {
+          url
+        }
+        tags {
+          value
         }
       }
-      bussines: postsConnection(
+      bussines: posts(
         first: 3
         orderBy: createdAt_DESC
-        where: { category: Bussines, status: PUBLISHED }
+        where: { category: Bussines }
+        stage: PUBLISHED
       ) {
-        edges {
-          node {
-            title
-            category
-            level
-            body {
-              html
-              text
-            }
-            icon {
-              url
-            }
-          }
+        title
+        category
+        level
+        body {
+          html
+          text
+        }
+        icon {
+          url
+        }
+        tags {
+          value
         }
       }
     }

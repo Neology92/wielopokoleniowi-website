@@ -12,9 +12,7 @@ import SidebarSection from './postSections/sidebarSection';
 // eslint-disable-next-line
 const parse = string => <div dangerouslySetInnerHTML={{ __html: string }} />;
 
-const PostLayout = ({
-  pageContext: { data, recommendedPostsEdges, pathname },
-}) => {
+const PostLayout = ({ pageContext: { data, recommendedPosts, pathname } }) => {
   const content = <> {parse(data.body.html)} </>;
 
   const tagsArray = [];
@@ -36,10 +34,7 @@ const PostLayout = ({
         />
         <BodySection content={content} />
       </MainWrapper>
-      <SidebarSection
-        tags={tagsArray}
-        recommendedPostsEdges={recommendedPostsEdges}
-      />
+      <SidebarSection tags={tagsArray} recommendedPosts={recommendedPosts} />
     </MainLayout>
   );
 };

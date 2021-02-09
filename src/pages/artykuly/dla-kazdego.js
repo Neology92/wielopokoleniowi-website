@@ -55,10 +55,10 @@ class EveryonePosts extends Component {
     // Data destructuring
     const {
       location: { pathname },
-      data: { graphcms },
+      data: {
+        graphcms: { posts, tags: queryTags },
+      },
     } = this.props;
-    const posts = graphcms.everyone.edges;
-    const queryTags = graphcms.tags.edges;
     const { search, filterTags } = this.state;
 
     // Functions
@@ -72,27 +72,27 @@ class EveryonePosts extends Component {
         filterTags: arr,
       });
     };
-    const filterByTags = edge => {
-      return edge.node.tags.filter(
+    const filterByTags = post => {
+      return post.tags.filter(
         tag => filterTags.filter(filterTag => filterTag === tag.value).length
       );
     };
 
     // if
-    const ifTagsResults = edge => {
-      const filteredTags = filterByTags(edge);
+    const ifTagsResults = post => {
+      const filteredTags = filterByTags(post);
       // return filteredTags.length === filterTags.length; //! Intersection of sets
       return filteredTags.length > 0 || !filterTags.length; //! Sum
     };
-    const ifSearchResults = edge =>
-      edge.node.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
-      edge.node.tags.filter(
+    const ifSearchResults = post =>
+      post.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+      post.tags.filter(
         tag => tag.value.toLowerCase().indexOf(search.toLowerCase()) !== -1
       ).length;
 
     // Filter posts
-    const filteredPosts = posts.filter(edge => {
-      return ifSearchResults(edge) && ifTagsResults(edge);
+    const filteredPosts = posts.filter(post => {
+      return ifSearchResults(post) && ifTagsResults(post);
     });
 
     return (
@@ -119,38 +119,27 @@ class EveryonePosts extends Component {
 export const everyonePostsQuery = graphql`
   query {
     graphcms {
-      everyone: postsConnection(
+      posts(
         orderBy: createdAt_DESC
-        where: { category: Everyone, status: PUBLISHED }
+        where: { category: Everyone }
+        stage: PUBLISHED
       ) {
-        edges {
-          node {
-            title
-            category
-            level
-            body {
-              html
-              text
-            }
-            icon {
-              url
-            }
-            tags {
-              value
-            }
-          }
+        title
+        category
+        level
+        body {
+          html
+          text
+        }
+        icon {
+          url
+        }
+        tags {
+          value
         }
       }
-      tags: tagsConnection(
-        orderBy: createdAt_DESC
-        where: { status: PUBLISHED }
-        first: 8
-      ) {
-        edges {
-          node {
-            value
-          }
-        }
+      tags(orderBy: createdAt_DESC, stage: PUBLISHED, first: 8) {
+        value
       }
     }
   }

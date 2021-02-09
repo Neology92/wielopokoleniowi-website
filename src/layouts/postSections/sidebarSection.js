@@ -14,11 +14,11 @@ const SectionWrapper = styled.section`
   }
 `;
 
-const SidebarSection = ({ tags, recommendedPostsEdges }) => {
+const SidebarSection = ({ tags, recommendedPosts }) => {
   return (
     <SectionWrapper>
       <About />
-      <Recommended recommendedPostsEdges={recommendedPostsEdges} />
+      <Recommended recommendedPosts={recommendedPosts} />
       <TagsBoard tags={tags} />
     </SectionWrapper>
   );
@@ -26,10 +26,23 @@ const SidebarSection = ({ tags, recommendedPostsEdges }) => {
 
 SidebarSection.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  recommendedPostsEdges: PropTypes.arrayOf(PropTypes.node),
+  recommendedPosts: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+      level: PropTypes.string.isRequired,
+      body: PropTypes.shape({
+        html: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+      }).isRequired,
+      icon: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+      }).isRequired,
+    })
+  ),
 };
 
 SidebarSection.defaultProps = {
-  recommendedPostsEdges: [],
+  recommendedPosts: [],
 };
 export default SidebarSection;

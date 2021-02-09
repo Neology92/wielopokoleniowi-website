@@ -10,16 +10,16 @@ import PostsWrapper from './PostsWrapper';
 import TileWrapper from './TileWrapper';
 import { SidebarSectionHeading } from '../Headings/Headings';
 
-const Recommended = ({ recommendedPostsEdges }) => {
+const Recommended = ({ recommendedPosts }) => {
   return (
     <RecommendedWrapper>
       <SidebarSectionHeading>Polecam również:</SidebarSectionHeading>
       <PostsWrapper>
-        {recommendedPostsEdges.map(edge => (
-          <div key={edge.node.id}>
+        {recommendedPosts.map(post => (
+          <div key={post.id}>
             <TileWrapper>
-              <StyledLink to={`/${slugify(edge.node.title.toLowerCase())}`}>
-                <PostTile post={edge.node} />
+              <StyledLink to={`/${slugify(post.title.toLowerCase())}`}>
+                <PostTile post={post} />
               </StyledLink>
             </TileWrapper>
           </div>
@@ -35,11 +35,22 @@ const StyledLink = styled(Link)`
 `;
 
 Recommended.propTypes = {
-  recommendedPostsEdges: PropTypes.arrayOf(PropTypes.node),
+  recommendedPosts: PropTypes.arrayOf({
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    level: PropTypes.string.isRequired,
+    body: PropTypes.shape({
+      html: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+    icon: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    }).isRequired,
+  }),
 };
 
 Recommended.defaultProps = {
-  recommendedPostsEdges: [],
+  recommendedPosts: [],
 };
 
 export default Recommended;

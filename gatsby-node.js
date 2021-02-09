@@ -5,59 +5,53 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postLayout = path.resolve(`src/layouts/postLayout.js`);
   const postsQuery = await graphql(`
-    {
+    query {
       graphcms {
-        posts: postsConnection(skip: 0, where: { status: PUBLISHED }) {
-          edges {
-            node {
-              id
-              title
-              category
-              level
-              body {
-                html
-                text
-              }
-              icon {
-                url
-              }
-              tags {
-                value
-              }
-            }
+        posts(stage: PUBLISHED) {
+          id
+          title
+          category
+          level
+          body {
+            html
+            text
+          }
+          icon {
+            url
+          }
+          tags {
+            value
           }
         }
       }
     }
   `);
 
-  postsQuery.data.graphcms.posts.edges.forEach(edge => {
-    let recommendedPostsEdges = {};
-    let edgesWithoutCurrent = {};
-    const patternCategory = edge.node.category;
+  postsQuery.data.graphcms.posts.forEach(post => {
+    let recommendedPosts = {};
+    let postsWithoutCurrent = {};
+    const patternCategory = post.category;
 
-    edgesWithoutCurrent = postsQuery.data.graphcms.posts.edges.filter(
-      innerEdge => !(innerEdge.node.id === edge.node.id)
+    postsWithoutCurrent = postsQuery.data.graphcms.posts.filter(
+      el => !(el.id === post.id)
     );
 
-    edge.node.tags.forEach(patternTag => {
-      recommendedPostsEdges = edgesWithoutCurrent.filter(innerEdge => {
-        const filteredTags = innerEdge.node.tags.filter(
+    post.tags.forEach(patternTag => {
+      recommendedPosts = postsWithoutCurrent.filter(el => {
+        const filteredTags = el.tags.filter(
           tag => tag.value === patternTag.value
         );
-        return (
-          filteredTags.length > 0 && innerEdge.node.category === patternCategory
-        );
+        return filteredTags.length > 0 && el.category === patternCategory;
       });
     });
 
     createPage({
-      path: `/${slugify(edge.node.title.toLowerCase())}`,
+      path: `/${slugify(post.title.toLowerCase())}`,
       component: postLayout,
       context: {
-        data: edge.node,
-        recommendedPostsEdges,
-        pathname: `/${slugify(edge.node.title.toLowerCase())}`,
+        data: post,
+        recommendedPosts,
+        pathname: `/${slugify(post.title.toLowerCase())}`,
       },
     });
   });
