@@ -10,7 +10,7 @@ import blot3 from 'assets/images/blot3.svg';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs, Definition } from 'components';
-import { StyledHeading, StyledContainer } from '../layouts/o-autorze/styled';
+import { StyledHeading, StyledContainer } from '../layouts/shared/styled';
 import Decoration from '../layouts/o-autorze/Decoration';
 
 const BreadcrumbsWrapper = styled.div`

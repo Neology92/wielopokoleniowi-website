@@ -30,6 +30,7 @@ import PostGraphics from './PostGraphics/PostGraphics';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import PostFooter from './PostFooter/PostFooter';
 
+import Rules from './Rules/Rules';
 import Definition from './Definition/Definition';
 import About from './About/About';
 import TagsBoard from './TagsBoard/TagsBoard';
@@ -68,4 +69,5 @@ export {
   TagsBoard,
   Recommended,
   Definition,
+  Rules,
 };

@@ -16,7 +16,7 @@ import {
   StyledHeading,
   StyledTextParagraph,
   StyledContainer,
-} from '../layouts/o-autorze/styled';
+} from '../layouts/shared/styled';
 import Decoration from '../layouts/o-autorze/Decoration';
 
 const BreadcrumbsWrapper = styled.div`
