@@ -4,6 +4,7 @@ const IconBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 80px;
 
   background: ${({ category, theme }) => {
     if (category === 'Bussines') return theme.color.nightBlue;
@@ -11,16 +12,16 @@ const IconBackground = styled.div`
   }};
 
   border-radius: 10px;
-  width: 100%;
+  width: calc(100% - 160px);
 
-  height: 52vw;
+  height: calc(52vw - 100px);
 
   ${({ theme }) => theme.media.above.s} {
-    height: 270px;
+    height: 150px;
   }
 
   ${({ theme }) => theme.media.above.m} {
-    height: 354px;
+    height: 194px;
   }
 `;
 
