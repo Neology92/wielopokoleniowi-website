@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MenuWrapper = styled.nav`
-  width: 127px;
+  width: 160px;
   position: absolute;
   z-index: 998;
   top: 0;

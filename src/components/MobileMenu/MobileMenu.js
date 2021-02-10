@@ -12,7 +12,7 @@ const menuItems = [
   { name: 'Dla Każdego', slug: '/artykuly/dla-kazdego' },
   { name: 'Dla Biznesu', slug: '/artykuly/dla-biznesu' },
   { name: 'Slownik', slug: '/slownik' },
-  { name: 'Newsletter', slug: '/newsletter' },
+  // { name: 'Newsletter', slug: '/newsletter' },
 ];
 
 const MobileMenu = ({ className, isOpen }) => (
