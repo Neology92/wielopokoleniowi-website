@@ -15,16 +15,9 @@ import { SEO, Breadcrumbs, TextWithIcon } from 'components';
 import {
   StyledHeading,
   StyledTextParagraph,
+  StyledContainer,
 } from '../layouts/o-autorze/styled';
 import Decoration from '../layouts/o-autorze/Decoration';
-
-const StyledContainer = styled.div`
-  box-sizing: border-box;
-  padding: 0 15px;
-  margin: 0 0 40px;
-  width: 100%;
-  min-height: 80vh;
-`;
 
 const BreadcrumbsWrapper = styled.div`
   padding: 15px 0 0 15px;

@@ -22,3 +22,11 @@ export const StyledTextParagraph = styled(TextParagraph)`
     font-size: 1.6rem;
   }
 `;
+
+export const StyledContainer = styled.div`
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 0 40px;
+  width: 100%;
+  min-height: 80vh;
+`;

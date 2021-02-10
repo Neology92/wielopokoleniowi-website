@@ -10,22 +10,8 @@ import blot3 from 'assets/images/blot3.svg';
 
 import { MainLayout } from 'layouts';
 import { SEO, Breadcrumbs, Definition } from 'components';
-import { StyledHeading } from '../layouts/o-autorze/styled';
+import { StyledHeading, StyledContainer } from '../layouts/o-autorze/styled';
 import Decoration from '../layouts/o-autorze/Decoration';
-
-const StyledContainer = styled.div`
-  width: 100%;
-  min-height: 80vh;
-  margin: 0 0 10vw 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  h1 {
-    font-size: 4rem;
-    margin: 0 auto;
-  }
-`;
 
 const BreadcrumbsWrapper = styled.div`
   padding: 15px 0 0 15px;
