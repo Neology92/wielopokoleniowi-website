@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const TileWrapper = styled.header`
   width: 92%;
-  height: 259px;
+  min-height: 170px;
   margin: 20px auto;
 
   border-radius: 10px;
