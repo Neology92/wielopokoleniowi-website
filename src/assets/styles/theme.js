@@ -50,11 +50,11 @@ export const theme = {
     },
 
     below: {
-      xl: '@media (min-width: 1200px)',
-      l: '@media (min-width: 992px)',
-      m: '@media (min-width: 768px)',
-      s: '@media (min-width: 480px)',
-      xs: '@media (min-width: 320px)',
+      xl: '@media (max-width: 1200px)',
+      l: '@media (max-width: 992px)',
+      m: '@media (max-width: 768px)',
+      s: '@media (max-width: 480px)',
+      xs: '@media (max-width: 320px)',
     },
   },
 };

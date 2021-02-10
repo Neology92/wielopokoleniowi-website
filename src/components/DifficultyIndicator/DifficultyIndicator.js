@@ -8,6 +8,10 @@ const StyledStar = styled(Star)`
   padding: 1px;
   height: 11px;
   opacity: ${({ isBright }) => (isBright ? 1 : 0.3)};
+
+  ${({ theme }) => theme.media.below.l} {
+    height: 8px;
+  }
 `;
 
 const Indicator = ({ className, level }) => {
@@ -28,6 +32,12 @@ const DifficultyIndicator = styled(Indicator)`
   flex-direction: column-reverse;
   row-gap: 2px;
   margin: 15px;
+
+  ${({ theme }) => theme.media.below.l} {
+    margin-top: 10px;
+    margin-left: 8px;
+    row-gap: 1px;
+  }
 `;
 
 Indicator.propTypes = {
