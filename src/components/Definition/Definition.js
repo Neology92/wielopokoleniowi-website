@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Wrapper, Heading, Body } from './styled';
 
 const Definition = ({ word, definition }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <Wrapper>
-      <Heading>{word}</Heading>
-      <Body>{definition}</Body>
+      <Heading isOpen={isOpen} onClick={handleClick}>
+        {word}
+      </Heading>
+      {isOpen && <Body>{definition}</Body>}
     </Wrapper>
   );
 };
