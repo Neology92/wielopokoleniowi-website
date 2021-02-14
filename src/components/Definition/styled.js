@@ -15,7 +15,7 @@ export const Heading = styled.h3`
 
   width: 250px;
   margin: 0;
-  border-bottom: 1px solid
+  border-bottom: 2px solid
     ${({ theme, isOpen }) => (isOpen ? theme.color.darkGrey : 'transparent')};
 
   cursor: pointer;
