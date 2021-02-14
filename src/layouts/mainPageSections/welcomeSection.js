@@ -60,15 +60,10 @@ const WelcomeSection = () => (
       <SectionHeading>Łączy nas PRZYSZŁOŚĆ</SectionHeading>
       <TextParagraph>
         Jeśli dbasz o siebie, swoją rodzinę, majątek lub firmę - znalazłeś się w
-        dobrym miejscu. Wielopokoleniowi to blog o relacjach rodzinnych,
-        majątku, pieniądzach, dziedziczeniu i sukcesji międzypokoleniowej. O
-        tym, jak mądrze budować majątek i biznes oraz w jaki sposób przekazywać
-        go z pokolenia na pokolenie. Jak dbać o wzajemne relacje i zapobiegać
-        rodzinnym waśniom, problemom prawnym albo finansowym. To jest miejsce
-        dla każdego, kto patrzy dalej w Przyszłość! Zostań z nami na dłużej i
-        daj się wciągnąć!
+        dobrym miejscu. Wielopokoleniowi to blog sukcesji, mądrym budowaniu
+        majątku i biznesu oraz przekazywaniu ich kolejnym pokoleniom.
       </TextParagraph>
-      <StyledTextParagraph>Cieszę się, że tu zajrzałeś!</StyledTextParagraph>
+      <StyledTextParagraph>Cieszę się, że tu jesteś!</StyledTextParagraph>
       <TextParagraph>Łukasz Martyniec</TextParagraph>
     </InnerWrapper>
     <StyledFamilyLeft />

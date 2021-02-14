@@ -16,12 +16,8 @@ const PostFooter = () => {
         m.in. o tego typu tematach. Rozkładamy na czynniki pierwsze różne ich
         aspekty i uczymy się na błędach innych.
         <br />
-        Żeby takich historii było jak najmniej. Żeby być mądrzejszym i
-        sprytniejszym. Żeby zachować wpływ przynajmniej na tę część otaczającej
-        nas rzeczywistości, na którą się da.
-      </StyledParagraph>
-      <StyledParagraph>
-        Jeśli chcesz być na bieżąco, zapisz się na nasz Newsletter.
+        Żeby być mądrzejszym i sprytniejszym. Żeby łatwiej i bardziej efektywnie
+        budować Wielopokoleniową zamożność.
       </StyledParagraph>
       <StyledParagraph>Zapraszam!</StyledParagraph>
     </PostFooterWrapper>
