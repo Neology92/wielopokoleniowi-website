@@ -46,6 +46,12 @@ module.exports = {
         // 'https://api-euwest.graphcms.com/v1/cjycti0901d9701e2wyewpsfw/master', // Legacy API
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-2E1YR5E15L'],
+      },
+    },
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
