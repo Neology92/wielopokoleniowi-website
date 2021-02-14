@@ -75,3 +75,79 @@ export const Description = styled(TextParagraph)`
     font-size: 1.6rem;
   }
 `;
+
+export const Ul = styled.ul`
+  list-style: none;
+`;
+
+export const Li = styled.li`
+  padding: 5px;
+  position: relative;
+
+  color: ${({ theme }) => theme.color.darkBlue};
+
+  ::before {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: -20px;
+    top: 12px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 100%;
+    background: ${({ theme }) => theme.color.darkBlue};
+  }
+`;
+
+export const Category = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const StarsContainer = styled.div`
+  margin-left: 15px;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 8px;
+
+  ${({ theme }) => theme.media.above.l} {
+    margin-left: 0;
+    width: 150px;
+  }
+`;
+
+export const StarImg = styled.img`
+  height: 30px;
+`;
+
+export const CategoryDesc = styled(TextParagraph)`
+  text-align: left;
+  width: 60%;
+  padding: 10px 10px;
+  color: ${({ theme }) => theme.color.darkBlue};
+
+  ${({ theme }) => theme.media.above.l} {
+    font-size: 1.6rem;
+    width: 50%;
+  }
+`;
+
+export const Hand = styled.img`
+  position: absolute;
+  display: none;
+
+  ${({ theme }) => theme.media.above.l} {
+    display: block;
+    bottom: 110px;
+    right: -220px;
+  }
+
+  z-index: -1;
+`;
