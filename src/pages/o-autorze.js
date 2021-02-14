@@ -35,91 +35,71 @@ const About = ({ location: { pathname } }) => (
       <Decoration src={blot1} left="-300px" top="150px" isTop isLeft />
       <Decoration src={blot2} right="-200px" bottom="800px" />
       <Decoration src={blot3} left="-40px" bottom="100px" isLeft />
-      <StyledHeading>Cześć, witaj w moim świecie!</StyledHeading>
+      <StyledHeading>Witaj w Wielopokoleniowym świecie!</StyledHeading>
       <StyledTextParagraph>
-        Kim jestem? Od wielu lat przedstawiam się jako „gość, który pisze
-        ludziom testamenty”. To prawda. Napisałem ich już grubo ponad tysiąc.
+        Kim jestem? Od wielu lat przedstawiam się jako facet, który pisze
+        ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
         Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i
-        stwierdzają, że „ha ha, ale ja jeszcze nie wybieram się na tamten
-        świat”. Jeszcze inni zaczynają drążyć… Testament to w tym wypadku tylko
-        hasło i pretekst do dalszej rozmowy. Nie, nie jestem po prostu
-        prawnikiem, ani sprzedawcą polis na życie, choć jednych i drugich szkolę
-        od ponad 15 lat. Jestem doradcą sukcesyjnym, który skończył kiedyś prawo
-        i pomaga ludziom podejmować bardzo ważne dla nich decyzje. Jak przy
-        pomocy posiadanego majątku zabezpieczyć się na starość? Jak, komu i
-        kiedy przekazać biznes albo rodzinny majątek? Jak w perspektywie
-        wielopokoleniowej budować silną rodzinę? Na co trzeba zwrócić uwagę - na
-        wszystkich płaszczyznach istotnych dla procesu sukcesji, choć przede
-        wszystkim od strony majątkowej: prawnej i finansowej. Wiem także, gdzie
-        kończy się moja wiedza - współpracuję z szeregiem specjalistów z różnych
-        dziedzin, którzy także pomagają z sukcesji. Wielu z nich zgodziło się
-        zostać moimi gośćmi na Wielopokoleniowych. Dość dobrze orientuję się w
-        kwestiach prawnych, podatkowych i finansowych, ale nie one są
-        najważniejsze. Zawsze stoję po stronie grupy osób, którymi się opiekuję,
-        czyli szkolę albo doradzam. Najczęściej jest to rodzina albo wspólnicy
-        firmy - rzadko pracuję tylko z jedną osobą. Staram się spojrzeć na
-        sytuację z góry i poszukać takich rozwiązań, które zadowolą wszystkich.
-        Nie reprezentuję jednej osoby w sporze z pozostałymi, częściej działam
-        jako mediator albo superarbiter, niż pełnomocnik.
+        stwierdzają, że ha ha, ale ja jeszcze nie wybieram się na tamten świat.
+        Jeszcze inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło
+        i pretekst do dalszej rozmowy.
         <br />
         <br />
-        Dla jasności - formalnie jestem prawnikiem, czyli absolwentem studiów
-        prawniczych. Nigdy nie starałem się o żadną aplikację, nie jestem
-        adwokatem ani radcą prawnym. Prawo i finanse traktuję jako szkielet, w
-        oparciu o który buduję plan sukcesji, tj. rozłożonego w czasie i
-        uporządkowanego przekazania majątku rodzinnego lub biznesu dzieciom,
-        albo tzw. plan awaryjny, czyli zabezpieczenie na wypadek śmierci. Poza
-        doradztwem niczego nie sprzedaję. Nie proponuję nikomu konkretnych
-        rozwiązań finansowych, zagranicznych spółek w pakiecie czy optymalizacji
-        podatkowej. Wiem, że mogą być przydatne, ale nie powinny być celem samym
-        w sobie. Najważniejsze jest przecież zupełnie co innego.
+        Jestem doradcą sukcesyjnym [link do SSS] i prawnikiem, który pomaga
+        ludziom podejmować ważne, życiowe decyzje. Jak, komu i kiedy przekazać
+        majątek i podzielić go pomiędzy dzieci? Jak przeprowadzić sukcesję
+        biznesu rodzinnego (i nierodzinnego)? Jak w perspektywie
+        wielopokoleniowej budować silną i zamożną rodzinę, dbać o relacje i
+        solidne fundamenty?
       </StyledTextParagraph>
 
       <TextWithIcon src={bulb} isBlue>
         <h3>
-          Dlaczego bloguję i skąd pomysł, aby stworzyć Wielopokoleniowych?
+          Dlaczego bloguję i skąd pomysł, aby stworzyć{' '}
+          <span>Wielopokoleniowych</span>?
         </h3>
         <StyledTextParagraph>
-          Dzielenie się wiedzą tkwi we mnie od lat. Od kiedy pamiętam, uwielbiam
-          stać przed ludźmi i opowiadać im o tym, co wymyśliłem w kwestii
-          sukcesji i planowania spadkowego - praktycznie od 1998 r. interesuję
-          się tą tematyką, a szkolę mniej więcej od 2005 r. Ponoć jestem w tym
-          niezły - na liczniku mam już prawie 20.000 słuchaczy, a wszystkie
-          szkolenia i wystąpienia ułożyłem sam. To nie jest wyczytane z
-          amerykańskich książek, ani „zapożyczone” od kogokolwiek w Polsce - to
-          są w całości moje autorskie szkolenia i pomysły. Mam też na koncie
-          kilkadziesiąt popularyzatorskich i naukowych publikacji, głównie na
-          temat sukcesji biznesu rodzinnego, o którym też będę tutaj pisał.
+          Zajmuję się przede wszystkim doradztwem sukcesyjnym i widzę, jak wiele
+          błędów popełnianych jest przy podejmowaniu istotnych, majątkowych
+          decyzji. Ile krąży nieporozumień, potocznych prawd albo tabu. Jak
+          wiele potencjału i środków marnuje się na nieprzemyślane działania,
+          koszty albo niepotrzebne spory.
+          <br />
+          <br />
+          Sukcesja jest wyjątkowo interdyscyplinarna. Przy jej planowaniu
+          potrzebni są specjaliści z wielu dziedzin i mało kto potrafi zrobić to
+          dobrze. O tym też będę pisał i podzielę się z Tobą wieloma moimi
+          pomysłami, co można zrobić lepiej. Dzielenie się wiedzą tkwi we mnie
+          od lat. Uwielbiam pisać i szkolić, robię to z powodzeniem od dawna.
+          Wszystkie programy szkoleniowe napisałem sam – to nie jest wiedza
+          zapożyczona z amerykańskich książek, tylko czysta praktyka i
+          doświadczenie z osobistej pracy z kilkunastoma tysiącami osób.
         </StyledTextParagraph>
       </TextWithIcon>
 
       <StyledTextParagraph>
-        Mam już trochę doświadczeń blogowych. Na blogu
-        <strong> Finanse Bardzo Osobiste u Marcina Iwucia </strong>
-        znajdziesz kilka wpisów z moim udziałem - w tym dwa podcasty i dwa
-        webinary. W latach 2012-2017 prowadziłem także portal
-        planowaniespadkowe.pl, na którym poruszałem tematykę sukcesji. Nie było
-        to jednak projekt dojrzały, ani profesjonalny. Teraz przyszedł czas na
-        blog z prawdziwego zdarzenia ;) Chcę dzielić się wiedzą, pokazywać
-        problemy oraz dobre praktyki w tym zakresie, które udało się z
-        powodzeniem wdrożyć w biznesie rodzinnym. Wprowadziłem przeszło 400
-        kompleksowych planów sukcesji majątkowej w biznesie, w kilkudziesięciu
-        rodzinach doradzam już od 5-8 lat. Jestem współautorem pierwszych
-        konstytucji rodzinnych w Polsce i opracowań na temat ładu rodzinnego.
+        Mam już trochę doświadczeń blogowych, zdarzają mi się występy gościnne
+        np. u Marcina Iwucia czy Radka Budnickiego. Może niektórzy pamiętają
+        także portal <strong>planowaniespadkowe.pl</strong>, który prowadziłem w
+        latach 2012-2017. Nie było to jednak projekt dojrzały, ani
+        profesjonalny. Teraz przyszedł czas na blog z prawdziwego zdarzenia 😉
         <br />
         <br />
-        Domyślam się, że na 98% są to pojęcia dla Ciebie nowe. Tutaj postaram
-        się pisać prosto, najprościej jak potrafię (patrz 6 Zasada
-        Wielopokoleniowych), żeby z nieco odmiennej pokazać Ci świat ważnych,
-        życiowych, rodzinnych i biznesowych decyzji, które każdy z nas podejmuje
-        i będzie podejmował przez całe życie. Pokażę wiele przykładów i historii
-        z życia wziętych. Nie wszystkie są fajne i pozytywne. Wiele jest
-        smutnych czy zakończonych porażką. Chcę, abyś - jeśli postanowisz ze mną
-        zostać i czytać dalej - mógł uczyć się na błędach innych, a także
-        czerpać z nich przykład. Wiele rozwiązań, o których tutaj piszę, są
-        moimi pomysłami wypraktykowanymi w pracy z rodzinami w przeróżnych
-        sytuacjach życiowych czy biznesowych. Ale ten blog jest przede wszystkim
-        dla „zwyczajnych” ludzi, którzy nie prowadzą biznesu. Jest dla każdego.
+        Na co dzień jestem prezesem spółki doradczej Kancelaria Sukcesyjna sp. z
+        o.o., w ramach której świadczę usługi doradztwa sukcesyjnego i prawnego.
+        To moja główna działalność. Od niedawna funkcjonuje także spółka Finanse
+        Osobiste sp. z o.o., w której rozwijam działalność polegającą na
+        dostarczaniu najlepszych rozwiązań finansowych, które towarzyszą
+        sukcesji. O finansach osobistych na blogu będzie także sporo.
+        <br />
+        <br />
+        Obie spółki należą do Wielopokoleniowi sp. z o.o., w której jestem
+        wspólnikiem i prezesem zarządu. Prowadzę przez nią blog i planuję
+        rozwijać działalność popularyzatorską i edukacyjną. Blog
+        Wielopokoleniowi.pl to moje kolejne spełnione Marzenie i Wielka
+        Przygoda, z którą mam zamiar pozostać na dłużej. Wielopokoleniowi to
+        także prezent dla mnie. Blog wystartował 16 lutego 2021 roku. Dokładnie
+        w moje 45 urodziny!
       </StyledTextParagraph>
 
       <TextWithIcon src={target} isRight isBlue>
@@ -129,17 +109,21 @@ const About = ({ location: { pathname } }) => (
         <ul>
           <li>
             <StyledTextParagraph>
-              <strong>
-                Zaufanie i współpraca z moimi Guru (bardzo Wam dziękuję!):
-              </strong>
+              <strong>Na początek klika liczb:</strong>
             </StyledTextParagraph>
             <StyledTextParagraph>
               <span>
-                Adrianną Lewandowską, Pawłem „Pawelcem” Ratajem, Wiesią
-                Machalicą, Ewą Więcek-Janką, Marcinem Iwuciem, Katarzyną
-                Stróżyńską, Marią Adamską, Eweliną Szeratics, Marią Olszewską i
-                bardzo, bardzo wieloma innymi osobami, które miałem zaszczyt i
-                przyjemność poznać
+                - od 2000 r. prowadzę własną kancelarię prawną, początki szkoleń
+                i doradztwa sukcesyjnego to 2004 r., a od 2007 r. zajmuję się
+                wyłącznie sukcesją,
+                <br />
+                - za mną już przeszło 1500 szczegółowo przeanalizowanych
+                sytuacji sukcesyjnych i 500 kompleksowych planów sukcesji w
+                biznesie, niektórymi rodzinami opiekuję się już 6-8 lat,
+                <br />
+                - w moich szkoleniach wzięło udział przeszło 20.000 osób
+                <br />- głównie przedsiębiorców, prawników i agentów
+                ubezpieczeniowych.
               </span>
             </StyledTextParagraph>
           </li>
@@ -149,8 +133,16 @@ const About = ({ location: { pathname } }) => (
             </StyledTextParagraph>
             <StyledTextParagraph>
               <span>
-                Od kilku lat wspieram Kampanię Napisz Testament, a także inne
-                projekty, ale o nich nie napiszę publicznie,
+                Od kilku lat wspieram Kampanię{' '}
+                <a
+                  href="http://www.napisztestament.org.pl/"
+                  target="blank"
+                  noopenner
+                  noreferrer
+                >
+                  Napisz Testament
+                </a>
+                , a także inne projekty.
               </span>
             </StyledTextParagraph>
           </li>
@@ -160,10 +152,9 @@ const About = ({ location: { pathname } }) => (
             </StyledTextParagraph>
             <StyledTextParagraph>
               <span>
-                Regularnie odwiedzając Konferencję Naukową Firmy Rodzinne w
-                Łodzi, głosząc referaty i publikując nt. sukcesji (niewielu jest
-                prawników, którzy publikują dla ekonomistów i specjalistów od
-                zarządzania),
+                Póki co mam na koncie kilka publikacji naukowych na temat
+                różnych odcieni sukcesji, publikuję w wydawnictwach prawniczych
+                i ekonomicznych.
               </span>
             </StyledTextParagraph>
           </li>
@@ -175,14 +166,10 @@ const About = ({ location: { pathname } }) => (
             </StyledTextParagraph>
             <StyledTextParagraph>
               <span>
-                Mamy mój mały wpływ na to, jak stosuje się prawo (szkolenia
-                m.in. dla radców prawnych) oraz się je tworzy (jako ekspert
-                Instytutu Biznesu Rodzinnego brałem udział w pracach nad kilkoma
-                ustawami w Ministerstwie Przedsiębiorczości i Technologii - mam
-                już kilkanaście „swoich” przepisów, a część z nich - jak mi się
-                wydaje - jest nawet dosyć istotna). Wielopokoleniowi to moje
-                kolejne spełnione Marzenie i Wielka Przygoda, z którą mam zamiar
-                zostać na dłużej.
+                Mam chociaż trochę wpływ na to, jak stosuje się prawo (szkolenia
+                m.in. dla radców prawnych) oraz się je tworzy – jako konsultant
+                społeczny brałem udział m.in. w pracach nad ustawą o zarządzie
+                sukcesyjnym oraz ustawą o fundacjach rodzinnych.
               </span>
             </StyledTextParagraph>
           </li>
@@ -193,15 +180,34 @@ const About = ({ location: { pathname } }) => (
         <h3>Co poza tym?</h3>
         <StyledTextParagraph>
           Staram się żyć normalnie i raczej skromnie. Mam rodzinę, przyjaciół,
-          ogródek działkowy (choć tak naprawdę jest trochę bardziej mojej
-          koleżanki Małżonki, niż mój), kota i pasjami uwielbiam jazz. Od kilku
-          lat Jazz nad Odrą to moje ulubione miejsce do życia - pod koniec
-          kwietnia znikam na kilka dni. Mieszkam we Wrocławiu, więc mam blisko -
-          do Impartu 10 minut na piechotę ;) Jestem też wielkim fanem rozwoju
-          osobistego - sporo czytam, słucham audiobooków, podcastów i ćwiczę na
-          TEDex’a. Mam nadzieję, że Wielopokoleniowi staną się częścią Twojego
-          rozwoju osobistego i że będę miał przez to w niego swój mały wkład.
-          Cieszę się, że tutaj jesteś i dzielisz ze mną swój czas :)
+          ogródek działkowy i pasjami uwielbiam jazz. Od kilku lat Jazz nad Odrą
+          to moje ulubione miejsce do życia - pod koniec kwietnia znikam na pięć
+          dni. Mieszkam we Wrocławiu, więc mam blisko - do Impartu 10 minut na
+          piechotę.
+          <br />
+          Mam nadzieję, że <strong>Wielopokoleniowi</strong> staną się częścią
+          Twojego rozwoju osobistego i że będę miał w niego swój mały wkład.
+          <br />
+          <br />
+          Cieszę się, że tutaj jesteś i dzielisz ze mną swój czas 😊
+          <br />
+          <i>Łukasz Martyniec</i>
+        </StyledTextParagraph>
+        <br />
+        <StyledTextParagraph>
+          p.s. Więcej informacji na mój temat znajdziesz{' '}
+          <a href="https://kancelariasukcesyjna.pl/" noreferrer noopenner>
+            tutaj
+          </a>{' '}
+          i{' '}
+          <a
+            href="https://pl.linkedin.com/in/łukasz-martyniec-85b95860"
+            noopenner
+            noreferrer
+          >
+            tutaj
+          </a>
+          .
         </StyledTextParagraph>
       </TextWithIcon>
     </StyledContainer>
