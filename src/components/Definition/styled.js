@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import arrowRed from 'assets/images/arrowRed.svg';
 
 export const Wrapper = styled.div`
-  margin-top: 40px;
+  margin-top: 15px;
   margin-left: 25px;
 `;
 
@@ -40,6 +40,7 @@ export const Heading = styled.h3`
 export const Body = styled.p`
   padding: 5px 0;
   margin-top: 10px;
+  margin-bottom: 25px;
 
   text-align: justify;
   color: ${({ theme }) => theme.color.textColor};
