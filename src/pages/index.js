@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
 
   data.graphcms.everyone.forEach((post, i) => {
     posts.push(post);
-    posts.push(data.graphcms.bussines[i]);
+    if (data.graphcms.bussines[i]) posts.push(data.graphcms.bussines[i]);
   });
 
   return (
