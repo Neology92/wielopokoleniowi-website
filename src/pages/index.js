@@ -24,11 +24,14 @@ const StyledContainer = styled.div`
 
 const IndexPage = ({ data }) => {
   const posts = [];
+  const {
+    graphcms: { everyone, bussines },
+  } = data;
 
-  data.graphcms.everyone.forEach((post, i) => {
-    posts.push(post);
-    if (data.graphcms.bussines[i]) posts.push(data.graphcms.bussines[i]);
-  });
+  for (let i = 0; i < 3; i++) {
+    if (everyone[i]) posts.push(everyone[i]);
+    if (bussines[i]) posts.push(bussines[i]);
+  }
 
   return (
     <MainLayout path="/" isMainPage>
