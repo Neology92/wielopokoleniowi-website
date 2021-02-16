@@ -37,15 +37,14 @@ const About = ({ location: { pathname } }) => (
       <Decoration src={blot3} left="-40px" bottom="100px" isLeft />
       <StyledHeading>Witaj w Wielopokoleniowym świecie!</StyledHeading>
       <StyledTextParagraph>
-        Kim jestem? Od wielu lat przedstawiam się jako facet, który pisze
-        ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
+        Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam, że piszę ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
         Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i
         stwierdzają, że ha ha, ale ja jeszcze nie wybieram się na tamten świat.
         Jeszcze inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło
         i pretekst do dalszej rozmowy.
         <br />
         <br />
-        Jestem doradcą sukcesyjnym [link do SSS] i prawnikiem, który pomaga
+        Jestem doradcą sukcesyjnym i prawnikiem, który pomaga
         ludziom podejmować ważne, życiowe decyzje. Jak, komu i kiedy przekazać
         majątek i podzielić go pomiędzy dzieci? Jak przeprowadzić sukcesję
         biznesu rodzinnego (i nierodzinnego)? Jak w perspektywie
@@ -121,8 +120,8 @@ const About = ({ location: { pathname } }) => (
                 sytuacji sukcesyjnych i 500 kompleksowych planów sukcesji w
                 biznesie, niektórymi rodzinami opiekuję się już 6-8 lat,
                 <br />
-                - w moich szkoleniach wzięło udział przeszło 20.000 osób
-                <br />- głównie przedsiębiorców, prawników i agentów
+                - w moich szkoleniach wzięło udział przeszło 20.000 osób 
+                    - głównie przedsiębiorców, prawników i agentów
                 ubezpieczeniowych.
               </span>
             </StyledTextParagraph>
