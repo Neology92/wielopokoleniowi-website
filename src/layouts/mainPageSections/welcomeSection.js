@@ -60,8 +60,8 @@ const WelcomeSection = () => (
       <SectionHeading>Łączy nas PRZYSZŁOŚĆ</SectionHeading>
       <TextParagraph>
         Jeśli dbasz o siebie, swoją rodzinę, majątek lub firmę - znalazłeś się w
-        dobrym miejscu. Wielopokoleniowi to blog sukcesji, mądrym budowaniu
-        majątku i biznesu oraz przekazywaniu ich kolejnym pokoleniom.
+        dobrym miejscu. Wielopokoleniowi to blog o sukcesji, mądrym budowaniu
+        majątku i biznesu oraz o przekazywaniu ich kolejnym pokoleniom.
       </TextParagraph>
       <StyledTextParagraph>Cieszę się, że tu jesteś!</StyledTextParagraph>
       <TextParagraph>Łukasz Martyniec</TextParagraph>
