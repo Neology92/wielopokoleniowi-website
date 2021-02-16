@@ -17,8 +17,8 @@ const AboutSection = () => (
         Cześć, witaj w moim świecie!
       </StyledSecondSectionHeading>
       <TextParagraph>
-        Kim jestem? Od wielu lat na pytanie o wykonywany zawód - odpowiadam, 
-        że piszę ludziom testamenty. To prawda. Napisałem ich już grubo ponad tysiąc.
+        Kim jestem? Od wielu lat przedstawiam się jako „gość, który pisze
+        ludziom testamenty”. To prawda. Napisałem ich już kilka tysięcy. 
         Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i
         stwierdzają, że „ha ha, ale ja jeszcze nie wybieram się na tamten
         świat”. Jeszcze inni zaczynają drążyć… Testament to w tym wypadku tylko
