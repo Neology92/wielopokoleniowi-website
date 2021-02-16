@@ -18,9 +18,11 @@ const AboutSection = () => (
       </StyledSecondSectionHeading>
       <TextParagraph>
         Kim jestem? Od wielu lat przedstawiam się jako „gość, który pisze
-        ludziom testamenty”. To prawda. Napisałem ich już kilka tysięcy. Niektórzy pytają, czy jestem notariuszem, 
-inni robią dziwną minę i stwierdzają, że: ha ha, ale ja jeszcze nie wybieram się na tamten świat. Jeszcze inni zaczynają drążyć… 
-Testament to w tym wypadku jedynie hasło i pretekst do dalszej rozmowy.
+        ludziom testamenty”. To prawda. Napisałem ich już kilka tysięcy. 
+        Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę 
+        i stwierdzają, że: ha ha, ale ja jeszcze nie wybieram się na tamten świat. 
+        Jeszcze inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło 
+        i pretekst do dalszej rozmowy.
       </TextParagraph>
       <Button to="/o-autorze">Czytaj</Button>
     </TextWrapper>
