@@ -45,7 +45,7 @@ const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
       </StyledTextParagraph>
       <br />
       <StyledTextParagraph>
-        Ponieważ blogowanie siedzi we mnie już od dawna, a <i>Wielopokoleniowi</i>
+        Ponieważ blogowanie siedzi we mnie już od dawna, a <i>Wielopokoleniowi<i/>
         wykluwali się w mojej głowie przez dobre kilka lat, postanowiłem przyjąć
         sam dla siebie kilka zasad, których zamierzam się trzymać. Część z nich
         wynika z moich osobistych doświadczeń i zapatrywań, część przyjąłem jako
@@ -71,7 +71,7 @@ const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
       <StyledTextParagraph>
         Ciekaw jestem, co Ty na to? A także, jak - szczególnie w dzisiejszych
         czasach, kiedy z różnych stron wmawia się nam, że więcej nas dzieli, niż
-        łączy - przyjmiesz <b>Wielopokoleniowe idee</b>? Że warto{' '}
+        łączy - przyjmiesz <b><i>Wielopokoleniowe<i/> idee</b>? Że warto{' '}
         <b>świadomie</b>, <b>razem</b> i <b>w zgodzie</b>!
       </StyledTextParagraph>
       <br />
