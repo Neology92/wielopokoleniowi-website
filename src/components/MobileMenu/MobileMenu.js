@@ -25,7 +25,7 @@ const MobileMenu = ({ className, isOpen }) => (
       ))}
     </MenuLinksWrapper>
     <IconsWrapper isOpen={isOpen}>
-      <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+      <a href="https://www.facebook.com/wielopokoleniowi/">
         <StyledFacebook />
       </a>
       {/* Youtube will come back there in the future */}
