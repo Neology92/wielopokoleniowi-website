@@ -64,7 +64,7 @@ const WelcomeSection = () => (
         majątku i biznesu oraz przekazywaniu ich kolejnym pokoleniom.
       </TextParagraph>
       <StyledTextParagraph>Cieszę się, że tu jesteś!</StyledTextParagraph>
-      <TextParagraph>Łukasz Martyniec</TextParagraph>
+      <TextParagraph><i>Łukasz Martyniec<i/></TextParagraph>
     </InnerWrapper>
     <StyledFamilyLeft />
     <StyledFamilyRight />
