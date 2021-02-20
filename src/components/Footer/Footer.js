@@ -64,7 +64,7 @@ const Footer = () => {
         <section>
           <div>
             <a
-              href="https://www.facebook.com/wielopokoleniowi/"
+              href="https://www.facebook.com/wielopokoleniowi"
               target="_blank"
               rel="noopener noreferrer"
             >
