@@ -29,19 +29,17 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <Block shadow="strong">
-        <h6>Masz jakieś pytania?</h6>
+        <h6>Kontakt</h6>
         <StyledTelephone />
         <a href="tel: +48604968609">+48 604 968 609</a>
         <StyledMail />
-        <a href="mailto: martyniec@kancelariasukcesyjna.pl">
-          martyniec@kancelariasukcesyjna.pl
+        <a href="mailto: wszyscyjestesmy@wielopokoleniowi.pl">
+          wszyscyjestesmy@wielopokoleniowi.pl
         </a>
       </Block>
       <Block shadow="medium" isDark>
         <h6>
-          Masz problem?
-          <br />
-          Szukasz pomocy sukcesyjnej?
+         Zapraszam również na:
         </h6>
         <StyledWeb />
         <a
