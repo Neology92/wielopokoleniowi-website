@@ -11,7 +11,7 @@ const menuItems = [
   { name: 'O autorze', slug: '/o-autorze' },
   { name: 'Dla Każdego', slug: '/artykuly/dla-kazdego' },
   { name: 'Dla Biznesu', slug: '/artykuly/dla-biznesu' },
-  { name: 'Slownik', slug: '/slownik' },
+  { name: 'Słownik', slug: '/slownik' },
   // { name: 'Newsletter', slug: '/newsletter' },
 ];
 
@@ -25,7 +25,7 @@ const MobileMenu = ({ className, isOpen }) => (
       ))}
     </MenuLinksWrapper>
     <IconsWrapper isOpen={isOpen}>
-      <a href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/">
+      <a href="https://www.facebook.com/wielopokoleniowi/">
         <StyledFacebook />
       </a>
       {/* Youtube will come back there in the future */}
