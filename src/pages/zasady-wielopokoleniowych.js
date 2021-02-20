@@ -45,7 +45,7 @@ const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
       </StyledTextParagraph>
       <br />
       <StyledTextParagraph>
-        Ponieważ blogowanie siedzi we mnie już od dawna, a Wielopokoleniowi
+        Ponieważ blogowanie siedzi we mnie już od dawna, a <i>Wielopokoleniowi</i>
         wykluwali się w mojej głowie przez dobre kilka lat, postanowiłem przyjąć
         sam dla siebie kilka zasad, których zamierzam się trzymać. Część z nich
         wynika z moich osobistych doświadczeń i zapatrywań, część przyjąłem jako
