@@ -69,7 +69,7 @@ const Header = () => {
         <StyledMobileMenu isOpen={isMenuOpen} />
         <SocialDesktop>
           <a
-            href="https://www.facebook.com/KancelariaSukcesyjnaMARTYNIEC/"
+            href="https://www.facebook.com/wielopokoleniowi/"
             target="_blank"
             rel="noopener noreferrer"
           >
