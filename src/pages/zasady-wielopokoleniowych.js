@@ -32,7 +32,16 @@ const Pages = styled.img`
 
 const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Zasady Wielopokoleniowych" />
+    <SEO
+      title="Zasady Wielopokoleniowych"
+      description="Ponieważ blogowanie siedzi we mnie już od dawna, a Wielopokoleniowi
+        wykluwali się w mojej głowie przez dobre kilka lat, postanowiłem przyjąć
+        sam dla siebie kilka zasad, których zamierzam się trzymać. Część z nich
+        wynika z moich osobistych doświadczeń i zapatrywań, część przyjąłem jako
+        własne z inspiracji moich bardziej doświadczonych koleżanek i kolegów
+        blogerów i podcasterów. Zanim zagłębisz się bardziej w temat, zapoznaj
+        się z tymi Zasadami."
+    />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>

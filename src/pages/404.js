@@ -21,7 +21,7 @@ const StyledContainer = styled.div`
 
 const PageNotFound = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Home" />
+    <SEO title="404 - Nie znaleziono" />
     <StyledContainer>
       <h1>404</h1>
       <h1>Page not found</h1>

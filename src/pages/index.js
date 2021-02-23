@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <MainLayout path="/" isMainPage>
-      <SEO title="Home" />
+      <SEO title="Strona Główna" />
       <StyledContainer>
         <WelcomeSection />
         <FirstStepsSection />

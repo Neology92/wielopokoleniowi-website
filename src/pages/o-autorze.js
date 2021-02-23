@@ -26,7 +26,15 @@ const BreadcrumbsWrapper = styled.div`
 
 const About = ({ location: { pathname } }) => (
   <MainLayout path={pathname}>
-    <SEO title="O autorze" />
+    <SEO
+      title="O autorze"
+      description="Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam,
+        że piszę ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
+        Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i
+        stwierdzają, że ha ha, ale ja jeszcze nie wybieram się na tamten świat.
+        Jeszcze inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło
+        i pretekst do dalszej rozmowy."
+    />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>
@@ -37,20 +45,19 @@ const About = ({ location: { pathname } }) => (
       <Decoration src={blot3} left="-40px" bottom="100px" isLeft />
       <StyledHeading>Witaj w Wielopokoleniowym świecie!</StyledHeading>
       <StyledTextParagraph>
-        Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam, 
-        że piszę ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
+        Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam, że
+        piszę ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
         Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i
         stwierdzają, że ha ha, ale ja jeszcze nie wybieram się na tamten świat.
         Jeszcze inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło
         i pretekst do dalszej rozmowy.
         <br />
         <br />
-        Jestem doradcą sukcesyjnym i prawnikiem, który pomaga
-        ludziom podejmować ważne, życiowe decyzje. Jak, komu i kiedy przekazać
-        majątek i podzielić go pomiędzy dzieci? Jak przeprowadzić sukcesję
-        biznesu rodzinnego (i nierodzinnego)? Jak w perspektywie
-        wielopokoleniowej budować silną i zamożną rodzinę, dbać o relacje i
-        solidne fundamenty?
+        Jestem doradcą sukcesyjnym i prawnikiem, który pomaga ludziom podejmować
+        ważne, życiowe decyzje. Jak, komu i kiedy przekazać majątek i podzielić
+        go pomiędzy dzieci? Jak przeprowadzić sukcesję biznesu rodzinnego (i
+        nierodzinnego)? Jak w perspektywie wielopokoleniowej budować silną i
+        zamożną rodzinę, dbać o relacje i solidne fundamenty?
       </StyledTextParagraph>
 
       <TextWithIcon src={bulb} isBlue>
@@ -120,10 +127,8 @@ const About = ({ location: { pathname } }) => (
                 - za mną już przeszło 1500 szczegółowo przeanalizowanych
                 sytuacji sukcesyjnych i 500 kompleksowych planów sukcesji w
                 biznesie, niektórymi rodzinami opiekuję się już 6-8 lat,
-                <br />
-                - w moich szkoleniach wzięło udział przeszło 20.000 osób 
-                    - głównie przedsiębiorców, prawników i agentów
-                ubezpieczeniowych.
+                <br />- w moich szkoleniach wzięło udział przeszło 20.000 osób -
+                głównie przedsiębiorców, prawników i agentów ubezpieczeniowych.
               </span>
             </StyledTextParagraph>
           </li>
