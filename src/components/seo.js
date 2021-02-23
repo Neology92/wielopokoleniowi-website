@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import logoImage from 'assets/images/logoWithBackground.png';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, location: { origin } }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: window.location.origin + logoImage,
+          content: origin + logoImage,
         },
         {
           property: `og:title`,
@@ -77,6 +77,7 @@ SEO.defaultProps = {
 };
 
 SEO.propTypes = {
+  location: PropTypes.shape(PropTypes.string).isRequired,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
