@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: logoImage,
+          content: window.location.origin + logoImage,
         },
         {
           property: `og:title`,
