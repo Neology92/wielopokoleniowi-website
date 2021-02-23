@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import logoImage from 'assets/images/logoWithBackground.png';
+import logoImagePath from 'assets/images/logoWithBackground.png';
 
-function SEO({ description, lang, meta, title, origin }) {
+function SEO({ description, lang, meta, title, origin, imagePath }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, title, origin }) {
     `
   );
 
-  const metaOrigin = origin || 'https://wielopokoleniowi.pl';
+  const metaImage = imagePath || logoImagePath;
   const metaDescription = description || site.siteMetadata.description;
 
   return (
@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, title, origin }) {
         },
         {
           property: `og:image`,
-          content: metaOrigin + logoImage,
+          content: origin + metaImage,
         },
         {
           property: `og:title`,
@@ -75,10 +75,12 @@ SEO.defaultProps = {
   lang: `pl`,
   meta: [],
   description: ``,
+  imagePath: ``,
 };
 
 SEO.propTypes = {
   origin: PropTypes.string.isRequired,
+  imagePath: PropTypes.string,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
