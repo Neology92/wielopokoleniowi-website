@@ -19,7 +19,8 @@ function SEO({ description, lang, meta, title, origin, image }) {
     `
   );
 
-  const metaImage = image || origin + logoImagePath;
+  const metaOrigin = origin || 'https://wielopokoleniowi.pl';
+  const metaImage = image || metaOrigin + logoImagePath;
   const metaDescription = description || site.siteMetadata.description;
 
   return (
