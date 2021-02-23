@@ -25,7 +25,12 @@ const PostLayout = ({
 
   return (
     <MainLayout isPost>
-      <SEO title={data.title} origin={origin} />
+      <SEO
+        title={data.title}
+        description={data.excerpt}
+        imagePath={data.icon.url}
+        origin={origin}
+      />
       <MainWrapper>
         <HeadingSection
           title={data.title}
