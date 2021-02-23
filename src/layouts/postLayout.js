@@ -28,7 +28,7 @@ const PostLayout = ({
       <SEO
         title={data.title}
         description={data.excerpt}
-        imagePath={data.icon.url}
+        image={data.icon.url}
         origin={origin}
       />
       <MainWrapper>
