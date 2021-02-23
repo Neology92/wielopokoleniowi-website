@@ -24,10 +24,11 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const About = ({ location: { pathname } }) => (
+const About = ({ location: { pathname, origin } }) => (
   <MainLayout path={pathname}>
     <SEO
       title="O autorze"
+      origin={origin}
       description="Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam,
         że piszę ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
         Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i

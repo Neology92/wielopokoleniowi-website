@@ -29,7 +29,7 @@ class BussinesPosts extends Component {
   render() {
     // Data destructuring
     const {
-      location: { pathname },
+      location: { pathname, origin },
       data: {
         graphcms: { posts, tags: queryTags },
       },
@@ -72,7 +72,7 @@ class BussinesPosts extends Component {
 
     return (
       <MainLayout path={pathname}>
-        <SEO title="Dla Biznesu" />
+        <SEO title="Dla Biznesu" origin={origin} />
         <StyledContainer>
           <BreadcrumbsWrapper>
             <Breadcrumbs path={pathname} />

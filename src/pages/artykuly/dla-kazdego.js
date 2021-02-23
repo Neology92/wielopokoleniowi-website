@@ -54,7 +54,7 @@ class EveryonePosts extends Component {
   render() {
     // Data destructuring
     const {
-      location: { pathname },
+      location: { pathname, origin },
       data: {
         graphcms: { posts, tags: queryTags },
       },
@@ -97,7 +97,7 @@ class EveryonePosts extends Component {
 
     return (
       <MainLayout path={pathname}>
-        <SEO title="Dla Każdego" />
+        <SEO title="Dla Każdego" origin={origin} />
         <StyledContainer>
           <BreadcrumbsWrapper>
             <Breadcrumbs path={pathname} />

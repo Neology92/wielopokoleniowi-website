@@ -19,9 +19,9 @@ const StyledContainer = styled.div`
   }
 `;
 
-const PageNotFound = ({ location: { pathname } }) => (
+const PageNotFound = ({ location: { pathname, origin } }) => (
   <MainLayout path={pathname}>
-    <SEO title="404 - Nie znaleziono" />
+    <SEO title="404 - Nie znaleziono" origin={origin} />
     <StyledContainer>
       <h1>404</h1>
       <h1>Page not found</h1>

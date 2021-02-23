@@ -18,13 +18,13 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 const Slownik = ({
-  location: { pathname },
+  location: { pathname, origin },
   data: {
     graphcms: { dictionaries },
   },
 }) => (
   <MainLayout path={pathname}>
-    <SEO title="Slownik" />
+    <SEO title="Slownik" origin={origin} />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import logoImage from 'assets/images/logoWithBackground.png';
 
-function SEO({ description, lang, meta, title, location: { origin } }) {
+function SEO({ description, lang, meta, title, origin }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title, location: { origin } }) {
     `
   );
 
+  const metaOrigin = origin || 'https://wielopokoleniowi.pl';
   const metaDescription = description || site.siteMetadata.description;
 
   return (
@@ -35,7 +36,7 @@ function SEO({ description, lang, meta, title, location: { origin } }) {
         },
         {
           property: `og:image`,
-          content: origin + logoImage,
+          content: metaOrigin + logoImage,
         },
         {
           property: `og:title`,
@@ -77,7 +78,7 @@ SEO.defaultProps = {
 };
 
 SEO.propTypes = {
-  location: PropTypes.shape(PropTypes.string).isRequired,
+  origin: PropTypes.string.isRequired,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),

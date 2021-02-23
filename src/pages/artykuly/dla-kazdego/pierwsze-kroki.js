@@ -28,9 +28,9 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const EveryoneFirstSteps = ({ location: { pathname } }) => (
+const EveryoneFirstSteps = ({ location: { pathname, origin } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Dla Każdego" />
+    <SEO title="Dla Każdego" origin={origin} />
     <StyledContainer>
       <BreadcrumbsWrapper>
         <Breadcrumbs path={pathname} />

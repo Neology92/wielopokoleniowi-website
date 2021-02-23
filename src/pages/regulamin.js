@@ -24,9 +24,9 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const Regulamin = ({ location: { pathname } }) => (
+const Regulamin = ({ location: { pathname, origin } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Regulamin" />
+    <SEO title="Regulamin" origin={origin} />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>

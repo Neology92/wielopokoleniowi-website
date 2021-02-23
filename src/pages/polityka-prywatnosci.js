@@ -24,9 +24,9 @@ const BreadcrumbsWrapper = styled.div`
   width: 100%;
 `;
 
-const PolitykaPrywatnosci = ({ location: { pathname } }) => (
+const PolitykaPrywatnosci = ({ location: { pathname, origin } }) => (
   <MainLayout path={pathname}>
-    <SEO title="Polityka prywatności" />
+    <SEO title="Polityka prywatności" origin={origin} />
     <BreadcrumbsWrapper>
       <Breadcrumbs path={pathname} />
     </BreadcrumbsWrapper>

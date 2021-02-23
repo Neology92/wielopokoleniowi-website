@@ -30,10 +30,11 @@ const Pages = styled.img`
   margin: 40px auto;
 `;
 
-const ZasadyWielopokoleniowych = ({ location: { pathname } }) => (
+const ZasadyWielopokoleniowych = ({ location: { pathname, origin } }) => (
   <MainLayout path={pathname}>
     <SEO
       title="Zasady Wielopokoleniowych"
+      origin={origin}
       description="Ponieważ blogowanie siedzi we mnie już od dawna, a Wielopokoleniowi
         wykluwali się w mojej głowie przez dobre kilka lat, postanowiłem przyjąć
         sam dla siebie kilka zasad, których zamierzam się trzymać. Część z nich
