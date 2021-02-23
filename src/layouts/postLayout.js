@@ -30,6 +30,7 @@ const PostLayout = ({
         description={data.excerpt}
         image={data.icon.url}
         origin={origin}
+        type="article"
       />
       <MainWrapper>
         <HeadingSection
