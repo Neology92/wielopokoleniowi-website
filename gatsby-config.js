@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wielopokoleniowi`,
-    description: ``,
+    description: `Jeśli dbasz o siebie, swoją rodzinę, majątek lub firmę - znalazłeś się w dobrym miejscu. Wielopokoleniowi to blog o sukcesji, mądrym budowaniu majątku i biznesu oraz o przekazywaniu ich kolejnym pokoleniom.`,
     author: `@Neology`,
   },
   plugins: [
