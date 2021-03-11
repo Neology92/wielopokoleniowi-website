@@ -42,10 +42,23 @@ const Rules = () => {
           tu wiele pozytywnych przykładów i postaw. Mam nadzieję, że siła{' '}
           <i>Wielopokoleniowych</i> &nbsp;będzie płynąć właśnie z tego, aby
           pokazać dobre przykłady, dać szansę zbudować dobre praktyki w każdej
-          rodzinie i firmie. Chcę, abyś na tym blogu dostrzegł samego siebie i
-          Twoją rodzinę - właśnie jako <i>WIELOPOKOLENIOWĄ</i>. Abyś poszerzył
-          perspektywę i podejmował lepsze decyzje, które podniosą jakość Twoich
-          relacji i całego życia.
+          rodzinie i firmie.{' '}
+          <b>
+            Chcę, abyś na tym blogu dostrzegł samego siebie i Twoją rodzinę -
+            właśnie jako <i>WIELOPOKOLENIOWĄ</i>.
+          </b>{' '}
+          Abyś poszerzył perspektywę i podejmował lepsze decyzje, które podniosą
+          jakość Twoich relacji i całego życia.
+          <br />
+          <br />
+          Na blogu znajdziesz wiele opisów sytuacji rodzinnych i biznesowych,
+          cytatów oraz fragmentów przemyśleń wielu ludzi. Wszystkie wydarzyły
+          się naprawdę – większość obserwowałem dziesiątki razy w różnych
+          kontekstach i sytuacjach. Każdy jednak stanowi jedynie fikcję
+          literacką – stworzoną na potrzeby bloga. Zostały zmienione w taki
+          sposób, aby nie można było powiązać ich z konkretną osobą, rodziną czy
+          firmą. <b>W relacji z klientami obowiązuje mnie poufność</b>, która
+          rozciąga się także na twórczość blogową.
         </Description>
       </RuleItem>
 
@@ -54,9 +67,9 @@ const Rules = () => {
         <Description>
           Wiedz, że będą prawdziwe i szczere. Nie posiadam monopolu na wiedzę, a
           tym bardziej na mądrość. Nie mam gotowych recept, ani śmiałości mówić
-          komukolwiek, co jest dobre, a co złe. Znajdziesz na Wielopokoleniowych
-          mniej lub bardziej szczegółowe opisy wielu zagadnień prawnych,
-          podatkowych czy finansowych, zastrzegam, że{' '}
+          komukolwiek, co jest dobre, a co złe. Znajdziesz na{' '}
+          <i>Wielopokoleniowych</i> mniej lub bardziej szczegółowe opisy wielu
+          zagadnień prawnych, podatkowych czy finansowych, zastrzegam jednak, że{' '}
           <b>
             to nie jest doradztwo: prawne, podatkowe, finansowe, czy
             jakiekolwiek inne. I nie możesz w ten sposób tych wypowiedzi
@@ -91,10 +104,9 @@ const Rules = () => {
           sp. z o.o. Nie ukrywam, że blog jest elementem mojego pomysłu na
           biznes. Wielopokoleniowi sp. z o.o. stoi na czele{' '}
           <b>Grupy Wielopokoleniowi</b>, w ramach której działają już dwie
-          spółki-córki:
-          <b>Kancelaria Sukcesyjna sp. z o.o.</b>, przez którą świadczę
-          wyłącznie usługi doradztwa sukcesyjnego (nie jest sprzedawcą, ani
-          pośrednikiem przy sprzedaży produktów finansowych) oraz{' '}
+          spółki-córki: <b>Kancelaria Sukcesyjna sp. z o.o.</b>, przez którą
+          świadczę wyłącznie usługi doradztwa sukcesyjnego (nie jest sprzedawcą,
+          ani pośrednikiem przy sprzedaży produktów finansowych) oraz{' '}
           <b>Finanse Osobiste sp. z o.o.</b>, która prowadzi szkolenia z
           sukcesji dla branży finansowej oraz rozwija muliagencję
           ubezpieczeniową. Zadaniem tej spółki będzie dostarczenie rozwiązań
@@ -110,11 +122,10 @@ const Rules = () => {
           </b>{' '}
           Przyjmuję prostą zasadę: jeśli w danym wpisie czy innym materiale nie
           ma mowy o partnerach czy sponsorach - jest on udostępniany za darmo,
-          staraniem wyłącznie moim, moich współpracowników, a także gości, kiedy
-          tacy się pojawią. Zachęcam do korzystania z usług oraz wsparcia
-          wszystkich spółek-córek. Nie masz takiego obowiązku – to Twój wybór i
-          Twoja odpowiedzialność, z jakiego rodzaju wsparcia merytorycznego
-          będziesz chciał skorzystać.
+          staraniem wyłącznie moim, moich gości i współpracowników. Zachęcam do
+          korzystania z usług oraz wsparcia wszystkich spółek-córek. Nie masz
+          takiego obowiązku – to Twój wybór i Twoja odpowiedzialność, z jakiego
+          rodzaju wsparcia merytorycznego będziesz chciał skorzystać.
         </Description>
       </RuleItem>
 
@@ -122,12 +133,12 @@ const Rules = () => {
         <Title>Swobodny ton, luźna forma wypowiedzi.</Title>
         <Description>
           Mam nadzieję, że się na to za mnie nie pogniewasz 😉 i pozwolisz, że
-          blogowo przejdziemy na TY. Zrobiłem to z dwóch powodów. Po pierwsze
-          będę poruszał tutaj tematy życiowo trudne, a prosty język ma ułatwić
-          komunikację i rozważania o nich. Postaram się nie nadużywać fachowego
-          słownictwa, choć nie sposób będzie pisać np. o zapisie windykacyjnym,
-          nie posługując się tym wyrażaniem (aby ułatwić Ci życie ułożyłem mój
-          <Link to="/slownik"> Subiektywny Słownik Sukcesyjny</Link>).
+          blogowo <b>przejdziemy na TY</b>. Proponuję to dlatego, że poruszam
+          tutaj tematy życiowo trudne, a prosty język ma ułatwić komunikację i
+          rozważania o nich. Postaram się nie nadużywać fachowego słownictwa,
+          choć nie sposób będzie pisać np. o zapisie windykacyjnym, nie
+          posługując się tym wyrażaniem (aby ułatwić Ci życie ułożyłem mój{' '}
+          <Link to="/slownik">Subiektywny Słownik Sukcesyjny</Link>).
           <br />
           <br />
           Przy każdym wpisie znajdują się gwiazdki. Ich liczba świadczy o
@@ -155,7 +166,10 @@ const Rules = () => {
               <br />
               To treści dłuższe i wymagające większej uwagi - tu także
               znajdziesz sporo przykładów. Dla wszystkich tych, którzy
-              interesują się tematem i chcą pogłębiać Wielopokoleniową wiedzę.
+              interesują się tematem i chcą pogłębiać <i>
+                Wielopokoleniową
+              </i>{' '}
+              wiedzę.
             </CategoryDesc>
           </Category>
           <Category>
@@ -167,9 +181,10 @@ const Rules = () => {
             <CategoryDesc>
               <b>DLA EKSPERTÓW</b>
               <br />
-              Treści kierowane do fachowców; prawników, notariuszy, księgowych,
-              doradców podatkowych. Innymi słowy: nudne i zbyt skomplikowane dla
-              osoby niezwiązanej z daną branżą.
+              Treści na temat strukturalnych zagadnień sukcesji i planowania
+              spadkowego, a także treści kierowane do fachowców; prawników,
+              notariuszy, księgowych, doradców podatkowych. Innymi słowy: nudne
+              i zbyt skomplikowane dla osoby niezwiązanej z daną branżą.
             </CategoryDesc>
           </Category>
         </Description>

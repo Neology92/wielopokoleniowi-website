@@ -81,8 +81,8 @@ const ZasadyWielopokoleniowych = ({ location: { pathname, origin } }) => (
       <StyledTextParagraph>
         Ciekaw jestem, co Ty na to? A także, jak - szczególnie w dzisiejszych
         czasach, kiedy z różnych stron wmawia się nam, że więcej nas dzieli, niż
-        łączy - przyjmiesz <b>Wielopokoleniowe idee</b>? Że warto{' '}
-        <b>świadomie</b>, <b>razem</b> i <b>w zgodzie</b>!
+        łączy - przyjmiesz <i>Wielopokoleniowe</i> idee? Że warto{' '}
+        <b>świadomie</b>, <b>razem</b> oraz <b>w zgodzie</b>!
       </StyledTextParagraph>
       <br />
     </StyledContainer>
