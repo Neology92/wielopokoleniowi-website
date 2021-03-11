@@ -46,12 +46,13 @@ const About = ({ location: { pathname, origin } }) => (
       <Decoration src={blot3} left="-40px" bottom="100px" isLeft />
       <StyledHeading>Witaj w Wielopokoleniowym świecie!</StyledHeading>
       <StyledTextParagraph>
-        Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam, że
-        piszę ludziom testamenty. To prawda. Napisałem ich już kilka tysięcy.
-        Niektórzy pytają, czy jestem notariuszem, inni robią dziwną minę i
-        stwierdzają, że ha ha, ale ja jeszcze nie wybieram się na tamten świat.
-        Jeszcze inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło
-        i pretekst do dalszej rozmowy.
+        Kim jestem? Od wielu lat, na pytanie o wykonywany zawód - odpowiadam, że{' '}
+        <b>piszę ludziom testamenty</b>. To prawda. Napisałem ich już kilka
+        tysięcy. Niektórzy pytają, czy jestem notariuszem, inni robią dziwną
+        minę i stwierdzają, że{' '}
+        <i>ha ha, ale ja jeszcze nie wybieram się na tamten świat</i>. Jeszcze
+        inni zaczynają drążyć… Testament to w tym wypadku jedynie hasło i
+        pretekst do dalszej rozmowy.
         <br />
         <br />
         Jestem doradcą sukcesyjnym i prawnikiem, który pomaga ludziom podejmować
@@ -63,15 +64,15 @@ const About = ({ location: { pathname, origin } }) => (
 
       <TextWithIcon src={bulb} isBlue>
         <h3>
-          Dlaczego bloguję i skąd pomysł, aby stworzyć{' '}
-          <span>Wielopokoleniowych</span>?
+          Dlaczego bloguję i skąd pomysł, aby stworzyć <i>Wielopokoleniowych</i>
+          ?
         </h3>
         <StyledTextParagraph>
           Zajmuję się przede wszystkim doradztwem sukcesyjnym i widzę, jak wiele
           błędów popełnianych jest przy podejmowaniu istotnych, majątkowych
-          decyzji. Ile krąży nieporozumień, potocznych prawd albo tabu. Jak
-          wiele potencjału i środków marnuje się na nieprzemyślane działania,
-          koszty albo niepotrzebne spory.
+          decyzji. Ile krąży nieporozumień, potocznych prawd albo <i>tabu</i>.
+          Jak wiele potencjału i środków marnuje się na nieprzemyślane
+          działania, koszty albo niepotrzebne spory.
           <br />
           <br />
           Sukcesja jest wyjątkowo interdyscyplinarna. Przy jej planowaniu
@@ -95,19 +96,19 @@ const About = ({ location: { pathname, origin } }) => (
         <br />
         Na co dzień jestem prezesem spółki doradczej Kancelaria Sukcesyjna sp. z
         o.o., w ramach której świadczę usługi doradztwa sukcesyjnego i prawnego.
-        To moja główna działalność. Od niedawna funkcjonuje także spółka Finanse
-        Osobiste sp. z o.o., w której rozwijam działalność polegającą na
+        To moja główna działalność. W ramach grupy funkcjonuje także spółka
+        Finanse Osobiste sp. z o.o., w której rozwijam działalność polegającą na
         dostarczaniu najlepszych rozwiązań finansowych, które towarzyszą
         sukcesji. O finansach osobistych na blogu będzie także sporo.
         <br />
         <br />
         Obie spółki należą do Wielopokoleniowi sp. z o.o., w której jestem
         wspólnikiem i prezesem zarządu. Prowadzę przez nią blog i planuję
-        rozwijać działalność popularyzatorską i edukacyjną. Blog
-        Wielopokoleniowi.pl to moje kolejne spełnione Marzenie i Wielka
-        Przygoda, z którą mam zamiar pozostać na dłużej. Wielopokoleniowi to
-        także prezent dla mnie. Blog wystartował 16 lutego 2021 roku. Dokładnie
-        w moje 45 urodziny!
+        rozwijać działalność popularyzatorską i edukacyjną. Blog{' '}
+        <b>Wielopokoleniowi.pl</b> to moje kolejne spełnione Marzenie i Wielka
+        Przygoda, z którą mam zamiar pozostać na dłużej. <i>Wielopokoleniowi</i>{' '}
+        to także prezent dla mnie. Blog wystartował 16 lutego 2021 roku.
+        Dokładnie w moje 45 urodziny!
       </StyledTextParagraph>
 
       <TextWithIcon src={target} isRight isBlue>
@@ -191,27 +192,32 @@ const About = ({ location: { pathname, origin } }) => (
           dni. Mieszkam we Wrocławiu, więc mam blisko - do Impartu 10 minut na
           piechotę.
           <br />
-          Mam nadzieję, że <strong>Wielopokoleniowi</strong> staną się częścią
-          Twojego rozwoju osobistego i że będę miał w niego swój mały wkład.
+          Mam nadzieję, że{' '}
+          <i>
+            <strong>Wielopokoleniowi</strong>
+          </i>{' '}
+          staną się częścią Twojego rozwoju osobistego i że będę miał w niego
+          swój mały wkład.
           <br />
           <br />
           Cieszę się, że tutaj jesteś i dzielisz ze mną swój czas 😊
+          <br />
           <br />
           <i>Łukasz Martyniec</i>
         </StyledTextParagraph>
         <br />
         <StyledTextParagraph>
-          p.s. Więcej informacji na mój temat znajdziesz{' '}
+          p.s. Więcej informacji na mój temat znajdziesz na{' '}
           <a href="https://kancelariasukcesyjna.pl/" noreferrer noopenner>
-            tutaj
+            Kancelaria Sukcesyjna
           </a>{' '}
-          i{' '}
+          i profilu{' '}
           <a
             href="https://pl.linkedin.com/in/łukasz-martyniec-85b95860"
             noopenner
             noreferrer
           >
-            tutaj
+            Linkedin
           </a>
           .
         </StyledTextParagraph>
