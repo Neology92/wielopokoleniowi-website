@@ -52,7 +52,12 @@ module.exports = {
         trackingIds: ['G-2E1YR5E15L'],
       },
     },
-
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '921774938567180',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
